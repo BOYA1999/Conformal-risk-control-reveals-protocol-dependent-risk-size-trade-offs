@@ -1,5 +1,4 @@
-# MolXAI-CRC reproducibility package — current release
-
+# MolXAI-CRC reproducibility package 
 This package contains the code, frozen contracts, structure-free aggregate results, source records, and verification scripts used for the current manuscript analysis. It describes one release only. Manuscript files, figures, author information, local paths, raw molecular records, row-level predictions or attributions, checkpoints, logs, caches, and third-party source trees are not included.
 
 ## Included analyses
@@ -42,4 +41,4 @@ The release verifier checks the manifest, Python syntax, required analysis surfa
 
 The root MIT License covers repository-authored code and documentation. External datasets, pretrained models, software, and data-derived aggregate results retain their upstream terms; the relevant notices are kept beside the affected material. Raw records, structures, identifiers, weights, and third-party source trees are not redistributed.
 
-This directory is prepared for local upload. It has not been published to a remote repository or archival service.
+
