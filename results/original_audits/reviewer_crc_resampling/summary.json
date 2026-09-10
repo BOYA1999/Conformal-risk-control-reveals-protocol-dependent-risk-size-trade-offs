@@ -1,0 +1,95 @@
+{
+  "status": "complete",
+  "alpha": 0.1,
+  "bootstrap_repetitions": 500,
+  "calibration_size_multipliers": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "cells": 22,
+  "resample_rows": 66000,
+  "checkpoint_reuse": true,
+  "predictor_retraining": false,
+  "interpretation": "Fixed observed-pool stability diagnostic; not a fresh-population coverage proof.",
+  "summary": [
+    {
+      "method": "corrected",
+      "calibration_size_multiplier": 0.25,
+      "cells": 22,
+      "resamples": 11000,
+      "mean_fraction": 0.5925981818,
+      "median_fraction": 0.73,
+      "q25_fraction": 0.05,
+      "q75_fraction": 0.89,
+      "mean_realized_atom_fraction": 0.6131541861,
+      "mean_test_risk": 0.0789421533,
+      "risk_violation_frequency": 0.1541818182
+    },
+    {
+      "method": "corrected",
+      "calibration_size_multiplier": 0.5,
+      "cells": 22,
+      "resamples": 11000,
+      "mean_fraction": 0.5826354545,
+      "median_fraction": 0.69,
+      "q25_fraction": 0.05,
+      "q75_fraction": 0.89,
+      "mean_realized_atom_fraction": 0.6031491483,
+      "mean_test_risk": 0.0838640296,
+      "risk_violation_frequency": 0.2038181818
+    },
+    {
+      "method": "corrected",
+      "calibration_size_multiplier": 1.0,
+      "cells": 22,
+      "resamples": 11000,
+      "mean_fraction": 0.5782363636,
+      "median_fraction": 0.69,
+      "q25_fraction": 0.05,
+      "q75_fraction": 0.89,
+      "mean_realized_atom_fraction": 0.5986987796,
+      "mean_test_risk": 0.0866788891,
+      "risk_violation_frequency": 0.244
+    },
+    {
+      "method": "naive",
+      "calibration_size_multiplier": 0.25,
+      "cells": 22,
+      "resamples": 11000,
+      "mean_fraction": 0.5740045455,
+      "median_fraction": 0.69,
+      "q25_fraction": 0.05,
+      "q75_fraction": 0.89,
+      "mean_realized_atom_fraction": 0.5944131901,
+      "mean_test_risk": 0.0889940058,
+      "risk_violation_frequency": 0.3217272727
+    },
+    {
+      "method": "naive",
+      "calibration_size_multiplier": 0.5,
+      "cells": 22,
+      "resamples": 11000,
+      "mean_fraction": 0.5737472727,
+      "median_fraction": 0.68,
+      "q25_fraction": 0.05,
+      "q75_fraction": 0.89,
+      "mean_realized_atom_fraction": 0.5940865193,
+      "mean_test_risk": 0.0893226163,
+      "risk_violation_frequency": 0.3305454545
+    },
+    {
+      "method": "naive",
+      "calibration_size_multiplier": 1.0,
+      "cells": 22,
+      "resamples": 11000,
+      "mean_fraction": 0.5737654545,
+      "median_fraction": 0.68,
+      "q25_fraction": 0.05,
+      "q75_fraction": 0.89,
+      "mean_realized_atom_fraction": 0.5941191268,
+      "mean_test_risk": 0.0895088313,
+      "risk_violation_frequency": 0.3314545455
+    }
+  ]
+}

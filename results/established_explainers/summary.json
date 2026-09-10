@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "surface": "post_rejection_official_split_matched_subset",
+  "runtime_seconds": 5581.891673326492,
+  "cell_method_rows": 330,
+  "unique_cells": 66,
+  "methods": [
+    {
+      "method": "atom_occlusion",
+      "cells": 66,
+      "macro_task_mean_risk": 0.074739362956143,
+      "macro_task_mean_atom_fraction": 0.5032871069519826,
+      "macro_task_mean_precision": 0.5974820065166722,
+      "macro_task_mean_iou": 0.563935845788219,
+      "risk_pass_cells": 56,
+      "efficiency_pass_cells": 51
+    },
+    {
+      "method": "gnnexplainer",
+      "cells": 66,
+      "macro_task_mean_risk": 0.0843218243417117,
+      "macro_task_mean_atom_fraction": 0.8546958583707815,
+      "macro_task_mean_precision": 0.29117929698798384,
+      "macro_task_mean_iou": 0.2804547189727748,
+      "risk_pass_cells": 54,
+      "efficiency_pass_cells": 11
+    },
+    {
+      "method": "gradinput",
+      "cells": 66,
+      "macro_task_mean_risk": 0.07220368400932943,
+      "macro_task_mean_atom_fraction": 0.6574344466441455,
+      "macro_task_mean_precision": 0.5065270522394263,
+      "macro_task_mean_iou": 0.48288530557426235,
+      "risk_pass_cells": 59,
+      "efficiency_pass_cells": 24
+    },
+    {
+      "method": "ig",
+      "cells": 66,
+      "macro_task_mean_risk": 0.0733356928955283,
+      "macro_task_mean_atom_fraction": 0.6033942931710946,
+      "macro_task_mean_precision": 0.5277466570859247,
+      "macro_task_mean_iou": 0.5016920240775161,
+      "risk_pass_cells": 59,
+      "efficiency_pass_cells": 38
+    },
+    {
+      "method": "saliency",
+      "cells": 66,
+      "macro_task_mean_risk": 0.07982108588647992,
+      "macro_task_mean_atom_fraction": 0.6108458699711482,
+      "macro_task_mean_precision": 0.45266571262812155,
+      "macro_task_mean_iou": 0.4314478195648336,
+      "risk_pass_cells": 52,
+      "efficiency_pass_cells": 40
+    }
+  ],
+  "interpretation": "Reviewer-driven matched-subset benchmark; not a restoration of the original untouched final-test gate."
+}

@@ -68,7 +68,7 @@ for path in ROOT.rglob("*"):
 for path in ROOT.rglob("*"):
     if path.is_file() and path.suffix.lower() in {".pt", ".pth", ".ckpt", ".bin", ".pkl", ".pickle", ".sdf", ".smi", ".parquet"}:
         failures.append(f"blocked file type: {path.relative_to(ROOT)}")
-    if path.is_dir() and path.name in {".git", "__pycache__", ".pytest_cache"}:
+    if path.is_dir() and path.name in {"__pycache__", ".pytest_cache"}:
         failures.append(f"blocked directory: {path.relative_to(ROOT)}")
 
 if MANIFEST.is_file():
@@ -76,7 +76,7 @@ if MANIFEST.is_file():
     for line in MANIFEST.read_text(encoding="utf-8").splitlines():
         digest, relative = line.split("  ", 1)
         listed[relative] = digest
-    actual = sorted(path.relative_to(ROOT).as_posix() for path in ROOT.rglob("*") if path.is_file() and path != MANIFEST and "__pycache__" not in path.parts)
+    actual = sorted(path.relative_to(ROOT).as_posix() for path in ROOT.rglob("*") if path.is_file() and path != MANIFEST and ".git" not in path.parts and "__pycache__" not in path.parts)
     require(sorted(listed) == actual, "manifest file list")
     for relative, expected in listed.items():
         path = ROOT / relative

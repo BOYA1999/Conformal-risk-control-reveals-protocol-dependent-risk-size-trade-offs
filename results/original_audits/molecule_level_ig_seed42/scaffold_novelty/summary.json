@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "molecule_rows": 78732,
+  "invalid_scaffold_rows": 0,
+  "definition": "unseen means absent from fit plus development; calibration is excluded from model exposure",
+  "overall": [
+    {
+      "scaffold_novelty": "seen",
+      "molecules": 14344,
+      "mean_miss_loss": 0.1010868639,
+      "mean_iou": 0.5393871167,
+      "mean_selected_fraction": 0.6296019089,
+      "mean_fidelity_advantage": 5.8244673274
+    },
+    {
+      "scaffold_novelty": "unseen",
+      "molecules": 12880,
+      "mean_miss_loss": 0.090237875,
+      "mean_iou": 0.5455020815,
+      "mean_selected_fraction": 0.6374143263,
+      "mean_fidelity_advantage": 6.1054699172
+    }
+  ],
+  "rates": [
+    {
+      "family": "bxaic",
+      "task": "B",
+      "molecules": 9998,
+      "unseen_rate": 0.475495099,
+      "unique_test_scaffolds": 4021
+    },
+    {
+      "family": "bxaic",
+      "task": "P",
+      "molecules": 9998,
+      "unseen_rate": 0.475495099,
+      "unique_test_scaffolds": 4021
+    },
+    {
+      "family": "bxaic",
+      "task": "PAINS",
+      "molecules": 9998,
+      "unseen_rate": 0.475495099,
+      "unique_test_scaffolds": 4021
+    },
+    {
+      "family": "bxaic",
+      "task": "X",
+      "molecules": 9998,
+      "unseen_rate": 0.475495099,
+      "unique_test_scaffolds": 4021
+    },
+    {
+      "family": "bxaic",
+      "task": "indole",
+      "molecules": 9998,
+      "unseen_rate": 0.475495099,
+      "unique_test_scaffolds": 4021
+    },
+    {
+      "family": "bxaic",
+      "task": "rings-count",
+      "molecules": 9998,
+      "unseen_rate": 0.475495099,
+      "unique_test_scaffolds": 4021
+    },
+    {
+      "family": "bxaic",
+      "task": "rings-max",
+      "molecules": 9998,
+      "unseen_rate": 0.475495099,
+      "unique_test_scaffolds": 4021
+    },
+    {
+      "family": "google",
+      "task": "benzene",
+      "molecules": 4000,
+      "unseen_rate": 0.627,
+      "unique_test_scaffolds": 1530
+    },
+    {
+      "family": "google",
+      "task": "logic10",
+      "molecules": 1938,
+      "unseen_rate": 0.6150670795,
+      "unique_test_scaffolds": 795
+    },
+    {
+      "family": "google",
+      "task": "logic7",
+      "molecules": 972,
+      "unseen_rate": 0.6893004115,
+      "unique_test_scaffolds": 421
+    },
+    {
+      "family": "google",
+      "task": "logic8",
+      "molecules": 1836,
+      "unseen_rate": 0.4793028322,
+      "unique_test_scaffolds": 689
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "expected_rows": 132,
+  "observed_rows": 132,
+  "unique_cells": 66,
+  "finite_numeric_outputs": true,
+  "no_cross_policy_mixing": true
+}

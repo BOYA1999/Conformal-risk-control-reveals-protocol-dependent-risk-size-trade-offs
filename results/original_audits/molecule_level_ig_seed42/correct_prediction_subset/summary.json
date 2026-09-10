@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "Integrated Gradients, seed 42, 22 task-backbone cells",
+  "all_rationale_bearing": {
+    "molecules": 27224,
+    "cells": 22,
+    "macro_mean_risk": 0.0869248446422426,
+    "risk_pass_cells": 16,
+    "macro_mean_selected_fraction": 0.5978709901720594,
+    "macro_mean_iou": 0.5142051805224619,
+    "macro_mean_fidelity_advantage": 7.088366790858893,
+    "fidelity_win_cells": 21
+  },
+  "correctly_classified": {
+    "molecules": 25266,
+    "cells": 22,
+    "macro_mean_risk": 0.08834505122139089,
+    "risk_pass_cells": 16,
+    "macro_mean_selected_fraction": 0.5976480017159298,
+    "macro_mean_iou": 0.5149017683390107,
+    "macro_mean_fidelity_advantage": 7.122478243223522,
+    "fidelity_win_cells": 21
+  },
+  "interpretation": "Correct-classification restriction does not change risk-pass or fidelity-win counts."
+}

@@ -1,0 +1,18 @@
+{
+  "validation": {
+    "status": "PASS",
+    "observed_cells": 22,
+    "script_hashes_match": true,
+    "finite": true
+  },
+  "runtime_seconds": 1659.2185962200165,
+  "gate": {
+    "risk_pass_cells": 20,
+    "efficiency_pass_cells": 3,
+    "macro_mean_risk": 0.07716930346827158,
+    "macro_mean_atom_fraction": 0.8600055766076878,
+    "ig_macro_mean_atom_fraction": 0.598810229517441,
+    "macro_atom_fraction_reduction_vs_ig": -0.26119534709024683,
+    "go_full_gnnexplainer": false
+  }
+}
