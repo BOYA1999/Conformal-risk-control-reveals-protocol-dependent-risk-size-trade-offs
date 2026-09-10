@@ -1,0 +1,54 @@
+{
+  "amendment_id": "A4-CONTRACT-AMENDMENT-002",
+  "recorded_at_local": "2026-09-04T23:55:00+08:00",
+  "stage": "after 14 completed amended cells and one partial PAINS seed-2026 training attempt; before any remaining cell",
+  "status": "accepted_schedule_matched_oracle_correction",
+  "previous_contract_sha256": "F3ABE6714964269EC2ED4B548F8432F2F5A70CFF8C2AA998FEFA4399F3210B15",
+  "amended_contract_sha256": "3140BC34AA835E2EFE89E244874A4164012E712E895BF1F4FDF4DE27153D4ED2",
+  "previous_code_sha256": "436A020099216329E8268F301C80FF9636A11BE7BD6077D36F4D92D044857740",
+  "amended_code_sha256": "D6333242264C583BAF29BF4257D9F7F50050B7596928E9A44E0D4ABE37DDC57B",
+  "trigger": {
+    "independent_qa_finding": "The strictly ordered oracle and actual include-all-ties explainer were calibrated on different per-molecule cardinality schedules, so separately calibrated mean retained fractions did not define a capacity lower bound.",
+    "observed_negative_excess_cells": {
+      "bxaic__P__gine__seed123": -2.165e-05,
+      "bxaic__X__gine__seed42": -0.00282174,
+      "bxaic__X__gine__seed123": -0.0031836,
+      "bxaic__X__gine__seed2026": -0.0028141
+    }
+  },
+  "correction": "At every fraction-grid point and for every molecule, compute the actual include-all-ties selected cardinality first, then construct the rationale-first oracle with exactly that cardinality. This guarantees pointwise oracle loss no greater than actual loss on a shared monotone schedule, an oracle CRC index no later than the actual CRC index, and nonnegative capacity excess.",
+  "unchanged": [
+    "all source data and split identities",
+    "45-dimensional atom and 17-dimensional bond features",
+    "four-layer hidden-128 residual GINE architecture",
+    "training, early stopping, seeds, alpha, and fraction grid",
+    "true-class signed integrated gradients with 20 steps",
+    "actual include-all-ties set policy"
+  ],
+  "new_reusable_evidence": "Each cell stores compressed ragged calibration/test attribution scores, rationale indices, source indices, and the 101-point actual selected-count schedules with exact amended contract/code hashes.",
+  "checkpoint_reuse": "The 14 completed checkpoints are preserved byte-for-byte and reused only for predictor evaluation, IG, and corrected postprocessing. Their original training hashes remain declared separately from amended evaluation hashes. PAINS seed-2026 had no completed checkpoint and will train normally when the full run resumes.",
+  "mapping_audit": "Inherited without rerun because atom/edge mapping code, data, and feature construction are unchanged; the existing mapping_audit.json remains PASS.",
+  "selection_effect": "None. The correction was required by a failed lower-bound invariant. No architecture, training, attribution, alpha, or task setting was selected or tuned from test performance.",
+  "invalidated_outputs": [
+    "the amended smoke output using the strictly ordered oracle",
+    "oracle fields and cell-level evaluation hashes in the 14 completed cell JSON files"
+  ],
+  "preserved_outputs": [
+    "the mixed full.log as attempt history",
+    "all 14 completed checkpoint files and their SHA-256 hashes",
+    "low-AUROC, high-risk, and otherwise negative results"
+  ],
+  "pre_gpu_validation": {
+    "status": "PASS",
+    "artifact": "oracle_unit_validation.json",
+    "design": "240 deterministic synthetic molecules with quantized scores to exercise ties",
+    "checks": [
+      "exact tie-inclusive cardinalities",
+      "monotone cardinality schedules",
+      "pointwise oracle loss dominance",
+      "oracle CRC index ordering",
+      "nonnegative capacity excess",
+      "ragged score artifact roundtrip"
+    ]
+  }
+}

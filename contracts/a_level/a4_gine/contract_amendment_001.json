@@ -1,0 +1,28 @@
+{
+  "amendment_id": "A4-CONTRACT-AMENDMENT-001",
+  "recorded_at_local": "2026-09-04T22:39:00+08:00",
+  "stage": "after mapping audit and smoke; after three B cells; before any other completed full cell",
+  "status": "accepted_semantic_correction_and_oracle_repair",
+  "previous_contract_sha256": "A9F36309FF21CE04837781D75500A3201A7B9F43929A1BF64A769FBE47991F57",
+  "amended_contract_sha256": "F3ABE6714964269EC2ED4B548F8432F2F5A70CFF8C2AA998FEFA4399F3210B15",
+  "previous_code_sha256": "9B7481DC6DFADE990A5D9BF0830F2BB6DE7A7AD479891FF946CD8F6631B637B2",
+  "amended_code_sha256": "436A020099216329E8268F301C80FF9636A11BE7BD6077D36F4D92D044857740",
+  "corrections": [
+    {
+      "field": "attribution.rationale_semantics",
+      "evidence": "mapping_audit.json records 49,330 nonempty rings-count masks, including 34,268 records with label 0",
+      "correction": "Preserve true-class IG; state that true-class and positive-class targets do not coincide for those rings-count records; leave deployment-target alternatives to A5."
+    },
+    {
+      "field": "oracle_definition",
+      "evidence": "The initial binary oracle score tied all rationale atoms and therefore selected the full rationale at the first positive fraction, allowing a negative retained-fraction difference at unequal realized risk.",
+      "correction": "Use the historical best-case strictly ordered rationale-first capacity lower bound, with the same fraction grid and corrected CRC. It has no score ties by construction; actual GINE sets remain include-all-ties."
+    }
+  ],
+  "selection_effect": "None. The correction was triggered by preflight semantics and an invariant failure, not by comparative task performance. No test result was used to tune architecture, features, optimizer, early stopping, IG steps, alpha, or fraction grid.",
+  "invalidated_outputs": [
+    "smoke under the previous contract/code hashes",
+    "bxaic/B seeds 42, 123, and 2026 under the previous contract/code hashes"
+  ],
+  "remediation": "Preserve invalidated outputs in invalidated_attempt_before_contract_correction_20260904 and rerun smoke plus all 33 cells under the amended contract and code hashes."
+}

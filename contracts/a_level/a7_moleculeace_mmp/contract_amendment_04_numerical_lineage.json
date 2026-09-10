@@ -1,0 +1,49 @@
+{
+  "status": "FROZEN_POST_RUN_NUMERICAL_LINEAGE_CORRECTION",
+  "date": "2026-09-05",
+  "trigger": "The first full validator found two method rows from one pair whose raw checkpoint-attribution forward changed the sign of an effectively zero serialized prediction difference.",
+  "affected_key": {
+    "dataset": "CHEMBL4792_Ki",
+    "split": "test",
+    "pair_type": "sar_cliff_proxy",
+    "pair_id": 23,
+    "seed": 17,
+    "methods": [
+      "integrated_gradients",
+      "atom_occlusion"
+    ]
+  },
+  "observed_values": {
+    "serialized_prediction_a": 6.876356601715088,
+    "serialized_prediction_b": 6.876356601715088,
+    "serialized_prediction_delta": 0.0,
+    "checkpoint_attribution_prediction_a": 6.876356601715088,
+    "checkpoint_attribution_prediction_b": 6.87635612487793,
+    "checkpoint_attribution_delta": 4.76837158203125e-07,
+    "formal_checkpoint_reproduction_max_absolute_error": 9.5367431640625e-07
+  },
+  "direction_strata_authority": "predictions.csv",
+  "numerical_tie_atol": 1e-06,
+  "correction": "Use serialized deployment predictions for prediction_a, prediction_b, predicted_delta, and direction strata. Continue to use checkpoint forwards only to compute attribution scores and the disclosed reproduction diagnostic. Record every sign instability; abort if either delta exceeds the fixed numerical-tie tolerance.",
+  "scientific_effect": "The affected pair is retained and classified from the authoritative serialized delta as a direction error, not as robustly direction-correct. All-pair risk, retained fraction, precision, IoU, model metrics, masks, mappings, and attribution methods are unchanged; only direction-stratified membership is corrected.",
+  "validator_correction": "The claim-boundary check now tests the existing semantically equivalent negation 'does not establish ... distribution-free risk control' instead of requiring the exact substring 'no distribution-free'. No scientific threshold is relaxed.",
+  "pre_correction_outputs_backup": "diagnostics/postrun_before_numerical_lineage_correction",
+  "pre_correction_output_sha256": {
+    "pair_attributions.csv": "89EBFC74E70FE472B40F0D2ADC90CD6BC2827F9365CF1D0E553CF413B143135B",
+    "crc_results.csv": "4E28FB8FFE44B200D32B43C3A6648722B472BF62E1DC085AF56BE9E1CD2BC5BB",
+    "crc_macro_summary.csv": "A1C46C0CC41E1D67126FB42D071BCCC1978D16CB1D30501598826A51CA664FD0",
+    "component_crc_feasibility.csv": "43D2D590112792A2409E3C31C60D0B0D3DFEB46A689BB71584FE08625BC0894C",
+    "summary.json": "7156EA68412BBAC1505CDB0EA33CAF195E4EFFEFBBE76F2430FF764505015208",
+    "attribution_environment.json": "FF3AB4E382C887FF2825733FBC57484CE99B1A20AE560C31807682BAF4A2260D",
+    "validation.json": "77E25BDEE45FC381E8DAF1BB94FF3FE4ED655AF6AD10EA1328C2343A0A339F4F",
+    "validation.md": "0FB032037DCC2126E6732A1D0FFCDC9D13E98D4000A2C883E1A2004C0DBA144D"
+  },
+  "prior_code_sha256": {
+    "attribute_and_crc.py": "8F7FBD43A5F6548A92C42427B4DD4801C47EF9BFBBF507CF7995C7556471EB31",
+    "validate_a7.py": "B0E9BF0E56545CF2ED961405D4FCC2F6120693958AC1A46B6808582A8254AB22"
+  },
+  "current_code_sha256": {
+    "attribute_and_crc.py": "67AC0BF3334C5406195EA974A9FA99284D098F7E44A548129567F98BAC100F66",
+    "validate_a7.py": "BE54B3ABE3F5CE788D5EC80AED984963CB06BDD5F39263269798DBA3AD17F224"
+  }
+}

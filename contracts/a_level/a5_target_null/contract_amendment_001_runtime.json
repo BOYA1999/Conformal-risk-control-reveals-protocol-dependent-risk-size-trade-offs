@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-04",
+  "status": "FROZEN_BEFORE_FORMAL_RUN",
+  "reason": "CPU smoke exposed a Windows import-order conflict and PyG automatic increment of attributes named source_index.",
+  "changes": [
+    "Import PyTorch before NumPy, pandas, and scikit-learn.",
+    "Recover attribution source IDs from the immutable input graph sequence because shuffle is false."
+  ],
+  "estimand_changed": false,
+  "formal_results_before_amendment": 0,
+  "final_script_sha256": "2933643253DFCF90C695A3480E8D5AD0F05575402D49A56D326F31E3396C73BD",
+  "contract_sha256": "7061DF1C9051F130BB7F11B515EB7C6616837FBC960E7B80CBD6B0C0C8F322E8",
+  "smoke_status": "PASS_ONE_CELL"
+}

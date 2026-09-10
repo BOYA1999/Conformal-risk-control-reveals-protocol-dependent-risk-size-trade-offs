@@ -1,0 +1,186 @@
+{
+  "status": "FROZEN_PRE_FORMAL_RUN",
+  "frozen_date": "2026-09-04",
+  "scope": "A7 chemistry-grounded validation only",
+  "supersedes_code_hashes_in": "contract_amendment_02_runtime_import_order.json",
+  "statistical_claim": "descriptive finite-pool clustered stress test only",
+  "proxy_definition": "experimental SAR-linked transformation-site proxy",
+  "proxy_boundary": "The proxy is neither causal, complete, mechanistic, expert-annotated, nor ground truth.",
+  "risk_definition": "Mean fraction of proxy atoms missed (one minus proxy recall), not the probability of any miss.",
+  "atom_occlusion_definition": "Zero one atom's continuous features while preserving all molecular edges.",
+  "formal_training": {
+    "targets": [
+      "CHEMBL204_Ki",
+      "CHEMBL214_Ki",
+      "CHEMBL228_Ki",
+      "CHEMBL233_Ki",
+      "CHEMBL234_Ki",
+      "CHEMBL235_EC50",
+      "CHEMBL236_Ki",
+      "CHEMBL237_Ki",
+      "CHEMBL244_Ki",
+      "CHEMBL264_Ki",
+      "CHEMBL4792_Ki"
+    ],
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "cells": 33,
+    "epochs": 120,
+    "patience": 15,
+    "batch_size": 96,
+    "integrated_gradients_steps": 32,
+    "device": "record actual device; GPU is not a statistical requirement"
+  },
+  "fragmentation_contract": {
+    "method": "RDKit rdMMPA.FragmentMol with maxCuts=1",
+    "default_cut_smarts": "[#6+0;!$(*=,#[!#6])]!@!=!#[*]",
+    "max_cut_bonds": 20,
+    "fragmentation_limit_unique_molecules": 245,
+    "fragmentation_limit_target_split_occurrences": 297,
+    "fragmentation_limit_selected_molecule_overlap": 0,
+    "rdmmpa_core_set_mapping_mismatch_unique_molecules": 9,
+    "no_default_smarts_eligible_bond_unique_molecules": 3,
+    "boundary": "The default cap creates a reported structural selection boundary for large or complex molecules and is not raised post hoc."
+  },
+  "pair_panel": {
+    "candidate_pairs": 2853,
+    "selected_pairs": 1035,
+    "calibration_pairs": 559,
+    "test_pairs": 476,
+    "selection": "Deterministic maximum-cardinality molecule-disjoint matching within each target and split; no truncation to preliminary scout counts.",
+    "preliminary_scout_boundary": "Earlier count estimates were not backed by a recoverable executable artifact and are retained only as a preliminary feasibility estimate."
+  },
+  "clustered_calibration": {
+    "calibration_component_count_range": [
+      3,
+      15
+    ],
+    "minimum_components_for_alpha_0_10_numeric_finite_correction": 9,
+    "numerically_feasible_targets": [
+      "CHEMBL204_Ki",
+      "CHEMBL214_Ki",
+      "CHEMBL228_Ki",
+      "CHEMBL233_Ki",
+      "CHEMBL235_EC50",
+      "CHEMBL237_Ki",
+      "CHEMBL264_Ki"
+    ],
+    "numerically_infeasible_targets": [
+      "CHEMBL234_Ki",
+      "CHEMBL236_Ki",
+      "CHEMBL244_Ki",
+      "CHEMBL4792_Ki"
+    ],
+    "pair_weighted_policy": "pair_crc_descriptive",
+    "component_weighted_policy": "component_crc_cluster_stress_test",
+    "boundary": "MMP pairs are clustered inside group_id components. Pair-level exchangeability is unsupported. Neither policy carries a distribution-free pair-level risk-control or generalization guarantee; component-weighted results are also descriptive."
+  },
+  "train_development_split": {
+    "rule": "Exact deterministic subset of whole train-only components nearest to 20%; ties favor the smaller development count and seeded component order.",
+    "group_overlap": 0,
+    "CHEMBL214_Ki": {
+      "development": 216,
+      "training_pool": 2091,
+      "development_fraction": 0.10329985652797705,
+      "retained_model_train_component_size": 1875
+    },
+    "CHEMBL234_Ki": {
+      "development": 92,
+      "training_pool": 2524,
+      "development_fraction": 0.03645007923930269,
+      "retained_model_train_component_size": 2432
+    },
+    "boundary": "Whole components are not split to manufacture a 20% development fraction. Development-only early stopping is retained, but extreme component concentration weakens checkpoint selection for these two targets."
+  },
+  "target_panel_eligibility": {
+    "source_eligible_targets": 15,
+    "selected_targets": 11,
+    "rule": "Retain targets with at least 20 auditable molecule-disjoint exact-single-cut cliff pairs in both calibration and test.",
+    "excluded_targets": {
+      "CHEMBL2147_Ki": {
+        "calibration": 93,
+        "test": 1
+      },
+      "CHEMBL219_Ki": {
+        "calibration": 4,
+        "test": 5
+      },
+      "CHEMBL239_EC50": {
+        "calibration": 3,
+        "test": 8
+      },
+      "CHEMBL287_Ki": {
+        "calibration": 12,
+        "test": 10
+      }
+    },
+    "boundary": "This is a pre-model feasibility filter and is not relaxed after predictor or attribution results are observed."
+  },
+  "cross_target_overlap": {
+    "selected_panel_nonzero_target_pairs": 6,
+    "selected_panel_pairwise_shared_molecule_sum": 97,
+    "selected_panel_maximum": {
+      "target_a": "CHEMBL204_Ki",
+      "target_b": "CHEMBL244_Ki",
+      "shared_molecules": 38
+    },
+    "full_manifest_nonzero_target_pairs": 27,
+    "full_manifest_pairwise_shared_molecule_sum": 7983,
+    "full_manifest_maximum": {
+      "target_a": "CHEMBL233_Ki",
+      "target_b": "CHEMBL237_Ki",
+      "shared_molecules": 1979
+    },
+    "boundary": "Target-resampling intervals describe this fixed overlapping 11-target panel; they are not population confidence intervals or evidence of independent-target generalization."
+  },
+  "negative_control": {
+    "status": "descriptive-only sensitivity",
+    "selected_test_pairs": 467,
+    "balance_targets_with_absolute_smd_at_most_0_25": 9,
+    "retained_imbalanced_targets": [
+      "CHEMBL235_EC50",
+      "CHEMBL244_Ki"
+    ],
+    "boundary": "The matched noncliff control cannot support causal, specificity, or ground-truth claims."
+  },
+  "required_outputs": [
+    "mmp_pairs.csv",
+    "mmp_pair_candidates.csv",
+    "mmp_pair_counts.csv",
+    "mmp_mapping_exclusions.csv",
+    "mmp_mapping_audit.json",
+    "mmp_component_cluster_sizes.csv",
+    "mmp_component_diagnostics.csv",
+    "fragmentation_limit_exclusions.csv",
+    "no_eligible_bond_exclusions.csv",
+    "noncliff_matched_controls.csv",
+    "noncliff_control_counts.csv",
+    "noncliff_control_balance.csv",
+    "noncliff_control_audit.json",
+    "training_split_preflight.csv",
+    "training_split_preflight.json",
+    "target_panel_eligibility.csv",
+    "target_panel_eligibility_audit.json",
+    "cross_target_overlap.csv",
+    "cross_target_overlap_audit.json"
+  ],
+  "license_boundary": "MoleculeACE code is MIT. ChEMBL v29-derived benchmark and derived data are CC BY-SA 3.0 and are not covered by the project MIT license.",
+  "code_sha256": {
+    "build_mmp_pairs.py": "09AC41768B1BCF2A5AD7BBDAA966F416B604B641735CB022DCD21452C9CA66D7",
+    "build_noncliff_controls.py": "08533736AE67F897DED24C0F6BA1A7D02C3F8F5CA915FB513A5DF9C4C0A90A6E",
+    "build_training_split_preflight.py": "735B41DD764EFD276827F04833D039F65B3EA8A1BAF462BAE5625676BBA7FB4C",
+    "build_target_panel_eligibility.py": "F9E68580B947D1DB107C184A02A0DD52C8F4CC4F6D8EC726D799E3335DE49EE1",
+    "build_cross_target_overlap.py": "ADDE58E1A8CE50DEE083009F1B1EEC7ED9E88B34EAD14F36F989343A668D3963",
+    "gine_model.py": "4E092A8AE61D6E17C2CCB41CADE1471B4D5FF636BE6DCC4DF5E5F94A2BCDEEF0",
+    "train_gine.py": "925D4AF262DD4EFF7535E34FC632818E161E8A322D7F25CD29FCED79BE56B84B",
+    "attribute_and_crc.py": "8F7FBD43A5F6548A92C42427B4DD4801C47EF9BFBBF507CF7995C7556471EB31",
+    "validate_a7.py": "B0E9BF0E56545CF2ED961405D4FCC2F6120693958AC1A46B6808582A8254AB22",
+    "make_provenance.py": "57E99E026A91DCCB464B3D7C8359BAEB44458C785D2067A7D965AE51B5C8F113",
+    "make_manifest.py": "1CA6126FB1D090052312A75632275420A8EB782C975614849D9E18B58CA85158",
+    "verify_manifest.py": "4598FCC438FC4EE04C8DCBFB5FE675E14B0FC6A847638B0D971227D9734E0B0F",
+    "smoke_a7.py": "9776DD13763B5F27C3334C0A12803731226B7849508A18694EB2CDEC8AB02541"
+  }
+}

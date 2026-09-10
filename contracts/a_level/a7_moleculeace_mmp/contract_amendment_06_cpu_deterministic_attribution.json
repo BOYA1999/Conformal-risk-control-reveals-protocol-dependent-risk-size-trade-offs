@@ -1,0 +1,121 @@
+{
+  "status": "FROZEN_POST_RUN_CPU_DETERMINISTIC_ATTRIBUTION",
+  "date": "2026-09-05",
+  "trigger": "Independent full GPU attribution reruns changed many near-tied atom-score orderings and downstream CRC rows despite atom-score differences of only about 2e-6.",
+  "failed_gpu_evidence": {
+    "status": "GPU_ATTRIBUTION_NOT_FROZEN",
+    "run1_full_artifacts": "diagnostics/postrun_before_numerical_lineage_correction",
+    "run2_evidence": "diagnostics/gpu_attribution_instability/run2_lineage_corrected_log_only",
+    "run2_limitation": "Detailed run-2 CSVs had been overwritten before cross-run nondeterminism was recognized; the complete console log is retained.",
+    "run3_full_artifacts": "diagnostics/gpu_attribution_instability/run3_predictive_summary_gpu",
+    "audit": "diagnostics/gpu_attribution_instability/gpu_attribution_instability_audit.json",
+    "atom_score_max_absolute_difference": 1.9074000000007807e-06,
+    "full_rank_changed_rows": 1428,
+    "crc_rows_with_any_difference": 1264,
+    "maximum_risk_difference": 0.0565284561237219,
+    "boundary": "No GPU attribution version may be selected or reported as the formal A7 result."
+  },
+  "frozen_predictor_artifacts": {
+    "file_sha256": {
+      "predictions.csv": "59A2CC31A15505DA99A5934225E9640BAF368DC39443EEB216D3C406BA15F527",
+      "model_metrics.csv": "43627228B5A4653338D11CF4A865D6826BFAB08958D62ED6E9A7977CBCCEEA3A",
+      "environment.json": "134538A40A200D5EDC723BF7CC92E7FBCDC738A6B11AFE127902CD1F9D28395B"
+    },
+    "checkpoint_hashes_csv": "model_checkpoint_hashes.csv",
+    "checkpoint_hashes_csv_sha256": "4BEB10D54DBACA3CC748C340300F61A51D33A94B4EE9ACFA4C7BBC687C9DA45D",
+    "checkpoint_count": 33,
+    "boundary": "Models, checkpoints, serialized predictions, metrics, train/development membership, and all pre-model chemistry artifacts remain frozen."
+  },
+  "formal_attribution": {
+    "device": "cpu",
+    "threads": 1,
+    "interop_threads": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "deterministic_algorithms": true,
+    "default_dtype": "torch.float32",
+    "integrated_gradients_steps": 32,
+    "score_serialization": "10 significant digits",
+    "ranking": "descending serialized absolute atom scores",
+    "tie_policy": "include every atom exactly tied at the serialized-score boundary",
+    "direction_strata_authority": "predictions.csv serialized deployment predictions",
+    "direction_numerical_tie_atol": 1e-06
+  },
+  "preflight_gate": {
+    "targets": [
+      "CHEMBL244_Ki",
+      "CHEMBL4792_Ki"
+    ],
+    "seeds": [
+      17,
+      43
+    ],
+    "independent_processes": 2,
+    "required_result": "All seven attribution/CRC artifacts byte-identical, attribution keys and serialized score arrays exact, CRC tables exact.",
+    "reason": "CHEMBL244_Ki has the largest selected panel and severe calibration clustering; CHEMBL4792_Ki contains the observed GPU sign instability and only three calibration components.",
+    "attempt_history": {
+      "unscored_operational_failure": "The first launch completed calculations but could not write because diagnostics/cpu_determinism_preflight/run1 did not exist; logs/cpu_determinism_preflight_run1.log is retained and this launch is not counted as either independent run.",
+      "corrective_action": "Created the exact run1 and run2 directories without changing attribution logic."
+    },
+    "observed_result": "PASS_EXACT",
+    "attribution_rows": 1652,
+    "crc_rows": 1008,
+    "artifact_sha256": {
+      "pair_attributions.csv": "3F139EF5E9557321BA377818D0659D79CAB5B3375FD6175072774E4882985A5C",
+      "crc_results.csv": "54AAB9A47218D4E76185E2DA16E3A7A478AC589812373B2A96C7D6A155A2CC25",
+      "crc_macro_summary.csv": "3B45E7B8D1EA6646BE7EB429B8925D8DADAF1EEAD70637551548DDC2FD4921F4",
+      "component_crc_feasibility.csv": "E3F8A2AE63A85E0BA745A0D22E8867F04B8F171C185D34A0BC3CDB120056DC05",
+      "near_zero_direction_instability.csv": "1D4D848D241E5B6608ECBE730906F81AB031E1AD6D255029317103DBC09A785E",
+      "summary.json": "DE5210D5805273844F123836803663952D9EA76618B9E5F40788D67A3CE75188",
+      "attribution_environment.json": "08730F76A0962E3EA65010A57C36F000AC73B4E5E4E9E7326D198EE1CB0DF671"
+    }
+  },
+  "full_run_gate": {
+    "independent_processes": 2,
+    "required_result": "All seven full attribution/CRC artifacts byte-identical with no tolerance and no output selection; run 1 is predesignated as canonical and run 2 is verification only.",
+    "failure_action": "STOP and report; do not tune or choose the better-looking run.",
+    "run1": "diagnostics/formal_cpu_reproducibility/run1",
+    "run2": "diagnostics/formal_cpu_reproducibility/run2",
+    "canonical_root_copy": "The root result files are the exact predesignated run-1 outputs.",
+    "observed_result": "PASS_EXACT",
+    "attribution_rows": 9012,
+    "crc_rows": 9576,
+    "artifact_sha256": {
+      "pair_attributions.csv": "488A0B98590BD10989B92607D5A282816910D096E9BEE94569C2233FAC3FDA4D",
+      "crc_results.csv": "179F580F3F74FF36A59F3059AEAB3878E71EEC833D375F7E68665DEC952CABF1",
+      "crc_macro_summary.csv": "E67462B399748501637342AA9145C4893985393E7C64044891D7E8CA96D3C5DB",
+      "component_crc_feasibility.csv": "78782BB07B52E7EA2A976BD6267518572DB08A54D9E2B8F03BEA1C5B427BC6A1",
+      "near_zero_direction_instability.csv": "1D4D848D241E5B6608ECBE730906F81AB031E1AD6D255029317103DBC09A785E",
+      "summary.json": "442863330BC3AE88749CD3CA72A8ACD58123F8DCCE4D8E7C1FA9894BCAA6682D",
+      "attribution_environment.json": "08730F76A0962E3EA65010A57C36F000AC73B4E5E4E9E7326D198EE1CB0DF671"
+    }
+  },
+  "historical_near_zero_instability": {
+    "pairs": 1,
+    "dataset": "CHEMBL4792_Ki",
+    "split": "test",
+    "pair_id": 23,
+    "seed": 17,
+    "prediction_table_delta": 0.0,
+    "gpu_checkpoint_delta": 4.76837158203125e-07,
+    "interpretation": "Numerically unstable, not robustly direction-correct."
+  },
+  "prior_code_sha256": {
+    "attribute_and_crc.py": "B08D68F8C3B9B0D78F3E91F646F1838E83139B9AF45391B95A3277FB7CAA4BF1",
+    "validate_a7.py": "CFDC029D3BFACE1E0ED330A5944FEF7A3F4CE8AA946791FB45DB5292849DD96B"
+  },
+  "current_code_sha256": {
+    "attribute_and_crc.py": "245E5800819785710CB7BC072C935528D9951B798C8772970947AC3D6B4D6734",
+    "validate_a7.py": "CBD14FC3AC178BDB7E3534965A3CDBB5313972617BD43F999EBDDAF4065CA67A"
+  },
+  "supporting_code_sha256": {
+    "build_cpu_determinism_preflight.py": "081149AF80021F92729C14452CB228A07430150BEF96962DFBD7BE9FF031F780",
+    "verify_attribution_reproducibility.py": "F36A23EAAADFEE9785ADD60E887FBC01830EBF7786B409EA92431EDE72B4B069",
+    "audit_gpu_attribution_instability.py": "6782C5555C68C4970FF7E2BC3AE8B480E8A8DB95D3FB0917A867B42D8C783826",
+    "make_checkpoint_hashes.py": "720AE06044B0EE524DBDE3274B2E3BFC9045476C13DD865ACA82F60653FCBEBD"
+  }
+}

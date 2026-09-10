@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "polaris/adme-fang-hclint-1",
+  "benchmark_md5sum": "42af137e8e493bd313071c720f26205c",
+  "dataset_artifact_id": "polaris/adme-fang-1",
+  "dataset_license": "CC-BY-4.0",
+  "dataset_source": "https://doi.org/10.1021/acs.jcim.3c00160",
+  "polaris_version": "0.13.0",
+  "target": "LOG_HLM_CLint",
+  "main_metric": "pearsonr",
+  "metrics": [
+    "explained_var",
+    "mean_absolute_error",
+    "mean_squared_error",
+    "pearsonr",
+    "r2",
+    "spearmanr"
+  ],
+  "n_train": 2229,
+  "n_test": 575,
+  "train_sha256": "8f2936a7ccf2d80110dff05bc9bf7ea115b076684e47e3c37d47fa09c4998f44",
+  "test_sha256": "60d55038d3d95ccb34a7be441ae1fbed7cb588e1d93c5843461f43aad98a1052",
+  "test_targets_accessed": false
+}

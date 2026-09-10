@@ -1,0 +1,27 @@
+{
+  "run_id": "RINGS-COUNT-CLASS-STRATIFIED-20260908",
+  "status": "FROZEN_BEFORE_RUN",
+  "reviewer_question": "Is the rings-count counterexample concentrated in negative-label molecules with nonempty supplied ring references, and how does the result change under a positive-class target?",
+  "full_test_surface": {
+    "source": "results/molecule_level_ig_seed42/molecules.csv.gz",
+    "cells": "rings-count, GIN and GCN, seed 42",
+    "target": "observed-class raw logit",
+    "method": "IG20",
+    "set_policy": "historical index_tiebreak_v1",
+    "calibration": "frozen full eligible calibration pool; no class-stratum recalibration",
+    "oracle": "task-level rationale-first oracle calibrated on all 4935 eligible calibration molecules",
+    "perturbation": "recorded zero-feature replacement versus one frozen equal-size random mask"
+  },
+  "matched_target_surface": {
+    "run_identity": "independent V8 fresh-attribution rerun on the frozen A5 identities and checkpoint; not a new independent molecule sample",
+    "sample": "A5 rings-count GIN seed-42 cache identities; 100 eligible calibration and 100 eligible test molecules",
+    "targets": ["observed_class", "positive_class"],
+    "methods": ["gradinput", "ig20"],
+    "set_policy": "include_all_exact_ties_v2",
+    "calibration": "each method-target is calibrated once on all 100 calibration molecules at alpha 0.10; fractions frozen before test stratification",
+    "oracle": "method-target-specific selected-count-schedule oracle, calibrated once on the same 100 calibration molecules",
+    "perturbation": "zero-feature replacement versus 20 deterministic equal-size random masks per molecule"
+  },
+  "negative_result_policy": "retain all positive, null, adverse and contradictory strata",
+  "boundaries": "descriptive conditional audit; no within-stratum CRC guarantee, population inference, chemical edit, causal importance or new independent confirmation"
+}

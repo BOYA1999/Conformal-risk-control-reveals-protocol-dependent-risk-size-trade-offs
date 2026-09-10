@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-04",
+  "status": "FROZEN_BEFORE_FORMAL_RUN",
+  "reason": "CPU smoke isolated a Windows scientific-runtime import-order conflict.",
+  "changes": [
+    "Import PyTorch before NumPy and pandas."
+  ],
+  "estimand_changed": false,
+  "formal_results_before_amendment": 0,
+  "final_script_sha256": "650E43B4E82D978F4FA8B99149DB0C80089D4FA6399C789FDC5AFEDC0F9A14A2",
+  "contract_sha256": "57F8F93A0255429D50A95B31CE232A679C7A222F45CDD690169D1631F7916496",
+  "smoke_status": "PASS_ONE_CELL"
+}

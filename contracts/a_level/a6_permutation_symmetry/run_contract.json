@@ -1,0 +1,37 @@
+{
+  "status": "FROZEN_BEFORE_RUN",
+  "reviewer_item": "A6",
+  "question": "Are model predictions, IG atom scores, and calibrated explanation sets stable when the same molecular graph is fully renumbered and attribution is recomputed?",
+  "analysis_role": "reviewer-driven graph permutation and symmetry audit",
+  "cells": "11 tasks x GIN/GCN x seed 42 = 22 historical predictor cells",
+  "sample": "first 25 test molecules in each pre-existing SHA-256-ordered nonempty-rationale score cache",
+  "permutations_per_molecule": 20,
+  "permutation_draw": "20 unique deterministic nonidentity node permutations per sampled molecule",
+  "expected_rows": {
+    "score_rows": 11000,
+    "policy_rows": 33000,
+    "policy_calibration_rows": 66
+  },
+  "attribution": "true-class signed Integrated Gradients with a zero baseline and 20 steps, recomputed after x, edge_index, and rationale_mask are fully permuted",
+  "mapping": "Every score and selected set is mapped back to the original atom identities before comparison.",
+  "set_policies": {
+    "index_tiebreak_v1": "historical top-ceil fraction with atom index as the tie breaker",
+    "include_all_exact_ties_v2": "include every atom tied at the kth-score boundary",
+    "rdkit_symmetry_orbit_closure_v3": "apply include-all-exact-ties and then include every atom in each selected RDKit graph-symmetry orbit"
+  },
+  "calibration": "Each set policy is independently recalibrated at alpha=0.10 on the original-orientation nonempty-rationale calibration cache for that cell.",
+  "same_run_reference": "The original-orientation and permuted IG scores are recomputed in the same execution and compared after mapping back. Historical cache scores are retained only as a separate numerical-consistency check and for policy calibration.",
+  "tie_measurement": "At each policy's own calibrated fraction, report the nominal atom count, exact-tie expansion for original and permuted orientations, and orbit-closure inflation relative to the tie-inclusive set evaluated at that same fraction.",
+  "provenance_resume": "A cell is reusable only when script, contract, imported partition code, task inputs, upstream cell, score cache, checkpoint, runtime versions, policies, sample size, permutation count, and run mode match; all row files must also have their expected counts.",
+  "symmetry_definition": "RDKit CanonicalRankAtoms with breakTies=false and includeChirality=true; interpreted only as graph-symmetry classes, not general physicochemical equivalence.",
+  "primary_observables": [
+    "mapped-back atom-score Spearman correlation",
+    "mapped-back calibrated-set Jaccard",
+    "logit drift and prediction flips",
+    "missed-rationale risk and retained fraction",
+    "symmetry-orbit split rate and orbit-closure size inflation"
+  ],
+  "existing_selector_check": "The separate 378,540-call cached-score selector audit is reused only as selector-level evidence and is not relabeled as re-attribution invariance.",
+  "interpretation_boundary": "The audit covers graph renumbering, two historical backbones, seed 42, and one attribution implementation. RDKit orbit closure is a sensitivity policy, not a claim that all orbit atoms are mechanistically interchangeable.",
+  "negative_result_policy": "All prediction flips, low-Jaccard cases, and size inflation are retained."
+}

@@ -1,0 +1,46 @@
+{
+  "status": "FROZEN_BEFORE_RUN",
+  "reviewer_item": "A5",
+  "questions": [
+    "How do true-class, positive-class, and deployment-available predicted-class atom rankings differ?",
+    "What risk-size behavior remains after a fit-only nonnull gate is placed before CRC?"
+  ],
+  "analysis_role": "reviewer-driven deployment-target and null-handling extension",
+  "cells": "11 tasks x 2 historical backbones x 3 model seeds = 66",
+  "checkpoints": "frozen historical GIN/GCN checkpoints",
+  "attribution_methods": [
+    "gradinput",
+    "integrated_gradients_20_steps"
+  ],
+  "target_modes": {
+    "true": "the observed class label; audit-only because it is unavailable at deployment",
+    "positive": "class-1 logit for every molecule",
+    "predicted": "argmax class frozen from the intact input before GradInput/IG computation and held fixed along the entire IG path"
+  },
+  "target_audit_sample": "the same at-most-100 nonempty-rationale molecules per official calibration/test split stored in each validated tie-inclusive score cache",
+  "set_policy": "include_all_exact_ties_v2",
+  "alpha": 0.1,
+  "fraction_grid": "0.00 to 1.00 inclusive by 0.01",
+  "null_gate": "fit-only StandardScaler followed by balanced logistic regression on frozen graph embeddings; target is |Y|>0; threshold fixed at 0.5; no calibration/test labels or features enter fitting",
+  "two_stage_explainer": "Gate-negative molecules receive an empty set. For gate-positive molecules, predicted-class GradInput scores are calibrated only on gate-positive, nonempty-rationale calibration cases.",
+  "fallback": "If fewer than 10 eligible calibration cases or no corrected candidate is feasible, emit the full graph for gate-positive molecules and mark deterministic_full_set_fallback; do not label that cell CRC-certified.",
+  "primary_two_stage_metrics": [
+    "null false-positive set rate",
+    "nonnull abstention rate",
+    "selective nonnull missed-rationale risk",
+    "overall nonnull risk with gate-negative nonnull molecules assigned loss 1",
+    "overall retained atom fraction",
+    "overall abstention rate"
+  ],
+  "target_metrics": [
+    "score Spearman and set Jaccard",
+    "target-specific calibrated risk and retained fraction",
+    "correct-versus-error risk-size strata",
+    "numerical equality of true and predicted scores when the prediction is correct"
+  ],
+  "same_run_target_audit": "True-, positive-, and predicted-class scores are recomputed in the same execution and batch regime. Historical score caches define the frozen sample and are checked separately for numerical consistency.",
+  "provenance_resume": "A cell is reusable only when script, contract, imported partition code, task inputs, upstream cell, score cache, checkpoint, runtime versions, alpha, grid, targets, methods, and run mode match; the per-molecule output must also be present with the expected row count.",
+  "smoke_isolation": "Smoke outputs are written only under a5_target_null/smoke and cannot satisfy or resume a full cell.",
+  "interpretation_boundary": "The two-stage experiment validates a concrete supervised gate on the studied benchmark distributions; it is not a universal detector of chemically meaningful rationales. Risk remains conditional on a nonempty formal reference mask. Mask-presence versus class-label agreement is reported because this target is identical to the class label in most benchmark tasks.",
+  "negative_result_policy": "All adverse, null, failed-gate, and misclassification strata are retained."
+}

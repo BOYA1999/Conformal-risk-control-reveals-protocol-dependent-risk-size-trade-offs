@@ -1,0 +1,42 @@
+{
+  "status": "FROZEN_BEFORE_RUN",
+  "reviewer_item": "A1/A7-statistical",
+  "question": "How do corrected CRC and the naive empirical selector behave under repeated mutually exclusive calibration/test redraws, and how do calibration size, task rationale prevalence, and predictor difficulty relate to the observed risk-size outcomes?",
+  "analysis_role": "reviewer-driven finite-pool repeated-split diagnostic",
+  "input": "validated tie-inclusive atom-score caches from <tie-inclusive-score-cache>",
+  "set_policy": "include_all_exact_ties_v2",
+  "cells": 66,
+  "methods": [
+    "gradinput",
+    "ig",
+    "saliency",
+    "atom_occlusion",
+    "gnnexplainer"
+  ],
+  "alpha": 0.1,
+  "fraction_grid": "0.00 to 1.00 inclusive by 0.01",
+  "pool": "The audited nonempty-rationale calibration and test score-cache rows are pooled within each predictor cell; n=200 except logic7 n=113.",
+  "calibration_fractions": [
+    0.125,
+    0.25,
+    0.5
+  ],
+  "split_rule": "For every cell and repeat, one seeded permutation creates a calibration prefix and its disjoint test complement. The same split is paired across all five methods.",
+  "repeats": 500,
+  "seed_rule": "2026090400 plus a SHA-256-derived cell offset plus repeat index",
+  "corrected_selector": "Smallest grid fraction satisfying (n*empirical calibration risk+1)/(n+1) <= 0.10.",
+  "naive_selector": "Smallest grid fraction satisfying empirical calibration risk <= 0.10.",
+  "primary_observables": [
+    "mean test missed-rationale risk",
+    "mean realized retained atom fraction"
+  ],
+  "diagnostic_observables": [
+    "test risk above alpha frequency",
+    "selected nominal fraction",
+    "fallback count",
+    "paired corrected-minus-naive differences"
+  ],
+  "task_covariates": "Rationale prevalence and test AUROC are read from the frozen full-grid cell outputs and related to task-macro diagnostic outcomes using descriptive Spearman correlations over 11 tasks.",
+  "interpretation_boundary": "Redraws reuse a finite, rationale-bearing, hash-selected pool and are statistically dependent across repeats. Violation frequency is descriptive and is not the estimand controlled by CRC. This experiment does not establish a new-population or molecule-wise guarantee.",
+  "negative_result_policy": "All adverse and null results are retained."
+}

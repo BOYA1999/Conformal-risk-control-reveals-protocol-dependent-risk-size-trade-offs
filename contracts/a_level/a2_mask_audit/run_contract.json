@@ -1,0 +1,126 @@
+{
+  "run_id": "jcim_a2_mask_audit_20260904",
+  "exp_id": "EXP-A2-MASK-AUDIT",
+  "reviewer_item": "A2",
+  "tier": "main_required_follow_up",
+  "status_at_freeze": "frozen_not_started",
+  "frozen_at": "2026-09-04T22:20:00+08:00",
+  "research_question": "Under the 66 frozen GIN/GCN predictors and their official held-out test splits, how does zeroing node features outside versus inside the reference atom mask change predictive behavior, and how sensitive are the Graph Attribution results to its multiple independent rationale channels?",
+  "null_hypothesis": "Rationale-only and complement-only feature-zeroing do not show a systematic predictive separation relative to the intact input, and Graph Attribution conclusions do not depend materially on the selected rationale-channel definition.",
+  "alternative_hypothesis": "Rationale-only feature-zeroing retains more predictive evidence than complement-only feature-zeroing, with materially similar conclusions across defensible Graph Attribution channel definitions.",
+  "baseline": {
+    "identity": "gradient_grid_main_20260809",
+    "root": "<project-root>/artifacts/experiment/gradient_grid_main",
+    "run_contract_sha256": "742C66B60F93C28B29A37392382007E2264DA1DCA73F0E56EA2B3568D2C8D211",
+    "manifest_sha256": "96B181DE35E20CADFEDB8FEDC6F39D01C5C47B0AAF79D1604824A3EFF4ADB383",
+    "checkpoint_count": 66,
+    "models": [
+      "gin",
+      "gcn"
+    ],
+    "seeds": [
+      42,
+      123,
+      2026
+    ],
+    "source_hashes": {
+      "src/run_gradient_grid.py": "5CE5AFA8E59CA6F7F8021B4D55FCCFE9A5DFA383349AE404BD196F195A5EB5E4",
+      "src/run_bxaic_probe.py": "DD7ED39D8D2F9F612343381C2C27A3EA25E5FA1C379450C75A13230682340F14",
+      "src/audit_graph_attribution.py": "F12F3F1D78DAA6D90AC7D1DDFC67D77A5DC94616A77922DE15F786EF17D7E67F"
+    }
+  },
+  "data": {
+    "families": {
+      "bxaic": {
+        "tasks": [
+          "B",
+          "P",
+          "X",
+          "indole",
+          "PAINS",
+          "rings-count",
+          "rings-max"
+        ],
+        "split": "split_0 == test",
+        "csv": "<project-root>/data/raw/bxaic/data.csv",
+        "csv_sha256": "14853568ECE75E5C5666C7190E6402CE8D24B3DD3DB171460E668C82C06344FC",
+        "sdf": "<project-root>/data/raw/bxaic/explanations.sdf",
+        "sdf_sha256": "83C86A6366AFF1DB12A3E439CEAB9A4F275508FAF1BEB5E1B8ADB261465E70AA"
+      },
+      "google": {
+        "tasks": [
+          "benzene",
+          "logic7",
+          "logic8",
+          "logic10"
+        ],
+        "split": "official *_traintest_indices.npz test_index",
+        "root": "<project-root>/reference/graph-attribution/data"
+      }
+    }
+  },
+  "intervention": {
+    "unchanged": [
+      "checkpoint weights",
+      "graph topology and edge_index",
+      "node count and batching",
+      "test membership and labels",
+      "evaluation threshold argmax"
+    ],
+    "conditions": {
+      "intact": "Use the original node-feature matrix.",
+      "rationale_only": "Keep features on masked nodes and replace every other node feature vector by zeros; retain all edges.",
+      "complement_only": "Replace masked-node feature vectors by zeros and keep all other node features; retain all edges."
+    },
+    "bxaic_mask": "Task-specific SDF atom-index property used by the frozen experiment.",
+    "google_masks": [
+      "historical_last_channel",
+      "union_of_all_channels",
+      "intersection_of_all_channels",
+      "each_independent_channel"
+    ]
+  },
+  "required_metrics": {
+    "classification": [
+      "auroc",
+      "auprc",
+      "accuracy"
+    ],
+    "paired_change_from_intact": [
+      "mean_true_class_logit_delta",
+      "median_true_class_logit_delta",
+      "mean_true_class_probability_delta",
+      "median_true_class_probability_delta",
+      "prediction_flip_rate"
+    ],
+    "google_channel_audit": [
+      "channel_count",
+      "mask_atom_count_and_fraction",
+      "last_union_intersection_overlap",
+      "each_channel_overlap",
+      "rationale_only_and_complement_only_prediction_sensitivity"
+    ]
+  },
+  "primary_analysis_unit": "predictor cell (family x task x architecture x seed)",
+  "aggregation": [
+    "cell",
+    "task",
+    "family",
+    "mask_definition"
+  ],
+  "outputs": [
+    "cell_metrics.csv",
+    "google_mask_definitions.csv",
+    "google_channel_masks.csv",
+    "google_channel_sensitivity.csv",
+    "summary.json",
+    "validation.json",
+    "input_manifest.json",
+    "output_manifest.json",
+    "run.log"
+  ],
+  "smoke_gate": "One B-XAIC and one Google cell must load, reproduce intact predictor metrics within numerical tolerance, and emit all required metric keys before the full run.",
+  "acceptance_gate": "All 66 checkpoints are evaluated; all required numeric metrics are finite when mathematically defined; official test counts match source indices; negative or contradictory results remain in the outputs; manifests and hashes validate.",
+  "stop_rule": "Stop rather than substitute data or retrain predictors if a checkpoint, official test split, rationale channel, or frozen source hash is missing or mismatched.",
+  "interpretation_boundary": "Node-feature zeroing leaves the molecular graph topology unchanged and does not produce a chemically valid counterfactual molecule. Results are computational perturbation sensitivity only, not causal sufficiency, necessity, mechanistic validation, or evidence that the masked structures are chemically realizable."
+}

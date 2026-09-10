@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN_BEFORE_RUN",
+  "reviewer_item": "A3",
+  "question": "Does the retrospective at-most-100-molecule matched subset reproduce the 66-cell full-grid IG and GradInput results closely enough to support subset-qualified five-method comparisons?",
+  "analysis_role": "reviewer-driven representativeness audit",
+  "historical_set_policy": "index_tiebreak_v1",
+  "comparability_guard": "Only historical full-grid and matched-subset outputs generated under index_tiebreak_v1 are compared; no tie-inclusive result enters this audit.",
+  "cells": 66,
+  "methods": [
+    "ig",
+    "gradinput"
+  ],
+  "primary_outcomes": [
+    "risk",
+    "atom_fraction"
+  ],
+  "secondary_outcomes": [
+    "precision",
+    "iou",
+    "selected_grid_fraction"
+  ],
+  "reference": "all rationale-bearing molecules in each frozen calibration and test split",
+  "candidate": "SHA-256-ordered subset capped at 100 rationale-bearing molecules per split",
+  "descriptive_checks": [
+    "Pearson and Spearman correlation across cells",
+    "mean and median absolute error and signed bias",
+    "risk-pass and efficiency-pass agreement",
+    "within-cell IG-versus-GradInput ordering agreement",
+    "family- and task-stratified summaries"
+  ],
+  "prespecified_support_rule": "For both methods and both primary outcomes, Spearman rho must be at least 0.80 and mean absolute error at most 0.05; risk-pass and efficiency-pass agreement must each be at least 0.90. This supports only subset-qualified conclusions and does not promote the retrospective experiment to an untouched primary analysis.",
+  "negative_result_policy": "All adverse, null, and family-specific findings are retained.",
+  "input_full_grid": "<project-root>/artifacts/experiment/gradient_grid_main/cells",
+  "input_subset": "<revision-root>/experiments/established_explainers_20260901/cells.csv"
+}

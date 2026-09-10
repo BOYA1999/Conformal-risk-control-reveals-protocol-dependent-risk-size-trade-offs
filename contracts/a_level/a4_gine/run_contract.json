@@ -1,0 +1,135 @@
+{
+  "run_id": "EXP-A4-BOND-AWARE-GINE-20260904",
+  "status": "frozen_preexecution_amended_002",
+  "frozen_at_local": "2026-09-04T22:20:00+08:00",
+  "last_amended_at_local": "2026-09-04T23:55:00+08:00",
+  "tier": "reviewer_required_retrospective_main",
+  "research_question": "Under the already frozen task and split contracts, does a modern bond-aware molecular GNN remain predictively competent, and what risk-size-localization behavior does true-class integrated gradients exhibit?",
+  "null_hypothesis": "The GINE extension does not provide a materially different predictor or explanation operating profile from the historical GIN/GCN cells under the available tasks.",
+  "alternative_hypothesis": "The GINE extension provides a different predictor and/or explanation operating profile on at least some observed tasks.",
+  "scope": {
+    "families": [
+      "bxaic",
+      "google"
+    ],
+    "tasks": [
+      "B",
+      "P",
+      "X",
+      "indole",
+      "PAINS",
+      "rings-count",
+      "rings-max",
+      "benzene",
+      "logic7",
+      "logic8",
+      "logic10"
+    ],
+    "seeds": [
+      42,
+      123,
+      2026
+    ],
+    "expected_cells": 33,
+    "alpha": 0.1,
+    "fraction_grid": "0.00, 0.01, ..., 1.00",
+    "surface": "reviewer-required retrospective extension"
+  },
+  "model": {
+    "name": "residual_gine",
+    "message_passing_layers": 4,
+    "hidden_channels": 128,
+    "residual_connections": true,
+    "convolution": "torch_geometric.nn.GINEConv",
+    "pooling": "global_add_pool",
+    "output_classes": 2,
+    "dropout": 0.0
+  },
+  "features": {
+    "preferred": "RDKit-derived 45-dimensional atom features and 17-dimensional directed-bond features",
+    "atom": [
+      "element one-hot over C,N,O,S,F,P,Cl,Br,Na,Ca,I,B,H,other",
+      "degree one-hot over 0,1,2,3,4,5,other",
+      "formal-charge one-hot over -2,-1,0,1,2,other",
+      "hybridization one-hot over SP,SP2,SP3,SP3D,SP3D2,other",
+      "total-H one-hot over 0,1,2,3,4,other",
+      "aromatic and ring indicators",
+      "chirality one-hot over unspecified,CW,CCW,other"
+    ],
+    "bond": [
+      "bond-type one-hot over SINGLE,DOUBLE,TRIPLE,AROMATIC,other",
+      "stereo one-hot over none,E,Z,any,other",
+      "conjugation and ring indicators",
+      "bond-direction one-hot over none,up,down,either,other"
+    ],
+    "google_mapping_gate": "For every molecule in all four Google tasks, RDKit reconstruction must exactly reproduce the official 14-way atom-type vectors, 5-way bond-type vectors, node count, directed edge count, and directed sender/receiver order before rich features are used.",
+    "bxaic_mapping_gate": "All retained B-XAIC SDF records must sanitize, preserve the CSV SMILES atom-symbol order, and have valid rationale indices. The one known source row 997 remains excluded exactly as in the frozen grid because its SMILES/RDKit valence is invalid.",
+    "fallback": "If either preferred-feature mapping gate fails, do not infer an atom correspondence. Record the failure and run GINE only with the source graph's official node and edge features where an exact mapping exists; if no exact bond mapping exists, stop A4 as blocked."
+  },
+  "split_contract": {
+    "bxaic": "Reuse split_0: train is divided into fit and deterministic hash-stratified dev (12.5% of each class); valid is calibration; test is test; source row 997 excluded.",
+    "google": "Reuse official train/test indices; official train is divided by the frozen mol_id hash into 70% fit, 10% dev, and 20% calibration within class; official test remains untouched.",
+    "test_use": "No test result may alter architecture, features, optimization, early stopping, or attribution settings."
+  },
+  "training": {
+    "sampler": "inverse-class-frequency WeightedRandomSampler with replacement over fit",
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "selection_metric": "dev AUROC",
+    "minimum_epochs": 10,
+    "early_stopping_patience": 5,
+    "minimum_auroc_improvement": 1e-05,
+    "gradient_clip_norm": 2.0,
+    "precision": "float32"
+  },
+  "attribution": {
+    "primary_method": "integrated gradients",
+    "steps": 20,
+    "baseline": "all-zero node-feature tensor with observed graph topology and bond features held fixed",
+    "score": "signed sum over node-feature integrated gradients",
+    "target": "true-class logit, matching the frozen historical grid",
+    "rationale_semantics": "Evaluation is conditional on nonempty source rationales. Nonempty rationales coincide with the positive class for B, P, X, indole, PAINS, rings-max, and the four Google tasks. In rings-count, 34,268 of 49,330 nonempty-rationale records have label 0, so true-class IG targets class 0 for those records. This run preserves the frozen true-class target and does not evaluate deployment-time target selection or null handling; positive-class and predicted-class alternatives are assigned to A5.",
+    "efficiency": "Only nonempty-rationale calibration/test graphs are differentiated because the primary loss discards null-rationale graphs; predictor metrics and null counts still use the complete partitions.",
+    "set_policy": "include every atom tied at the nominal top-fraction cutoff",
+    "primary_loss": "1 - fraction of rationale atoms recovered"
+  },
+  "required_metrics": [
+    "calibration and test AUROC",
+    "calibration and test AUPRC",
+    "test weighted F1",
+    "alpha=0.10 corrected CRC nominal fraction and realized retained fraction",
+    "test missed-rationale risk",
+    "test rationale precision",
+    "test rationale IoU",
+    "schedule-matched rationale-first oracle retained fraction and oracle excess",
+    "task-level deltas versus historical GIN and GCN predictor/IG cells"
+  ],
+  "historical_comparator": {
+    "source": "<project-root>/artifacts/experiment/gradient_grid_main/cells",
+    "identity": "frozen 3-layer hidden-32 GIN and GCN cells, seeds 42/123/2026",
+    "comparison_boundary": "GINE changes model capacity, residual architecture, node features, and bond features jointly, so deltas are an architecture-and-representation robustness comparison, not a causal bond-only ablation. Historical explanation cells used the earlier deterministic atom-index tie break; predictor metrics are directly comparable, while explanation deltas are descriptive and the tie-policy mismatch must be shown."
+  },
+  "oracle_definition": "For each molecule and fraction-grid point, first compute the number of atoms retained by the actual include-all-ties GINE score set. The oracle then places rationale atoms first while retaining exactly that molecule-specific number of atoms. Therefore oracle loss is pointwise no greater than actual loss on the identical per-molecule cardinality schedule; corrected CRC cannot select a later grid index for the oracle, and oracle capacity cannot exceed actual capacity. It is a best-case capacity lower bound, not a realizable or symmetry-consistent explainer.",
+  "acceptance_gate": [
+    "mapping audit PASS or an explicitly recorded conservative fallback",
+    "33 complete cells with exact contract/code hashes",
+    "all required metrics finite",
+    "all task/seed identities unique and split counts stable across seeds",
+    "one compressed ragged calibration/test score, rationale, source-index, and 101-point selected-count artifact per cell with exact contract/code hashes",
+    "schedule-matched oracle pointwise loss is no greater than actual loss and oracle capacity excess is nonnegative",
+    "raw mixed execution log preserved as attempt history and a separately validated authoritative log contains exactly 33 unique cells under only the final contract/code hashes",
+    "no omitted low-AUROC, high-risk, or otherwise negative cell",
+    "summary, validation, environment, logs, and SHA-256 manifest present"
+  ],
+  "stop_rule": "Stop on unresolved atom/edge mapping, split drift, non-finite metrics, fewer than 10 nonempty rationale examples in calibration, repeated resource failure, or any need to tune from test outcomes.",
+  "commands": {
+    "mapping_audit": "python run_gine.py --mode audit --project-root <project-root> --out-dir .",
+    "oracle_proof": "python run_gine.py --mode proof --project-root <project-root> --out-dir .",
+    "smoke": "python run_gine.py --mode smoke --project-root <project-root> --out-dir . --confirm RUN_A4_GINE_20260904",
+    "repair_existing_checkpoints": "python run_gine.py --mode repair --project-root <project-root> --out-dir . --confirm RUN_A4_GINE_20260904",
+    "full": "python run_gine.py --mode full --project-root <project-root> --out-dir . --confirm RUN_A4_GINE_20260904"
+  }
+}

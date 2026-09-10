@@ -1,0 +1,26 @@
+{
+  "polaris_benchmark": "polaris/adme-fang-hclint-1",
+  "polaris_dataset": "polaris/adme-fang-1",
+  "polaris_dataset_license": "CC-BY-4.0",
+  "polaris_dataset_source": "https://doi.org/10.1021/acs.jcim.3c00160",
+  "computational_adme": {
+    "repository": "https://github.com/molecularinformatics/Computational-ADME",
+    "commit": "b00df003de117ce9e5b381afd886095c5f2af2d5",
+    "license": "MIT"
+  },
+  "openadmet_models": {
+    "repository": "https://github.com/OpenADMET/openadmet-models",
+    "commit": "55dd001549885f8d8095af14733d61f36fc046c0",
+    "license": "Apache-2.0"
+  },
+  "optimus_prime": {
+    "repository": "https://github.com/OpenADMET/optimus-prime",
+    "commit": "7e095630c33c92b86914ccbcb31459ce3827309f",
+    "license": "Apache-2.0"
+  },
+  "chemeleon_checkpoint": {
+    "source": "https://zenodo.org/records/15460715/files/chemeleon_mp.pt",
+    "sha256": "c376624d3407204e780a0ed13a9ac097cc9bb1c13ef89cdbc633c1715c183651",
+    "bytes": 34859448
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "amendment": "01_pairs_before_model_training",
+  "date": "2026-09-04",
+  "reason": "The preliminary feasibility counts had no recoverable script. The auditable implementation was aligned molecule-by-molecule to reference-pipeline rdMMPA FragmentMol(maxCuts=1), and deterministic maximum-cardinality matching was then applied without count-based truncation.",
+  "status": "PASS",
+  "candidate_pairs": 2853,
+  "selected_molecule_disjoint_pairs": 1035,
+  "calibration_pairs": 559,
+  "test_pairs": 476,
+  "counts": {
+    "CHEMBL204_Ki": {
+      "calibration": 59,
+      "test": 40
+    },
+    "CHEMBL214_Ki": {
+      "calibration": 47,
+      "test": 31
+    },
+    "CHEMBL228_Ki": {
+      "calibration": 51,
+      "test": 34
+    },
+    "CHEMBL233_Ki": {
+      "calibration": 75,
+      "test": 52
+    },
+    "CHEMBL234_Ki": {
+      "calibration": 64,
+      "test": 35
+    },
+    "CHEMBL235_EC50": {
+      "calibration": 30,
+      "test": 29
+    },
+    "CHEMBL236_Ki": {
+      "calibration": 33,
+      "test": 32
+    },
+    "CHEMBL237_Ki": {
+      "calibration": 37,
+      "test": 43
+    },
+    "CHEMBL244_Ki": {
+      "calibration": 81,
+      "test": 109
+    },
+    "CHEMBL264_Ki": {
+      "calibration": 47,
+      "test": 27
+    },
+    "CHEMBL4792_Ki": {
+      "calibration": 35,
+      "test": 44
+    }
+  },
+  "minimum_per_target_split": 27,
+  "calibration_test_molecule_overlap": 0,
+  "within_target_split_molecule_reuse": 0,
+  "mapping_exclusions": 9,
+  "automorphism_truncations": 0,
+  "claim_boundary": "These are experimental SAR-linked transformation-site proxies, not causal or complete rationale ground truth."
+}

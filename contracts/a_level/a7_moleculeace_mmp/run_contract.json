@@ -1,0 +1,87 @@
+{
+  "run_id": "a7_moleculeace_mmp_20260904",
+  "status": "frozen_before_results",
+  "research_question": "Can calibration on molecule-disjoint experimental SAR-linked MMP transformation-site proxies control empirical missed-proxy risk for atom explanation sets on held-out activity-cliff pairs?",
+  "evidence_tier": "retrospective reviewer-requested external validation",
+  "proxy_boundary": "Experimental SAR-linked transformation-site proxy; not causal, complete, mechanistic, or expert ground truth.",
+  "source": {
+    "moleculeace_repo": "<moleculeace-repository>",
+    "moleculeace_commit": "7e6de0bd2968c56589c580f2a397f01c531ede26",
+    "moleculeace_code_license": "MIT",
+    "data_lineage": "MoleculeACE benchmark data derived from ChEMBL v29",
+    "data_license": "CC BY-SA 3.0",
+    "split_manifest": "<split-semantics-directory>/split_manifest.csv",
+    "split_manifest_sha256": "C71E0E2624AFFE872E368131517FA1A565B81520FED25F87CA4C64B53F83174F"
+  },
+  "targets": [
+    "CHEMBL204_Ki",
+    "CHEMBL214_Ki",
+    "CHEMBL228_Ki",
+    "CHEMBL233_Ki",
+    "CHEMBL234_Ki",
+    "CHEMBL235_EC50",
+    "CHEMBL236_Ki",
+    "CHEMBL237_Ki",
+    "CHEMBL244_Ki",
+    "CHEMBL264_Ki",
+    "CHEMBL4792_Ki"
+  ],
+  "split": {
+    "manifest_environment": "mmp_series",
+    "training_pool": "mmp_series/train only",
+    "development": "deterministic 80/20 split of training-only MMP/scaffold connected components",
+    "crc_calibration": "mmp_series/calibration exact-single-cut MMP cliff pairs",
+    "crc_test": "mmp_series/test exact-single-cut MMP cliff pairs",
+    "minimum_pairs_per_target_per_crc_split": 20,
+    "leakage_rule": "No canonical molecule may occur in both calibration and test; neither CRC split is used for model selection."
+  },
+  "mmp": {
+    "activity_cliff": "absolute measured pActivity difference > 1.0 and the frozen reference-pipeline MoleculeACE similarity rule (Morgan Tanimoto >= 0.9, generic-scaffold Tanimoto >= 0.9, or canonical-SMILES normalized Levenshtein similarity >= 0.9)",
+    "cut": "exactly one non-ring heavy-atom single bond",
+    "pair": "identical canonical attachment-labelled core and different variable fragments; a deterministic maximum-cardinality, maximum-weight graph matching makes molecules disjoint within each CRC split",
+    "ambiguity_resolution": "match the auditable reference-pipeline rdMMPA FragmentMol(maxCuts=1) rule: maximize fragment heavy atoms and break a size tie lexically; among pair mappings maximize common-core heavy atoms, and exclude incompatible tied mappings",
+    "main_proxy": "variable fragment plus core attachment atom on both molecules, then automorphism closure",
+    "sensitivities": [
+      "variable-only with automorphism closure",
+      "one-hop expansion of main proxy with automorphism closure"
+    ]
+  },
+  "predictor": {
+    "model": "bond-aware GINE regression",
+    "seeds_preferred": [
+      17,
+      29,
+      43
+    ],
+    "resource_fallback": "complete all 11 targets with seed 42 and report the limitation",
+    "selection_metric": "development RMSE",
+    "test_metrics": [
+      "RMSE",
+      "Spearman",
+      "pair-direction accuracy"
+    ]
+  },
+  "explanation": {
+    "estimand": "predicted potency difference f(A)-f(B)",
+    "candidate_domain": "disjoint union of atoms in A and B",
+    "methods": [
+      "integrated_gradients",
+      "atom_occlusion"
+    ],
+    "tie_policy": "include all atoms tied at the boundary",
+    "crc_alpha": 0.1
+  },
+  "required_outputs": [
+    "mmp_pairs.csv",
+    "mmp_pair_candidates.csv",
+    "mmp_mapping_exclusions.csv",
+    "mmp_mapping_audit.json",
+    "model_metrics.csv",
+    "pair_attributions.csv",
+    "crc_results.csv",
+    "summary.json",
+    "validation.md",
+    "environment.json",
+    "MANIFEST.sha256"
+  ]
+}

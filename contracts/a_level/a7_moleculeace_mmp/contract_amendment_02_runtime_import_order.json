@@ -1,0 +1,49 @@
+{
+  "amendment": "02_runtime_import_order_before_formal_training",
+  "date": "2026-09-04",
+  "status": "PASS",
+  "reason": "On this Windows runtime, importing NumPy/Pandas/scikit-learn before PyTorch 2.11 caused WinError 1114 while loading c10.dll. Importing torch and torch_geometric first resolves the loader conflict.",
+  "change": "Only module import order was changed in train_gine.py and attribute_and_crc.py; data, split, model, optimization, attribution, and CRC estimands are unchanged.",
+  "formal_run_contract_unchanged": {
+    "targets": 11,
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "cells": 33,
+    "epochs_max": 120,
+    "patience": 15,
+    "integrated_gradients_steps": 32,
+    "crc_alpha": 0.1
+  },
+  "sha256": {
+    "run_contract.json": "C466C755EB910745DC8E5748E9F4E85AE8EBB4925732C484C548D0D9E0FBAB4E",
+    "gine_model.py": "4E092A8AE61D6E17C2CCB41CADE1471B4D5FF636BE6DCC4DF5E5F94A2BCDEEF0",
+    "train_gine.py": "C5A66C990C433F59A0A7D16E4DE391CEA410D3E55C9BDEB83B7B4CD596570006",
+    "attribute_and_crc.py": "E6B30D0F647621595416BCAB828823C91A32CF1DD64DB3AB650CF26A583F36D6",
+    "smoke_a7.py": "9776DD13763B5F27C3334C0A12803731226B7849508A18694EB2CDEC8AB02541"
+  },
+  "runtime_import_smoke": {
+    "status": "PASS",
+    "torch": "2.11.0+cu128",
+    "torch_geometric": "2.5.0",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "sklearn": "1.8.0"
+  },
+  "cpu_end_to_end_smoke": {
+    "status": "PASS_NOT_ANALYTIC_EVIDENCE",
+    "target": "CHEMBL204_Ki",
+    "seed": 42,
+    "epochs": 1,
+    "ig_steps": 2,
+    "train_development_group_overlap": 0,
+    "attributed_pairs": 139,
+    "attribution_rows": 278,
+    "checkpoint_reproduction_max_absolute_error": 4.76837158203125e-07,
+    "batched_vs_sequential_ig_max_absolute_error": 2.3283064365386963e-09,
+    "include_all_ties": "PASS",
+    "note": "Smoke outputs are isolated under smoke_outputs and must not enter scientific summaries."
+  }
+}

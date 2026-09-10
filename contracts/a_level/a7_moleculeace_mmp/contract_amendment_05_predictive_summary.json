@@ -1,0 +1,52 @@
+{
+  "status": "FROZEN_POST_RUN_PREDICTIVE_SUMMARY_ADDITION",
+  "date": "2026-09-05",
+  "reason": "The formal activity-cliff predictor is an upstream validity boundary and its weak, heterogeneous performance must be visible in summary.json rather than only model_metrics.csv.",
+  "aggregation": "Equal-target macro mean after averaging three seeds within each of 11 targets.",
+  "frozen_values": {
+    "test_rmse": 1.2785090600845672,
+    "test_spearman": 0.237432325584645,
+    "test_pair_direction_accuracy": 0.48514529742181817
+  },
+  "frozen_extremes": {
+    "test_rmse": {
+      "lowest": {
+        "dataset": "CHEMBL235_EC50",
+        "value": 1.1312367730403956
+      },
+      "highest": {
+        "dataset": "CHEMBL244_Ki",
+        "value": 1.6597161414542352
+      }
+    },
+    "test_spearman": {
+      "lowest": {
+        "dataset": "CHEMBL235_EC50",
+        "value": -0.040997947266777
+      },
+      "highest": {
+        "dataset": "CHEMBL233_Ki",
+        "value": 0.39601009421639083
+      }
+    },
+    "test_pair_direction_accuracy": {
+      "lowest": {
+        "dataset": "CHEMBL204_Ki",
+        "value": 0.275
+      },
+      "highest": {
+        "dataset": "CHEMBL233_Ki",
+        "value": 0.6153846153846154
+      }
+    }
+  },
+  "scientific_boundary": "Weak and heterogeneous activity-cliff prediction limits downstream explanation interpretation. The amendment adds disclosure and independent validation only; it does not retrain, select, remove, or alter any model cell.",
+  "prior_code_sha256": {
+    "attribute_and_crc.py": "67AC0BF3334C5406195EA974A9FA99284D098F7E44A548129567F98BAC100F66",
+    "validate_a7.py": "BE54B3ABE3F5CE788D5EC80AED984963CB06BDD5F39263269798DBA3AD17F224"
+  },
+  "current_code_sha256": {
+    "attribute_and_crc.py": "B08D68F8C3B9B0D78F3E91F646F1838E83139B9AF45391B95A3277FB7CAA4BF1",
+    "validate_a7.py": "CFDC029D3BFACE1E0ED330A5944FEF7A3F4CE8AA946791FB45DB5292849DD96B"
+  }
+}
