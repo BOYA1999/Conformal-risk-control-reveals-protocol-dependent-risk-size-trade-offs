@@ -1,0 +1,5 @@
+method,target,fraction_difference_vs_A5,risk_difference_vs_A5,retained_difference_vs_A5
+gradinput,observed_class,0.0,0.0,0.0010560224089636305
+gradinput,positive_class,0.0,0.0,0.0
+ig20,observed_class,0.0,0.0,0.0002941176470587781
+ig20,positive_class,0.0,-0.0008333333333333387,0.0007310924369748895

@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "rule": "unweighted arithmetic mean fixed before evaluation",
+  "seed_scores": {
+    "42": {
+      "mean_squared_error": 0.1960888355526845,
+      "explained_var": 0.5162294776091287,
+      "pearsonr": 0.7259724535872957,
+      "mean_absolute_error": 0.3343690029652173,
+      "r2": 0.4951497918609752,
+      "spearmanr": 0.7292466929629507
+    },
+    "123": {
+      "mean_squared_error": 0.207173228599206,
+      "spearmanr": 0.7090542475864332,
+      "r2": 0.46661191962129,
+      "pearsonr": 0.6952045002715643,
+      "explained_var": 0.46682590496681753,
+      "mean_absolute_error": 0.34513248404347824
+    },
+    "2026": {
+      "spearmanr": 0.71934759576227,
+      "explained_var": 0.4982842723758997,
+      "mean_squared_error": 0.19527953329918077,
+      "pearsonr": 0.7186135863345611,
+      "r2": 0.49723342099762213,
+      "mean_absolute_error": 0.3336646093791304
+    }
+  },
+  "artifacts": {
+    "42": {
+      "model_sha256": "1dc26dbdb2d667a06329179da8c7ff63e8c1e00252b1b82bd730494712a629ac",
+      "predictions_sha256": "0911d8ebef58b59e74af3827d7edd0a96a446a7e53895ea26a8c7da720f54709",
+      "config_sha256": "b3c6f99211d54c4235699673d6d84d981caa9039cb124e26c417a9be7b013722",
+      "splits_sha256": "8c8608e68fd8dd6ea6bb64b2599ebb898edb8fb818df83f884fcc3b244fac285"
+    },
+    "123": {
+      "model_sha256": "fd96ad715369c8d69cf8dcb509dcfff9d32c1a40d4372b2f32397b220b3f576f",
+      "predictions_sha256": "70ae2e3b04fac84dad38e972fecb61c58881aad813f8f6f109696ceef84d83a6",
+      "config_sha256": "421f7bd0499b9c0de3f03b85023d9644e054bf3d9b7ba173e793be510736f22f",
+      "splits_sha256": "f87b97ee84deb86bbb090c3aedc104462f262b7625844ff310d5b5eb49c28d60"
+    },
+    "2026": {
+      "model_sha256": "a48fbb347e981e2e3b18e5b3225397d68633a7441661539be4843f23a1fa2349",
+      "predictions_sha256": "bb5848be4e423e821884ebc0720a3e4d9023eb272506499348a37446813e4d2f",
+      "config_sha256": "998740614b339a38d7eb2b4c6d34296710a8e9260c2c5a5eed8134998b64fa65",
+      "splits_sha256": "cc21bef3453b814395b6ebef7858f75c640c815f37a061c9a09a70382bdcb4cf"
+    }
+  },
+  "seed_mean": {
+    "mean_squared_error": 0.19951386581702377,
+    "explained_var": 0.4937798849839486,
+    "pearsonr": 0.713263513397807,
+    "mean_absolute_error": 0.3377220321292753,
+    "r2": 0.4863317108266291,
+    "spearmanr": 0.7192161787705514
+  },
+  "seed_sample_sd": {
+    "mean_squared_error": 0.006645533929353645,
+    "explained_var": 0.02500790628558508,
+    "pearsonr": 0.016066555266490604,
+    "mean_absolute_error": 0.0064272965359134775,
+    "r2": 0.01710958799858717,
+    "spearmanr": 0.010096864136463136
+  },
+  "results": {
+    "benchmark_artifact_id": "polaris/adme-fang-hclint-1",
+    "benchmark_name": null,
+    "benchmark_owner": null,
+    "results": [
+      {
+        "test_set": "test",
+        "target_label": "LOG_HLM_CLint",
+        "scores": {
+          "spearmanr": 0.7377262822786778,
+          "pearsonr": 0.7325225421906688,
+          "r2": 0.5258898337170989,
+          "mean_squared_error": 0.18414909795283754,
+          "mean_absolute_error": 0.3252032841802898,
+          "explained_var": 0.5299958035062919
+        }
+      }
+    ],
+    "name": null,
+    "description": "",
+    "tags": [],
+    "user_attributes": {},
+    "owner": null,
+    "polaris_version": "0.13.0",
+    "slug": null,
+    "github_url": null,
+    "paper_url": null,
+    "contributors": [],
+    "artifact_id": null,
+    "urn": null,
+    "version": 1
+  },
+  "ensemble_predictions_sha256": "b87dd521268d0e3955a99a36ed8ab95fc131032fde0629c7d6d8b830aea26a43",
+  "test_targets_accessed": false
+}

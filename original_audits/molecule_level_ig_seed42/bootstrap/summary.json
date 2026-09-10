@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "replicates": 2000,
+  "cells": 22,
+  "risk_point_pass_cells": 16,
+  "risk_ci_upper_pass_cells": 9,
+  "fidelity_positive_cells": 21,
+  "fidelity_holm_positive_cells": 21,
+  "boundary": "Bootstrap intervals and Holm results are descriptive support and do not replace preregistered gates."
+}

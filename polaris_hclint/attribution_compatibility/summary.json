@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "surface": "polaris_hidden_test_attribution_compatibility",
+  "model_sha256": "1dc26dbdb2d667a06329179da8c7ff63e8c1e00252b1b82bd730494712a629ac",
+  "n_molecules": 100,
+  "selection": "first molecules after SHA-256 ordering of test index and SMILES",
+  "ig_steps": 20,
+  "random_repeats": 20,
+  "mask_fraction": 0.2,
+  "mean_saliency_change": 0.4698210346698761,
+  "mean_ig_change": 0.5625438851118088,
+  "mean_random_change": 0.3147845358550549,
+  "mean_saliency_minus_random": 0.15503649881482126,
+  "saliency_minus_random_bootstrap_95ci": [
+    0.09428831226602198,
+    0.219269399691373
+  ],
+  "mean_ig_minus_random": 0.24775934925675394,
+  "ig_minus_random_bootstrap_95ci": [
+    0.177310534118861,
+    0.3202688831418752
+  ],
+  "saliency_win_fraction": 0.65,
+  "ig_win_fraction": 0.69,
+  "max_prediction_abs_diff": 3.393844605348306e-07,
+  "runtime_seconds": 14.530539100058377,
+  "test_targets_accessed": false,
+  "interpretation": "Computational compatibility and perturbation relevance only; Polaris HCLint has no atom rationale, so no missed-rationale CRC claim is made.",
+  "model_artifact": "Fine-tuned checkpoint not redistributed; SHA-256 retained in model_sha256."
+}

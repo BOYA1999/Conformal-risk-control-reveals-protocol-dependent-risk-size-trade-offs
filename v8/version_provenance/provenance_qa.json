@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Public P01-P19 provenance-map consistency",
+  "checks": {
+    "csv_rows": 19,
+    "unique_provenance_ids": 19,
+    "expected_ids_exactly_P01_through_P19": true,
+    "required_columns": 13,
+    "blank_required_fields": 0,
+    "canonical_artifacts_repository_relative": "19/19",
+    "p18_oracle_definitions_distinguished": true,
+    "p19_historical_and_matched_surfaces_distinguished": true,
+    "analysis_surfaces_distinguished": true
+  },
+  "gate": "PASS_PUBLIC_PROVENANCE_MAP",
+  "boundary": "This QA verifies the released provenance map only; it does not authorize submission or claim a remote deposit."
+}

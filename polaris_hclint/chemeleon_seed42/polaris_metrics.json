@@ -1,0 +1,33 @@
+{
+  "benchmark_artifact_id": "polaris/adme-fang-hclint-1",
+  "benchmark_name": null,
+  "benchmark_owner": null,
+  "results": [
+    {
+      "test_set": "test",
+      "target_label": "LOG_HLM_CLint",
+      "scores": {
+        "mean_squared_error": 0.1960888355526845,
+        "explained_var": 0.5162294776091287,
+        "pearsonr": 0.7259724535872957,
+        "mean_absolute_error": 0.3343690029652173,
+        "r2": 0.4951497918609752,
+        "spearmanr": 0.7292466929629507
+      }
+    }
+  ],
+  "name": null,
+  "description": "",
+  "tags": [],
+  "user_attributes": {},
+  "owner": null,
+  "polaris_version": "0.13.0",
+  "slug": null,
+  "github_url": null,
+  "paper_url": null,
+  "contributors": [],
+  "artifact_id": null,
+  "urn": null,
+  "version": 1,
+  "predictions_sha256": "0911d8ebef58b59e74af3827d7edd0a96a446a7e53895ea26a8c7da720f54709"
+}

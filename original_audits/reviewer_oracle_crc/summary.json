@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "primary_alpha": 0.1,
+  "efficiency_threshold": 0.8,
+  "n_tasks": 11,
+  "n_paired_cells": 132,
+  "all_explainer_fractions_at_least_oracle": true,
+  "by_explainer": {
+    "gradinput": {
+      "n_cells": 66,
+      "mean_oracle_atom_fraction": 0.2752375686846012,
+      "mean_explainer_atom_fraction": 0.65339975772489,
+      "mean_random_atom_fraction": 0.9079692713589056,
+      "mean_excess_atom_fraction": 0.378162189040289,
+      "mean_recoverable_efficiency": 0.3102187291432507,
+      "median_recoverable_efficiency": 0.010302093174067405,
+      "n_valid_recoverable_efficiency": 66,
+      "oracle_efficiency_pass_cells": 66,
+      "explainer_efficiency_pass_cells": 24
+    },
+    "ig": {
+      "n_cells": 66,
+      "mean_oracle_atom_fraction": 0.2752375686846012,
+      "mean_explainer_atom_fraction": 0.5941288037688911,
+      "mean_random_atom_fraction": 0.9079692713589056,
+      "mean_excess_atom_fraction": 0.31889123508429,
+      "mean_recoverable_efficiency": 0.41187609273814274,
+      "median_recoverable_efficiency": 0.2868051304563738,
+      "n_valid_recoverable_efficiency": 66,
+      "oracle_efficiency_pass_cells": 66,
+      "explainer_efficiency_pass_cells": 39
+    }
+  }
+}

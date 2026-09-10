@@ -1,0 +1,3 @@
+split,molecules,equality_count,mean_reference_fraction,mean_oracle_selected_fraction,mean_tie_extra_atoms,min_reference_atoms,max_reference_atoms,equality_rate
+test,512,512,0.5822173758435784,0.5822173758435784,14.375,11,28,1.0
+val,512,512,0.5926560066970491,0.592656006697049,14.369140625,11,25,1.0
