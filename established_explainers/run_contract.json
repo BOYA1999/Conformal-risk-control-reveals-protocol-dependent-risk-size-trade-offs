@@ -1,0 +1,16 @@
+{
+  "reviewer_item": "DEC-C2",
+  "surface": "post_rejection_official_split_matched_subset",
+  "methods": [
+    "gradinput",
+    "ig",
+    "saliency",
+    "atom_occlusion",
+    "gnnexplainer"
+  ],
+  "limit_per_split": 100,
+  "gnnexplainer_epochs": 100,
+  "selection": "rationale-bearing molecules ordered by SHA-256 of source index within each official calibration/test split",
+  "fixed": "original checkpoints, splits, rationale masks, CRC grid, alpha=0.10, risk and efficiency definitions",
+  "script_sha256": "D33CA71E34EBA8F2366A531457795516900A082DA4A9C2767B591EF83324A1A3"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS_WITH_STRUCTURAL_EXCEPTIONS",
+  "selection_rule": "Exact deterministic subset of whole train-only components nearest to 20%; ties favor the smaller development count and seeded component order.",
+  "cells": 33,
+  "group_overlap": 0,
+  "structural_exception_targets": [
+    "CHEMBL214_Ki",
+    "CHEMBL234_Ki"
+  ],
+  "CHEMBL214_Ki_boundary": "Development is 216/2091 (10.33%); model training retains one 1875-molecule component.",
+  "CHEMBL234_Ki_boundary": "Development is 92/2524 (3.65%); model training retains one 2432-molecule component.",
+  "interpretation": "Development-only early stopping is retained, but extreme component concentration weakens checkpoint selection for these targets; components are not split to manufacture a 20% development fraction."
+}
