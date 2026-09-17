@@ -1,0 +1,18 @@
+{
+  "analysis": "P22 / A01",
+  "original_plan_date": "2026-09-13",
+  "role": "Retrospective writing-facing grid sensitivity and four-method risk-size comparison",
+  "predictors": "66 original GIN/GCN checkpoints; 11 tasks; 2 backbones; seeds42,123,2026",
+  "data": "Original complete eligible calibration/test partitions and source atom order",
+  "methods": ["ig", "gradinput", "atom_occlusion", "saliency"],
+  "gradient_scoring": "Original fixed predictors; observed-class raw logit; signed IG20 with zero baseline and GradInput; original full-partition batching128/32 before selecting eligible records",
+  "added_methods": "P20 frozen occlusion/Saliency caches",
+  "grids": ["np.linspace(0,1,101) with floating-point ceil", "integer cardinality (q*m+99)//100 for q0..100"],
+  "tie_policy": "Original atom-index ordering",
+  "alphas": [0.05, 0.10, 0.20],
+  "paired_design": "Evaluate identical scores under both grids; preserve separate P01 historical-versus-reexecution comparison",
+  "acceptance": "66 identities;82866/81672 graph occurrences per method;input hashes and masks aligned;finite values;nested counts;nonincreasing loss;empty/full endpoints;first feasible selector;independent stored-score reconstruction",
+  "training": "none",
+  "transfer_boundary": "No raw molecules, scores or weights are included in this repository; acquire sources through their specified upstream routes, while original author-trained weights are not publicly distributed",
+  "adapter_boundary": "This portable contract preserves the recorded scientific conditions; the original plan and original runner hashes remain in the separate reviewer workspace. New runs retain their own source identities."
+}

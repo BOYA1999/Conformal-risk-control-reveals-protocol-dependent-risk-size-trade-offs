@@ -1,0 +1,54 @@
+{
+  "status": "PASS_FIGURE_4_5_NUMERICAL_SOURCE_RECONSTRUCTION",
+  "input_aggregates": [
+    {
+      "file": "results/protocol_figure/inputs/target_comparisons.csv",
+      "sha256": "fadd6e33a4e82bed3789f1368fbad2bc9d0e2bd346207a1218cd19eaacb9fe1b",
+      "same_bytes_as_original_figure_input": true
+    },
+    {
+      "file": "results/protocol_figure/inputs/set_family_task_macro.csv",
+      "sha256": "a9ba8fb3f1fde26bf1eb93a22588af353d8e626bf4367dfa1f6b493291a227d8",
+      "same_bytes_as_original_figure_input": true
+    },
+    {
+      "file": "results/protocol_figure/inputs/witness_cross_loss_family_macro.csv",
+      "sha256": "c22f64b77f9f6941c7c4de37c7e19a5652207d5090b3b67d1706e6e52733f5dc",
+      "same_bytes_as_original_figure_input": true
+    }
+  ],
+  "output_tables": [
+    {
+      "file": "fig4_interval_source.csv",
+      "rows": 2,
+      "sha256": "9d79e0cd4820160ef2ef1f29afeafd037309bff221ed7a711aac835782c58bad",
+      "byte_identical_to_figure_source": true
+    },
+    {
+      "file": "fig4_task_source.csv",
+      "rows": 66,
+      "sha256": "f3ae3c1b09337aa6d11d3223603df31b2577aa5051e97bfc8e89785f7833cc41",
+      "byte_identical_to_figure_source": true
+    },
+    {
+      "file": "fig5_reference_source.csv",
+      "rows": 4,
+      "sha256": "230789c3f9a95aeea9a2c49a128145840ea77f6bea0b753ce2575ce2d5b1b095",
+      "byte_identical_to_figure_source": true
+    },
+    {
+      "file": "fig5_set_family_source.csv",
+      "rows": 4,
+      "sha256": "19185a0e250a6c20ee41841cd7d207952b4dd9e90832d7219020e6646a7c3194",
+      "byte_identical_to_figure_source": true
+    },
+    {
+      "file": "fig5_target_source.csv",
+      "rows": 22,
+      "sha256": "88995551423c1813eff669a15ccb9d0243f092034b563fbfefea337192c2922e",
+      "byte_identical_to_figure_source": true
+    }
+  ],
+  "packaged_script_sha256": "e420ea2306e5e01f7486f774d796b66898ae9d24bb8a4a538dc0d668e5469087",
+  "boundary": "Structure-free cell/task summaries and actual figure-source CSVs; source provenance is kept separate across panels. No new attribution, image rendering, or raw-score replay is claimed."
+}

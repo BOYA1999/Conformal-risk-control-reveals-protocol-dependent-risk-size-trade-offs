@@ -1,0 +1,119 @@
+{
+  "status": "PASS_SELECTED_SUPPORTING_SUMMARIES",
+  "target_integration": {
+    "analysis_ids": [
+      "P15",
+      "P16",
+      "P17"
+    ],
+    "recorded_summarizer_sha256": "b2cc0bea53beb1a17a34f7bb54c112ce3d33afe43b66eec09357c761c849b21a",
+    "comparisons": [
+      {
+        "file": "comparison_task_macro.csv",
+        "rows": 13,
+        "expected_sha256": "914ec1a24fd09c5f877ce47279ed1447c80b56dfb206816346ef7f30a0a57539",
+        "actual_sha256": "914ec1a24fd09c5f877ce47279ed1447c80b56dfb206816346ef7f30a0a57539",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "comparisons_rank_defined.csv",
+        "rows": 143,
+        "expected_sha256": "a745826278815c9ff9fe49b73f177c1c3c070ae2880e7854a900e6ee12b9b0d5",
+        "actual_sha256": "a745826278815c9ff9fe49b73f177c1c3c070ae2880e7854a900e6ee12b9b0d5",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "completeness_monotonicity.csv",
+        "rows": 2,
+        "expected_sha256": "5d2523c53bd3916bfa3468edda0d91eafe6a9c19300fc6d327916259ef1753b8",
+        "actual_sha256": "5d2523c53bd3916bfa3468edda0d91eafe6a9c19300fc6d327916259ef1753b8",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "completeness_pooled.csv",
+        "rows": 12,
+        "expected_sha256": "f988ab313945271269ae422c11ece7526da33fe654fad6ffbb52f42f92e38e63",
+        "actual_sha256": "f988ab313945271269ae422c11ece7526da33fe654fad6ffbb52f42f92e38e63",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "family_macro.csv",
+        "rows": 28,
+        "expected_sha256": "210b0ed05f16bf7d16b6498b697db704733eaba33122cedf7f8970ba236384a5",
+        "actual_sha256": "210b0ed05f16bf7d16b6498b697db704733eaba33122cedf7f8970ba236384a5",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "perturbation_sign_summary.csv",
+        "rows": 8,
+        "expected_sha256": "78bf4b4843e1bee0ddfe7f65aa538c6f3177b6086d6242fe30dbe6d1ed197af0",
+        "actual_sha256": "78bf4b4843e1bee0ddfe7f65aa538c6f3177b6086d6242fe30dbe6d1ed197af0",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "perturbation_task_macro.csv",
+        "rows": 8,
+        "expected_sha256": "d43b1a0fa7bacfab5e14a0bd0f922d2f5c53e7ca9df4c4bbe4a6361f7be80cf0",
+        "actual_sha256": "d43b1a0fa7bacfab5e14a0bd0f922d2f5c53e7ca9df4c4bbe4a6361f7be80cf0",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "risk_pass_counts.csv",
+        "rows": 14,
+        "expected_sha256": "dad3b7b817f6f972ee7e6b7719aecf31b52b8a4a747c4532405f2b4bceefd2fa",
+        "actual_sha256": "dad3b7b817f6f972ee7e6b7719aecf31b52b8a4a747c4532405f2b4bceefd2fa",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "task_macro.csv",
+        "rows": 14,
+        "expected_sha256": "f9a355e73ba72c3085c8548f4200074567c11483b788384b2e51aa8ca30b9c95",
+        "actual_sha256": "f9a355e73ba72c3085c8548f4200074567c11483b788384b2e51aa8ca30b9c95",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      }
+    ],
+    "boundary": "Original descriptive summarizer executed on a working copy of original cell/molecule records. This is not an independent new attribution, reference audit, or replay of the historical validator."
+  },
+  "pharmacophore": {
+    "analysis_id": "P18",
+    "packaged_runner_sha256": "d3d4ec7717de8f27ab58acce825782626000a5aeefe6992f1de1bbc1e3eb29d4",
+    "checks": {
+      "binary_reference_scores_only": true,
+      "calibration_rows_512": true,
+      "reference_return_calibrated_index_is_first_nonempty_grid_point": true,
+      "schedule_matched_oracle_proofs_pass": true,
+      "selected_mask_equals_reference_mask_all_1024": true,
+      "source_summary_reconstructed_within_1e_12": true,
+      "source_test_oracle_selected_counts_exact": true,
+      "test_rows_512": true
+    },
+    "comparisons": [
+      {
+        "file": "reference_return_summary.csv",
+        "rows": 2,
+        "expected_sha256": "06a63a9d5490834ca4e8d5ff274965832ca00c523e4315f9e345df3037f33ef8",
+        "actual_sha256": "06a63a9d5490834ca4e8d5ff274965832ca00c523e4315f9e345df3037f33ef8",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "schedule_matched_capacity_oracle_summary.csv",
+        "rows": 3,
+        "expected_sha256": "29ca0cea6554e1fd00ec6bce3bd270c74468b10d561b3bbbba41e99b002164d2",
+        "actual_sha256": "29ca0cea6554e1fd00ec6bce3bd270c74468b10d561b3bbbba41e99b002164d2",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      }
+    ],
+    "boundary": "Reference-return and schedule-matched capacity outputs reconstructed from recorded attribution and selected-set numerical records, not a new neural attribution run."
+  }
+}

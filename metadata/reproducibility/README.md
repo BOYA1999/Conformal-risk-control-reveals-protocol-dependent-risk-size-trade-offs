@@ -1,0 +1,27 @@
+# Three levels of reproducibility
+
+Analysis freeze: 2026-09-13. This metadata describes the version-matched public package and the boundaries of non-public verification artifacts. Original author-trained weights and detailed molecule-level outputs are not included, and no public checkpoint link is asserted where none exists.
+
+| Level | Question | Recorded evidence and executable route | Remaining access or scope boundary |
+|---|---|---|---|
+| 1. Recorded-output reconstruction | Can stored scores and molecule statistics regenerate reported estimates and intervals? | P20's 66 stored score files and original cell/subset records; P21's 96 score files; `scripts/reproducibility/rebuild_recorded_outputs.py`. P22 includes 66 new fixed-checkpoint gradient caches and complete paired-grid curves, independently reconstructed by its separate evaluator. Original primary point estimates remain in retained records. The symmetric task and Liver correction scripts reconstruct their revision summaries. | These detailed inputs are not publicly distributed. Public cell means alone cannot reconstruct molecule-bootstrap intervals. P22's re-executed gradients are not relabelled as the historical P01 score arrays. |
+| 2. Fixed-checkpoint attribution replay | Can the same fitted predictor generate the explanation scores again? | `checkpoints.csv` identifies 66 original GIN/GCN weights, six Liver weights and the public K4_2ar GCN. Original P20 sampled solo-score checks and the fixed public pharmacophore reconstruction are recorded separately. Full P20 source/score checks use the documented external input layout. | A checkpoint hash alone is insufficient: author-trained weights currently have only local prepared access. Raw-source acquisition is also required for a model rerun. P20's sampled score checks are not a full independent attribution rerun. P21 raw and derived source terms remain unresolved for external transfer. |
+| 3. Fresh-training sensitivity | Does the specified training protocol reproduce the main qualitative findings? | `scripts/reproduce_primary.py` trains from pinned public sources. The reported clean reconstruction trained 66 new models and evaluated original full-grid gradients and the matched five-method subset. | New weights define a new run. The reported maximum retained-fraction changes were 0.237 for full-grid IG and 0.333 for subset GNNExplainer. This does not establish exact original sets, all rankings, or fresh-training stability of every later extension. |
+
+## Metadata files
+
+- `checkpoints.csv`: file name, SHA-256, byte count, role, origin, training-data source and external-workspace relative path for 73 checkpoint files. Names identify model configurations, not molecular subjects. `public_package_contains_weight` is false for every row.
+- `checkpoint_identity_validation.json`: the 72 author-trained weight hashes match the original per-cell checkpoint hashes. This confirms file identity only; the remaining checkpoint is the separately pinned public pharmacophore model.
+- `analysis_dependencies.csv`: claim/analysis-to-input/output mapping. Paths are relative to this repository or to an external `molxai-work` directory as marked.
+- `adapter_lineage.json`: recorded and packaged script hashes and actual portability-check outcomes. A path adapter must not silently replace the recorded source identity.
+- `recorded_reconstruction.json`: actual P20/P21 metric and interval reconstruction differences.
+- `supporting_reconstruction.json`: the nine original target/integration summary CSVs and two pharmacophore reference/capacity CSVs rebuilt from local recorded numerical inputs. Their byte identity is a stored-output reconstruction result, not a new attribution run.
+- `figure45_source_reconstruction.json`: five actual Figure 4/5 numerical tables reconstructed byte-for-byte using included structure-free task/cell summaries. Figure 4 sources are under `results/task_symmetry/figure_sources/`; Figure 5 sources and their recorded aggregate inputs are under `results/protocol_figure/`. The corresponding entry point is `scripts/reproducibility/rebuild_fig4_fig5_sources.py`; no rendered manuscript figures are packaged.
+
+## Source terms and actual access
+
+B-XAIC's pinned dataset card declares CC BY-SA 4.0. Its code repository's MIT licence does not replace the dataset licence. Graph Attribution's repository is Apache-2.0, with any underlying collection terms retained. The frozen pharmacophore data/checkpoint card declares CC BY 4.0. MolRep's repository states CC BY-NC-ND 4.0; no distinct licence for the linked Liver files was identified. See `DATA_SOURCES.md` for source URLs, frozen revisions and input checksums.
+
+The omission of author-trained weights is the chosen release scope, not a claimed blanket legal prohibition. No new licence is assigned here to learned weights or molecule-level derivatives. In particular, local verification does not establish permission to transfer Liver-derived files externally. Any delivery route and necessary source permission must be resolved before describing non-public files as externally available. The public pharmacophore checkpoint already has its pinned upstream source route.
+
+Repository-authored code and documentation use the root MIT licence. Source-derived aggregates retain the source conditions and are not relicensed under MIT. Newly generated review metadata does not erase those conditions.

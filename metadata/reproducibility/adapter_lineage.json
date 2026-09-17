@@ -1,0 +1,227 @@
+{
+  "status": "PASS_PORTABLE_ADAPTER_OUTPUTS",
+  "analyses": [
+    {
+      "analysis": "task_symmetry",
+      "recorded_runner_sha256": "404d8621dcc6ca1d5f6c778109ce3e67f7911a3d3a9dadbf2d2707d7b0160f01",
+      "packaged_runner_sha256": "3e0223b8e36574f4482fa5b8ec4ac661076651f5f9f0b434965b775f0f045ced",
+      "difference": "Portable input/output setup only; scientific calculations unchanged.",
+      "validation": "PASS",
+      "public_csv_comparisons": [
+        {
+          "file": "paired_summary.csv",
+          "sha256": "05b525e93f2ee4c25854a5b8b8a6fe99c5ca23425a3ea169a43d1f55c82a23b4",
+          "byte_identical": true
+        },
+        {
+          "file": "paired_task_differences.csv",
+          "sha256": "d1b2543664c6438d56cb26ca5e61f2b4ac2f9351f92df180dd8c9db3353786a9",
+          "byte_identical": true
+        },
+        {
+          "file": "summary.csv",
+          "sha256": "8675f9a60008fbccf9a5378a91f59d2732f6e1b0b109c2981127c62c810e6701",
+          "byte_identical": true
+        },
+        {
+          "file": "task_means.csv",
+          "sha256": "29bb57dd3c045118928d40b55e6ed2aa3f920662ee9d569b01de374523815bb3",
+          "byte_identical": true
+        }
+      ]
+    },
+    {
+      "analysis": "liver_calibration",
+      "recorded_runner_sha256": "f631772fcad9bf4cb5b189ab2d5c46eeabaf853ae63e62a072a66a1f535e4a9b",
+      "packaged_runner_sha256": "380b2608027d7fedfe9452c4fe4a59ee159b6e79eeb51c6a34b671641ed47086",
+      "difference": "Portable input/output setup only; scientific calculations unchanged.",
+      "validation": "PASS",
+      "public_csv_comparisons": [
+        {
+          "file": "cell_metrics.csv",
+          "sha256": "b70634366d839613ef8b0c09bf4380865eee7b22ff2cc633ca2c359b893b705b",
+          "byte_identical": true
+        },
+        {
+          "file": "paired_cells.csv",
+          "sha256": "a8e7b0971cb0d3f002647bed8b110f11bee086abf4de4222255f80d2c934d5ed",
+          "byte_identical": true
+        },
+        {
+          "file": "primary_table.csv",
+          "sha256": "12abe9f0fbd8971b1eb81f31e65292aee3059c0c22f5a6274f497c5edec8f05a",
+          "byte_identical": true
+        },
+        {
+          "file": "summary.csv",
+          "sha256": "b5a6d542127fecc1bf21697ef08281394a1c560b0408e1db99fd232fc8f41925",
+          "byte_identical": true
+        }
+      ]
+    },
+    {
+      "analysis": "grid_sensitivity",
+      "script_lineage": {
+        "run_grid.py": {
+          "recorded_sha256": "96d8addff4ecb1455bf7810f5fa3def17cf2a076dcfcc0fa171ca6a5d8af9190",
+          "packaged_sha256": "5196e0093ad00ae3b4fbadf6d6ddb42769223efcd4a4e7e96cf2de1bdc0ca725"
+        },
+        "validate_and_summarize.py": {
+          "recorded_sha256": "8e6aa1004873de0fc2abfaf68b25c2a01856bc5d7baae0ef5e0f0f082b5e21a3",
+          "packaged_sha256": "b01ad90a061bf62b438d627e67fe5c4f023f2fb7d5451b843bfedc1c725b6168"
+        }
+      },
+      "difference": "Portable source and external-output setup. Validator preserves the original recorded runner identity. Packaged scoring runner adds a same-runner resume guard and records its own source copy.",
+      "validation": "PASS_RECORDED_SCORE_RECONSTRUCTION",
+      "cells": 66,
+      "curve_rows": 106656,
+      "operating_points": 1584,
+      "maximum_curve_difference": 1.1102230246251565e-16,
+      "packaged_full_attribution_scoring_rerun": false,
+      "public_csv_comparisons": [
+        {
+          "file": "cardinality_counts.csv",
+          "rows": 132,
+          "expected_sha256": "c1586fac53d0e425b3b25d8f50ae1f9f8ba5989d611a4effded5acdc0d37658a",
+          "actual_sha256": "c1586fac53d0e425b3b25d8f50ae1f9f8ba5989d611a4effded5acdc0d37658a",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "curve_summary.csv",
+          "rows": 1616,
+          "expected_sha256": "b3a934d57cc277d338062b86791a2ad00021865ddb33b6706a26fc6ad10e4927",
+          "actual_sha256": "b3a934d57cc277d338062b86791a2ad00021865ddb33b6706a26fc6ad10e4927",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "curves.csv",
+          "rows": 106656,
+          "expected_sha256": "80f610b66c7b1c0c3c349a43219d57e995664c9bada43a75f843f20dd5c271d2",
+          "actual_sha256": "80f610b66c7b1c0c3c349a43219d57e995664c9bada43a75f843f20dd5c271d2",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "family_summary.csv",
+          "rows": 48,
+          "expected_sha256": "46bde84f62072bcc2482806b1b8da57febbfac20d0f0f25e113b6fa857cf784e",
+          "actual_sha256": "46bde84f62072bcc2482806b1b8da57febbfac20d0f0f25e113b6fa857cf784e",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "grid_effect_cells.csv",
+          "rows": 2376,
+          "expected_sha256": "3505fa4bf8dafd7deecccb0c0bd32e7cb3f5bab47f97fcdc0ddb485ed9247b33",
+          "actual_sha256": "3505fa4bf8dafd7deecccb0c0bd32e7cb3f5bab47f97fcdc0ddb485ed9247b33",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "grid_effect_summary.csv",
+          "rows": 36,
+          "expected_sha256": "1752b3012f943ee3cadebd234a597717aaa576e99404a2ccd754aeeade510ee8",
+          "actual_sha256": "1752b3012f943ee3cadebd234a597717aaa576e99404a2ccd754aeeade510ee8",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "historical_points.csv",
+          "rows": 792,
+          "expected_sha256": "8d48008e1f5db7b0422ab8d923ef81716cb3e6c6a959df55d9fbceb6dd85f266",
+          "actual_sha256": "8d48008e1f5db7b0422ab8d923ef81716cb3e6c6a959df55d9fbceb6dd85f266",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "historical_replay.csv",
+          "rows": 792,
+          "expected_sha256": "27e75e9f2aabe6db98782e2edc199f13b368262e1ba23a1c2afc9fa1a0c6e44d",
+          "actual_sha256": "27e75e9f2aabe6db98782e2edc199f13b368262e1ba23a1c2afc9fa1a0c6e44d",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "historical_replay_summary.csv",
+          "rows": 12,
+          "expected_sha256": "bd2cef6cee10d16cd903118fd44c5b5e54810492074a38c2a4b1f81b18401be6",
+          "actual_sha256": "bd2cef6cee10d16cd903118fd44c5b5e54810492074a38c2a4b1f81b18401be6",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "method_order_grid.csv",
+          "rows": 72,
+          "expected_sha256": "fc2af6a374e985760c30b56ad6bb945c91210d639228003c894a347a62eb0db7",
+          "actual_sha256": "fc2af6a374e985760c30b56ad6bb945c91210d639228003c894a347a62eb0db7",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "method_summary.csv",
+          "rows": 24,
+          "expected_sha256": "42ca62a5a6957e1ae6863db7a37ff9fbc3d5596ba256b1cdb828188536c6a26d",
+          "actual_sha256": "42ca62a5a6957e1ae6863db7a37ff9fbc3d5596ba256b1cdb828188536c6a26d",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "operating_points.csv",
+          "rows": 1584,
+          "expected_sha256": "6cc50891e985fd0e8d7520fe4952993e983e84b123a79ee03674a89f59b2f2b8",
+          "actual_sha256": "6cc50891e985fd0e8d7520fe4952993e983e84b123a79ee03674a89f59b2f2b8",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "paired_method_comparisons.csv",
+          "rows": 144,
+          "expected_sha256": "e70d057aeff887d4fcac6f8f4ef1217b5d141f640f3e1d142415ccdd34fd32af",
+          "actual_sha256": "e70d057aeff887d4fcac6f8f4ef1217b5d141f640f3e1d142415ccdd34fd32af",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "task_summary.csv",
+          "rows": 264,
+          "expected_sha256": "7ef1f4c8b26b5f073c64e1df7e736eade207cc48d2a5468ab1117270b3fb4c5a",
+          "actual_sha256": "7ef1f4c8b26b5f073c64e1df7e736eade207cc48d2a5468ab1117270b3fb4c5a",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        },
+        {
+          "file": "threshold_counts.csv",
+          "rows": 120,
+          "expected_sha256": "685c35166d89104555d30401c7bcac42a0c93980e80c5be9be5eb2d656af6ef3",
+          "actual_sha256": "685c35166d89104555d30401c7bcac42a0c93980e80c5be9be5eb2d656af6ef3",
+          "byte_identical": true,
+          "maximum_numeric_difference": 0.0
+        }
+      ]
+    }
+  ],
+  "figure_source_reconstruction": {
+    "script_sha256": "bd96faedae7bdbb6a202da15b0011cb9df1bae6a64e0af2f872793a57bd0ccb6",
+    "comparisons": [
+      {
+        "file": "fig3_curve_source.csv",
+        "rows": 1212,
+        "expected_sha256": "4e40ac06546b6778fe74b45651fcff031467c4cc1994547d190be087bad13096",
+        "actual_sha256": "4e40ac06546b6778fe74b45651fcff031467c4cc1994547d190be087bad13096",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      },
+      {
+        "file": "fig3_point_source.csv",
+        "rows": 36,
+        "expected_sha256": "7a37569d58b8cd34640bde43ef1644df06e28fd5747c7494b77e97191c0bad54",
+        "actual_sha256": "7a37569d58b8cd34640bde43ef1644df06e28fd5747c7494b77e97191c0bad54",
+        "byte_identical": true,
+        "maximum_numeric_difference": 0.0
+      }
+    ],
+    "boundary": "Task-macro CSV reconstruction only; no image rendering was performed by this entry point."
+  }
+}

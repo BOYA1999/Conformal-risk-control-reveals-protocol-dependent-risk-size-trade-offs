@@ -1,0 +1,439 @@
+{
+  "status": "PASS_ORIGINAL_CHECKPOINT_IDENTITIES",
+  "author_trained_checkpoints": 72,
+  "checks": [
+    {
+      "family": "primary",
+      "cell_id": "bxaic__B__gcn__seed123",
+      "checkpoint_sha256": "03eb92005b0d671a4f4d31298f89e633037df44fbb666be8cf9c8fe996aec9b6",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__B__gcn__seed2026",
+      "checkpoint_sha256": "4a4917d2d59e1fa788282f70888546b4f6622265e3f13ab4ada2e75a99c47cb8",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__B__gcn__seed42",
+      "checkpoint_sha256": "ee960b1b1b00ab4d515e75b0a8a68dd880d1a2940788df7a471b6c2205d49d88",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__B__gin__seed123",
+      "checkpoint_sha256": "8c4bb64554d63dc9ee225bbf9234dd4a4b4c8015492407942c748b4ab8e42358",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__B__gin__seed2026",
+      "checkpoint_sha256": "316016a8d6d81ea40ec4771366ec97432d34e921e393a4a2e4b9ad2331615973",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__B__gin__seed42",
+      "checkpoint_sha256": "ce15c307c3cce66eebeaa43fb80c91e7a33bc23324efcf083d92a29c53272884",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__indole__gcn__seed123",
+      "checkpoint_sha256": "d91e2b166ee1b5268eccbb0073fce9369695a8ba38a36d6a74b3da997231dd5a",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__indole__gcn__seed2026",
+      "checkpoint_sha256": "35052f02b2ef81901b4e07972e64ea7ea9e77b8a7bd6b4ede5cd5503900504b3",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__indole__gcn__seed42",
+      "checkpoint_sha256": "02e4725afcfd9045e3a78627104149426d65a33391566abdada1410d81399512",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__indole__gin__seed123",
+      "checkpoint_sha256": "d23a75548ab873f311606e4fb6f89b4eac499ec5ea9d6969bf017671b0e0cebe",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__indole__gin__seed2026",
+      "checkpoint_sha256": "35eacb90864a3e7a7674333873beb8e58d9266896b8d806d8c2161aeaa112da8",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__indole__gin__seed42",
+      "checkpoint_sha256": "36aa8ad3713bd91a7842513ce6bc24f74a475449b1cd0a9514f3344e9df3159e",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__P__gcn__seed123",
+      "checkpoint_sha256": "abf2c603d7211664b2969df62896e55dc7349eec61af91b5c28f1eb6514cdf2b",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__P__gcn__seed2026",
+      "checkpoint_sha256": "781b60801b6973f449c7587249111be81324efe05019cee560ed00d26170aed3",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__P__gcn__seed42",
+      "checkpoint_sha256": "14de2a34c80d87ccff9ba80372907c9cd1fa8440e44263038d5cfbcd7f6cc5be",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__P__gin__seed123",
+      "checkpoint_sha256": "bdeb28d280d97b7ec28d07d9db72b01430dbc4f251832ec83f9f07cd7d3ef3e0",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__P__gin__seed2026",
+      "checkpoint_sha256": "623d9cd61443975bb7b2d185286976e1106719d2f4df5054cb4e546dfdf83b8c",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__P__gin__seed42",
+      "checkpoint_sha256": "07ddbcb495d3d41cf69f6817532fe00ce489faa036fd222afeb2704fcd807487",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__PAINS__gcn__seed123",
+      "checkpoint_sha256": "baf08635efc60ab0d7bfa5bb732c65ba6f814bf8a3b7bbca5842b9822e51293b",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__PAINS__gcn__seed2026",
+      "checkpoint_sha256": "b762340ef08be7dfdaa3d41f9855f82a0f8297abd9c632ddd37d56b0e06cb446",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__PAINS__gcn__seed42",
+      "checkpoint_sha256": "89422a815aaa2dfffdb8a7bc1aaf77d5f052f6d61e0585b00bb2f938dc9a4e29",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__PAINS__gin__seed123",
+      "checkpoint_sha256": "60a59136a10d811e6dd22caf183646774ec88d9b24cf21b7c7b9dddf479dd595",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__PAINS__gin__seed2026",
+      "checkpoint_sha256": "9b40df5e49e39317c13f2c42d9860c2292931250d3f834bf4f958f3ead920e23",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__PAINS__gin__seed42",
+      "checkpoint_sha256": "2d48f87c39ea43aed5fca4c6c9fea331d6788262788d3cc2a6b7e7d9e63276af",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-count__gcn__seed123",
+      "checkpoint_sha256": "005f3261a3ccfbdc20171ce694666944dd242409051913bb9f07a18f6bd2b526",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-count__gcn__seed2026",
+      "checkpoint_sha256": "a49d8a3f49ea28d7df64bac6dcae7f215fe8076f3e631d685b50d6b118d8c7ed",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-count__gcn__seed42",
+      "checkpoint_sha256": "c089a5a9f9fd46590bf3415515340598d6476d0b0ca375a3af5a2215e5fff3af",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-count__gin__seed123",
+      "checkpoint_sha256": "66b2d6d812092aaec7f33e61784a399f2db45b3fb940c3e1b8fa890158ff312f",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-count__gin__seed2026",
+      "checkpoint_sha256": "4d2b8f4add122432c85f6bd3cfd1e66cf37ccb242987333541c6672c41f07c81",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-count__gin__seed42",
+      "checkpoint_sha256": "6ee2a96596de2645baa9b850616ecc7d953196c7bf83f612e6ce9383f75fbccf",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-max__gcn__seed123",
+      "checkpoint_sha256": "86aeed4ea723391f7b6524485593835a0e282328565f7f44082725d3f66781bd",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-max__gcn__seed2026",
+      "checkpoint_sha256": "50bf17d4884b3198cce398b881069badd7205d952179df47b4a57ffef8d7dd5f",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-max__gcn__seed42",
+      "checkpoint_sha256": "b5f05b62167aa9b9cf5e61ba0ca6f570e8906f40c0d762fd445c1cbe6646ecdc",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-max__gin__seed123",
+      "checkpoint_sha256": "e975095c9ff4e852ae7297b79b1e8a6849d9c546f8298aa4ecf2e5753703b3eb",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-max__gin__seed2026",
+      "checkpoint_sha256": "cd85991a982237015970da97a2e6947753a6c2eb5eed6d346811e3880b69796c",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__rings-max__gin__seed42",
+      "checkpoint_sha256": "fda0329d7d47c85d5942d5dbeb9192a1c9d4af9fce99b0a08796add09d19d4f4",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__X__gcn__seed123",
+      "checkpoint_sha256": "15841dd01e680cdd60fc0e75819cff11ffe3eb481aab9e0431703f48db5e3cec",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__X__gcn__seed2026",
+      "checkpoint_sha256": "ec1b694c47acc7c5651816a23d573112f0f0d2b4169fb204a5cdf98c83b5c333",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__X__gcn__seed42",
+      "checkpoint_sha256": "1184861c0004e33812f1d0d913b4ac3c642fc7eae10bbb51bd527c2ba87d1304",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__X__gin__seed123",
+      "checkpoint_sha256": "f3ab5769bd7d1c9ef31fef101b270b0a744bb9566a075326312c3dbfef79a0a6",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__X__gin__seed2026",
+      "checkpoint_sha256": "19e761f98a8e25aba037b1810e8d894eb6f8791e2a35b1af2ef4c9fc79da5a83",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "bxaic__X__gin__seed42",
+      "checkpoint_sha256": "ad9661a821194195c6510e5e436cf57fbcf98ad94af0ada917933d14067c4378",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__benzene__gcn__seed123",
+      "checkpoint_sha256": "39fede57af3023e7b1be46b448c5ffaa010403dd7cf4d7e4d3a5fa54b93ec453",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__benzene__gcn__seed2026",
+      "checkpoint_sha256": "87ff8f1ab3a052568d0307324b6526764f0a5526e2055c35bd41a4a8402bef51",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__benzene__gcn__seed42",
+      "checkpoint_sha256": "f3e28ee05af6a57105f11f1401ac052a46ddbc5bb53a171c262e680f498b6ac1",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__benzene__gin__seed123",
+      "checkpoint_sha256": "de1d55282ec5ffda96267a7d0e58324f3453ef59d3b78281d3ed7519c04c78fd",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__benzene__gin__seed2026",
+      "checkpoint_sha256": "1f08547e8069a7437ac285f5ffe0e25868d65d0586f99f27c17d3a28e69e949e",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__benzene__gin__seed42",
+      "checkpoint_sha256": "705c63c703e53f2e3f0729cfd1bb1e9c5eac086f706908978154778ea4732d89",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic10__gcn__seed123",
+      "checkpoint_sha256": "2556016a2d835ca0107562e316f4943cff60ba363a14be148eef5908dfbcedc6",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic10__gcn__seed2026",
+      "checkpoint_sha256": "285f71dace0ca4f8864c1fd78fb2239e3ef0e784f16db8646a204ef444593a19",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic10__gcn__seed42",
+      "checkpoint_sha256": "3fa5e6a271c2835d0f5adce1e6f3d5ce54ad33ec258ed4ac6a3f4beb769decd6",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic10__gin__seed123",
+      "checkpoint_sha256": "074e114e94600b4101e980d7fadc958bed239f455c7e5da4b967850f62167460",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic10__gin__seed2026",
+      "checkpoint_sha256": "4d47acd7b704151aa3b35250e3531d76dc9f3f0b3540b454c55206c13d154905",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic10__gin__seed42",
+      "checkpoint_sha256": "fadfcaae5ce83626e8c9013325ace4e2a714159634753413dc643958f16267f4",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic7__gcn__seed123",
+      "checkpoint_sha256": "c54a72a863a251f054bd66904a9ba8f89ca6ee0e38ad2f301360f09fef6a9581",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic7__gcn__seed2026",
+      "checkpoint_sha256": "e80206fc8611eed759b1b5cc1184557c2905a02a4b1f121971ed84d5ef0a5785",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic7__gcn__seed42",
+      "checkpoint_sha256": "36c12138a1e5cdee252dfe900accec9e5118026232bfea1e03d86d6b4db37332",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic7__gin__seed123",
+      "checkpoint_sha256": "b4f3cec562e58878573eb375a747c49214469e179564aa85deb95dc1fda949ad",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic7__gin__seed2026",
+      "checkpoint_sha256": "0adf3f15da25783e047008fa64432aef17e2907bc8f52bbec213b7bc04d93637",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic7__gin__seed42",
+      "checkpoint_sha256": "d230b11d71477b3d1e510a53c53d977785c07741d2bd408b4fdba0240844d060",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic8__gcn__seed123",
+      "checkpoint_sha256": "9332303332463f9b63d4d5b43cfd4a34c15ef76fcd15458655e9384267ed4f8e",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic8__gcn__seed2026",
+      "checkpoint_sha256": "fb752abe6a4a83f1f5eb1908d149aaa406d5036db7777d5af10f30bf57cfbde5",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic8__gcn__seed42",
+      "checkpoint_sha256": "cf0a91744b34c4a225ab344a48246a73acdacf3e191d9c284a7d82074790113d",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic8__gin__seed123",
+      "checkpoint_sha256": "645f7a33d06a15485698fae13f01998cb70d268d8b8eb64d35d26a23feadd1eb",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic8__gin__seed2026",
+      "checkpoint_sha256": "2bb410f3df7a94396c450e270a00ffc1e86267992bbe208d9357466da5b3aadf",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "primary",
+      "cell_id": "google__logic8__gin__seed42",
+      "checkpoint_sha256": "5dbef247a6218294ed885f5907481102fc8a2d65a7442a9af0d96ca26998cd27",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "liver",
+      "cell_id": "liver__gcn__seed123",
+      "checkpoint_sha256": "51ad549e238c2c3637949e429663080f975b6fdc5c9a8b656d649e3c0d8840ec",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "liver",
+      "cell_id": "liver__gcn__seed2026",
+      "checkpoint_sha256": "65299166b0b16e3093ee5c05f21b09157573de837d1605e7093e3050aeacab46",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "liver",
+      "cell_id": "liver__gcn__seed42",
+      "checkpoint_sha256": "6301a98ccd05e2e0bbf91b9ea20b1f94adcf24932bca834d953f440ac2eeeca5",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "liver",
+      "cell_id": "liver__gin__seed123",
+      "checkpoint_sha256": "d65b148d87ba3d11130094547701e5296266e077738682eed6656851efa99e6a",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "liver",
+      "cell_id": "liver__gin__seed2026",
+      "checkpoint_sha256": "9414c9f4fbab438dfde2bc2ad16eb12eed74e4d847bcb20b8cfba5daed089695",
+      "matches_original_cell_metadata": true
+    },
+    {
+      "family": "liver",
+      "cell_id": "liver__gin__seed42",
+      "checkpoint_sha256": "0efbf7fc7ec70ce250cb548a1dac0cd2264b09498b3eda3c0161552b7c99fcc5",
+      "matches_original_cell_metadata": true
+    }
+  ],
+  "boundary": "Original recorded checkpoint metadata versus copied weight hashes; no training, source mapping or attribution computation is implied."
+}

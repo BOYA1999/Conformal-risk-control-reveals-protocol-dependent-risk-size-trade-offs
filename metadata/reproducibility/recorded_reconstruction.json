@@ -1,0 +1,15 @@
+{
+  "status": "PASS_RECORDED_SCORE_AND_STATISTIC_RECONSTRUCTION",
+  "p20_cells": 66,
+  "p20_maximum_metric_difference": 3.419486915845482e-14,
+  "p21": {
+    "cells": 6,
+    "metric_rows": 288,
+    "molecule_records_reconstructed": 2976,
+    "test_molecules": 31,
+    "maximum_metric_difference": 1.1102230246251565e-16,
+    "maximum_summary_difference": 1.1102230246251565e-16,
+    "bootstrap": "2000 shared molecule draws; seed20260912; conditional on fixed calibration and checkpoints"
+  },
+  "boundary": "Frozen score/statistic reconstruction; no original-source atom mapping validation, new attribution, model training, new scientific validation, or public release."
+}

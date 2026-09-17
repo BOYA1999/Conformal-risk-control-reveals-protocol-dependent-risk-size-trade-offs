@@ -79,7 +79,7 @@ The structure-free A7 aggregate tables in `results/a_level/a7_moleculeace_mmp/` 
 - Associated article: `https://doi.org/10.1016/j.jocs.2026.102946`.
 - Code source: `https://github.com/AdamSulek/pharmaco-explainer`.
 - Frozen code commit: `f40599677e52574b86d8e7ccc6dc842471519cbd`.
-- Upstream code license: MIT; the upstream copyright/license notice is retained beside the pharmacophore adapter scripts. No upstream source tree is bundled.
+- Upstream code license: MIT. No upstream source tree or source code is bundled; the pharmacophore adapter scripts in this repository are repository-authored.
 - Data and checkpoint source: `https://huggingface.co/datasets/klimczakjakubdev/pharmaco-explainer`.
 - Frozen data/checkpoint commit: `fb38e88acd4b486a4ba9df74dccfa701e05d01b1`.
 - Dataset-card license: CC BY 4.0.
@@ -92,8 +92,20 @@ The structure-free pharmacophore aggregate tables retain CC BY 4.0 attribution a
 
 All author-trained and third-party weights are omitted. The omission is a release-scope choice and is not attributed to an invented licensing prohibition. See `REPRODUCIBILITY.md` for the precise regeneration and verification boundaries.
 
+## MolRep Liver chemical references
+
+- Article: [Rao et al., Patterns (2022)](https://doi.org/10.1016/j.patter.2022.100628); clinical-label lineage: [Liu et al., Journal of Cheminformatics (2015)](https://doi.org/10.1186/s13321-015-0053-y).
+- Official repository: [MolRep](https://github.com/biomed-AI/MolRep); [official data folder](https://drive.google.com/drive/folders/1oGhDfmggYRR49OUOgssQ_Zzd9qIbh0-Z). Accessed 2026-09-12.
+- [Liver.csv](https://drive.google.com/uc?export=download&id=1rwzRokbkuE0brZ4LzucYBcSXkoJQ4wvw): 159,328 bytes; SHA-256 `255054c8030712c094de5f88484311d006a667ae6565a2879c417d5cd47d533f`.
+- [attributions.npz](https://drive.google.com/uc?export=download&id=1FxyMnDr2_oy494Ljh1lTokWkSEt3yrgp): 32,813 bytes; SHA-256 `d2abe69c7e5d1f7fb1f2bb77029ed6d01492ef63c744c14ca11141660672383c`.
+- The repository [license](https://github.com/biomed-AI/MolRep/blob/main/LICENSE.txt) states CC BY-NC-ND 4.0; no distinct data-file license was identified. This package neither redistributes these files nor asserts broader reuse permission. Check the upstream conditions for the intended use.
+- The 587 released rows supply three-class liver-toxicity labels and source-provided atom alert masks. Preserve released atom order and use the restricted reader in `scripts/independent_reference/`. The masks are operational literature-alert references, not experimental causal atom truth. The separate chemist-annotation experiment is not used.
+- A total of 35 rows are excluded by cross-benchmark overlap and within-source duplicate rules. The 552 admitted rows yield 114 official test rows, of which 31 have nonempty references; calibration has 33 nonempty references. The exclusion and split procedures are frozen in `contracts/independent_reference/run_contract.json`.
+
+New analysis scripts are repository-authored and do not copy MolRep source code. `results/independent_reference/` contains only aggregate outputs and attribution, outside the root MIT scope. No raw or transformed molecule-level data, identities, masks, checkpoint or third-party source tree is distributed.
+
 ## Current release boundary
 
-The current analyses use the pinned B-XAIC, Graph Attribution, Polaris, MoleculeACE, and K4_2ar sources documented above. The pharmacophore audit uses the released K4_2ar tables, checkpoint, fixed slices, and score definitions; the rings-count audit uses the pinned B-XAIC inputs and external score cache. No additional external dataset is bundled here.
+The current analyses use the pinned B-XAIC, Graph Attribution, Polaris, MoleculeACE, K4_2ar and Liver sources documented above. The full-grid extension reuses the original 66 checkpoints; the independent-reference analysis trains six models with its own source and partitions. No external dataset is bundled here.
 
-Only structure-free aggregate outputs are included. Raw tables, structures, molecule or source-row identifiers, per-molecule predictions and attributions, checkpoints, score caches, and logs remain external. The provenance map records analysis identities and repository-relative output names; it does not replace a future public release tag or DOI.
+Only structure-free aggregate outputs are included. Raw tables, structures, molecule or source-row identifiers, per-molecule predictions and attributions, checkpoints, score caches, and logs remain external. The provenance map records analysis identities and repository-relative output names; immutable citation should use the release commit, tag or archival DOI when available.
