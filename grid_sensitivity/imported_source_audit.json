@@ -1,0 +1,17 @@
+[
+  {
+    "source": "run_gradient_grid.py",
+    "sha256": "5CE5AFA8E59CA6F7F8021B4D55FCCFE9A5DFA383349AE404BD196F195A5EB5E4",
+    "matches_frozen_p20": true
+  },
+  {
+    "source": "run_bxaic_probe.py",
+    "sha256": "DD7ED39D8D2F9F612343381C2C27A3EA25E5FA1C379450C75A13230682340F14",
+    "matches_frozen_p20": true
+  },
+  {
+    "source": "audit_graph_attribution.py",
+    "sha256": "F12F3F1D78DAA6D90AC7D1DDFC67D77A5DC94616A77922DE15F786EF17D7E67F",
+    "matches_frozen_p20": true
+  }
+]

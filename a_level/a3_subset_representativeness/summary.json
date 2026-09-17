@@ -1,0 +1,192 @@
+{
+  "status": "PARTIAL",
+  "reviewer_item": "A3",
+  "historical_set_policy": "index_tiebreak_v1",
+  "paired_method_cell_rows": 132,
+  "unique_cells": 66,
+  "methods": [
+    "ig",
+    "gradinput"
+  ],
+  "support_rule": {
+    "primary_correlations_ok": false,
+    "primary_errors_ok": true,
+    "gate_agreement_ok": false,
+    "subset_qualified_five_method_comparison_supported": false
+  },
+  "overall_metrics": [
+    {
+      "method": "gradinput",
+      "outcome": "risk",
+      "n_cells": 66,
+      "pearson_r": 0.6194782024282756,
+      "spearman_rho": 0.3593645661596498,
+      "mean_absolute_error": 0.01647576239830624,
+      "median_absolute_error": 0.008891333268895206,
+      "signed_bias_subset_minus_full": -0.012318322488240802,
+      "max_absolute_error": 0.07296088747477639
+    },
+    {
+      "method": "gradinput",
+      "outcome": "atom_fraction",
+      "n_cells": 66,
+      "pearson_r": 0.9998152470739448,
+      "spearman_rho": 0.9811164988890105,
+      "mean_absolute_error": 0.005471495576333322,
+      "median_absolute_error": 0.0014556278666414402,
+      "signed_bias_subset_minus_full": 0.004034688919255327,
+      "max_absolute_error": 0.0340354491077991
+    },
+    {
+      "method": "gradinput",
+      "outcome": "precision",
+      "n_cells": 66,
+      "pearson_r": 0.9885500225643565,
+      "spearman_rho": 0.9952968716665731,
+      "mean_absolute_error": 0.022610476455501988,
+      "median_absolute_error": 0.004416144591186527,
+      "signed_bias_subset_minus_full": -0.019277289040483838,
+      "max_absolute_error": 0.15120689655172403
+    },
+    {
+      "method": "gradinput",
+      "outcome": "iou",
+      "n_cells": 66,
+      "pearson_r": 0.9921215656876449,
+      "spearman_rho": 0.9919836639361065,
+      "mean_absolute_error": 0.01592506716350333,
+      "median_absolute_error": 0.004063018315416306,
+      "signed_bias_subset_minus_full": -0.010270898378932946,
+      "max_absolute_error": 0.10347140206894956
+    },
+    {
+      "method": "gradinput",
+      "outcome": "selected_grid_fraction",
+      "n_cells": 66,
+      "pearson_r": 0.9998557694501231,
+      "spearman_rho": 0.9931247297634022,
+      "mean_absolute_error": 0.004999999999999998,
+      "median_absolute_error": 0.0,
+      "signed_bias_subset_minus_full": 0.0037878787878787784,
+      "max_absolute_error": 0.020000000000000018
+    },
+    {
+      "method": "ig",
+      "outcome": "risk",
+      "n_cells": 66,
+      "pearson_r": 0.7002214505355714,
+      "spearman_rho": 0.43047163050970383,
+      "mean_absolute_error": 0.015235745755273497,
+      "median_absolute_error": 0.008292976064325379,
+      "signed_bias_subset_minus_full": -0.013866337723762515,
+      "max_absolute_error": 0.05087029072101918
+    },
+    {
+      "method": "ig",
+      "outcome": "atom_fraction",
+      "n_cells": 66,
+      "pearson_r": 0.9991844868534114,
+      "spearman_rho": 0.986274140780411,
+      "mean_absolute_error": 0.009562573369929753,
+      "median_absolute_error": 0.008658143408199183,
+      "signed_bias_subset_minus_full": 0.009265489402203324,
+      "max_absolute_error": 0.09728556549497314
+    },
+    {
+      "method": "ig",
+      "outcome": "precision",
+      "n_cells": 66,
+      "pearson_r": 0.9871956679817216,
+      "spearman_rho": 0.9980550527709318,
+      "mean_absolute_error": 0.024721793349304425,
+      "median_absolute_error": 0.005287014854922389,
+      "signed_bias_subset_minus_full": -0.022796080640092427,
+      "max_absolute_error": 0.15120689655172403
+    },
+    {
+      "method": "ig",
+      "outcome": "iou",
+      "n_cells": 66,
+      "pearson_r": 0.9915121628858733,
+      "spearman_rho": 0.9980550527709318,
+      "mean_absolute_error": 0.016288279302927082,
+      "median_absolute_error": 0.0037810232699869717,
+      "signed_bias_subset_minus_full": -0.012904655232220499,
+      "max_absolute_error": 0.10347140206894956
+    },
+    {
+      "method": "ig",
+      "outcome": "selected_grid_fraction",
+      "n_cells": 66,
+      "pearson_r": 0.9991986041409181,
+      "spearman_rho": 0.9954749794568422,
+      "mean_absolute_error": 0.009242424242424241,
+      "median_absolute_error": 0.009999999999999995,
+      "signed_bias_subset_minus_full": 0.00924242424242424,
+      "max_absolute_error": 0.09999999999999998
+    }
+  ],
+  "gate_agreement": [
+    {
+      "method": "gradinput",
+      "risk_pass_agreement": 0.7878787878787878,
+      "risk_pass_full": 55,
+      "risk_pass_subset": 59,
+      "efficiency_pass_agreement": 1.0,
+      "efficiency_pass_full": 24,
+      "efficiency_pass_subset": 24
+    },
+    {
+      "method": "ig",
+      "risk_pass_agreement": 0.8333333333333334,
+      "risk_pass_full": 52,
+      "risk_pass_subset": 59,
+      "efficiency_pass_agreement": 0.9848484848484849,
+      "efficiency_pass_full": 39,
+      "efficiency_pass_subset": 38
+    }
+  ],
+  "method_order_agreement": [
+    {
+      "outcome": "risk",
+      "n_cells": 66,
+      "exact_order_or_tie_agreement": 0.6818181818181818,
+      "strict_reversal_rate": 0.2878787878787879,
+      "full_ties": 14,
+      "subset_ties": 16
+    },
+    {
+      "outcome": "atom_fraction",
+      "n_cells": 66,
+      "exact_order_or_tie_agreement": 0.9393939393939394,
+      "strict_reversal_rate": 0.015151515151515152,
+      "full_ties": 21,
+      "subset_ties": 20
+    },
+    {
+      "outcome": "precision",
+      "n_cells": 66,
+      "exact_order_or_tie_agreement": 0.9090909090909091,
+      "strict_reversal_rate": 0.06060606060606061,
+      "full_ties": 14,
+      "subset_ties": 16
+    },
+    {
+      "outcome": "iou",
+      "n_cells": 66,
+      "exact_order_or_tie_agreement": 0.9090909090909091,
+      "strict_reversal_rate": 0.06060606060606061,
+      "full_ties": 14,
+      "subset_ties": 16
+    },
+    {
+      "outcome": "selected_grid_fraction",
+      "n_cells": 66,
+      "exact_order_or_tie_agreement": 0.9393939393939394,
+      "strict_reversal_rate": 0.015151515151515152,
+      "full_ties": 21,
+      "subset_ties": 20
+    }
+  ],
+  "interpretation": "This audit evaluates representativeness only for IG and GradInput, the methods available on both the full grid and the matched subset. It cannot validate the unobserved full-grid behavior of saliency, atom occlusion, or GNNExplainer."
+}

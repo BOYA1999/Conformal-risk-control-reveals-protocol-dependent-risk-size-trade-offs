@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "cells": 6,
+  "all_metric_rows_replayed": 288,
+  "molecule_rows_replayed": 2976,
+  "cached_score_arrays_checked": 96,
+  "independent_checkpoint_score_checks": 192,
+  "maximum_score_absolute_difference": 1.430511474609375e-06,
+  "training_epochs": {
+    "liver__gin__seed42": {
+      "epochs": 30,
+      "best_epoch": 15
+    },
+    "liver__gin__seed123": {
+      "epochs": 33,
+      "best_epoch": 18
+    },
+    "liver__gin__seed2026": {
+      "epochs": 32,
+      "best_epoch": 17
+    },
+    "liver__gcn__seed42": {
+      "epochs": 45,
+      "best_epoch": 30
+    },
+    "liver__gcn__seed123": {
+      "epochs": 34,
+      "best_epoch": 19
+    },
+    "liver__gcn__seed2026": {
+      "epochs": 55,
+      "best_epoch": 40
+    }
+  },
+  "unique_test_reference_molecules": 31,
+  "bootstrap": "2000 shared molecule draws; seed20260912; average six fixed models per molecule before resampling; percentile95%; conditional on calibration/checkpoints; no subgroup recalibration or multiple-comparison-adjusted significance claim",
+  "source_reference_boundary": "source-provided binary alert masks;48/587 differ from independent12-SMARTS union; operational reference fidelity is verified, exact SMARTS reconstruction and experimental causal truth are not established"
+}

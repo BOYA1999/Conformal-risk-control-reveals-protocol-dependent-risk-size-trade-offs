@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "cache_files": 66,
+  "expected_cell_method_size_selector_rows": 1980,
+  "observed_cell_method_size_selector_rows": 1980,
+  "expected_per_repeat_rows": 990000,
+  "observed_per_repeat_rows": 990000,
+  "finite_summary_values": true,
+  "all_test_complements_nonempty": true
+}

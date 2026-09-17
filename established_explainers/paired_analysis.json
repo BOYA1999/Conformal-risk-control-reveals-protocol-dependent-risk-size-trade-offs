@@ -1,0 +1,379 @@
+{
+  "status": "PASS",
+  "cells": 66,
+  "tasks": 11,
+  "methods": [
+    {
+      "method": "atom_occlusion",
+      "cells": 66,
+      "macro_task_risk": 0.07473936295614295,
+      "macro_task_atom_fraction": 0.5032871069519826,
+      "macro_task_precision": 0.597482006516672,
+      "macro_task_iou": 0.563935845788219,
+      "risk_pass_cells": 56,
+      "efficiency_pass_cells": 51,
+      "joint_pass_cells": 41,
+      "runtime_seconds": 148.0187040013261,
+      "seconds_per_molecule": 0.011675240889834841,
+      "peak_vram_mib": 241.4794921875
+    },
+    {
+      "method": "gnnexplainer",
+      "cells": 66,
+      "macro_task_risk": 0.08432182434171166,
+      "macro_task_atom_fraction": 0.8546958583707815,
+      "macro_task_precision": 0.29117929698798384,
+      "macro_task_iou": 0.2804547189727748,
+      "risk_pass_cells": 54,
+      "efficiency_pass_cells": 11,
+      "joint_pass_cells": 6,
+      "runtime_seconds": 5288.977457899833,
+      "seconds_per_molecule": 0.4171775877819714,
+      "peak_vram_mib": 19.2177734375
+    },
+    {
+      "method": "gradinput",
+      "cells": 66,
+      "macro_task_risk": 0.07220368400932939,
+      "macro_task_atom_fraction": 0.6574344466441455,
+      "macro_task_precision": 0.5065270522394263,
+      "macro_task_iou": 0.48288530557426235,
+      "risk_pass_cells": 59,
+      "efficiency_pass_cells": 24,
+      "joint_pass_cells": 23,
+      "runtime_seconds": 2.413696599425748,
+      "seconds_per_molecule": 0.00019038465053050545,
+      "peak_vram_mib": 26.28759765625
+    },
+    {
+      "method": "ig",
+      "cells": 66,
+      "macro_task_risk": 0.07333569289552823,
+      "macro_task_atom_fraction": 0.6033942931710944,
+      "macro_task_precision": 0.5277466570859247,
+      "macro_task_iou": 0.5016920240775161,
+      "risk_pass_cells": 59,
+      "efficiency_pass_cells": 38,
+      "joint_pass_cells": 31,
+      "runtime_seconds": 15.310005900333636,
+      "seconds_per_molecule": 0.0012076041883841012,
+      "peak_vram_mib": 26.4599609375
+    },
+    {
+      "method": "saliency",
+      "cells": 66,
+      "macro_task_risk": 0.07982108588647986,
+      "macro_task_atom_fraction": 0.6108458699711482,
+      "macro_task_precision": 0.45266571262812155,
+      "macro_task_iou": 0.4314478195648336,
+      "risk_pass_cells": 52,
+      "efficiency_pass_cells": 40,
+      "joint_pass_cells": 27,
+      "runtime_seconds": 2.2426360009703785,
+      "seconds_per_molecule": 0.00017689193886814787,
+      "peak_vram_mib": 26.28759765625
+    }
+  ],
+  "family_stratified": [
+    {
+      "family": "bxaic",
+      "family_label": "B-XAIC",
+      "tasks": 7,
+      "cells": 42,
+      "method": "atom_occlusion",
+      "risk": 0.06468900354371558,
+      "atom_fraction": 0.4479832022985863,
+      "precision": 0.6294252298128634,
+      "iou": 0.5977557683029419
+    },
+    {
+      "family": "bxaic",
+      "family_label": "B-XAIC",
+      "tasks": 7,
+      "cells": 42,
+      "method": "gnnexplainer",
+      "risk": 0.08407895064458669,
+      "atom_fraction": 0.842225171181841,
+      "precision": 0.25129021214112524,
+      "iou": 0.24182172202807792
+    },
+    {
+      "family": "bxaic",
+      "family_label": "B-XAIC",
+      "tasks": 7,
+      "cells": 42,
+      "method": "gradinput",
+      "risk": 0.07013587970470544,
+      "atom_fraction": 0.5465489636171087,
+      "precision": 0.5748715403284386,
+      "iou": 0.5467488675390888
+    },
+    {
+      "family": "bxaic",
+      "family_label": "B-XAIC",
+      "tasks": 7,
+      "cells": 42,
+      "method": "ig",
+      "risk": 0.0680419963778547,
+      "atom_fraction": 0.5124142585374518,
+      "precision": 0.588598279200805,
+      "iou": 0.5592090625571947
+    },
+    {
+      "family": "bxaic",
+      "family_label": "B-XAIC",
+      "tasks": 7,
+      "cells": 42,
+      "method": "saliency",
+      "risk": 0.07671404900849034,
+      "atom_fraction": 0.5145351895780589,
+      "precision": 0.46346295355431927,
+      "iou": 0.4444534796080058
+    },
+    {
+      "family": "google",
+      "family_label": "Graph Attribution",
+      "tasks": 4,
+      "cells": 24,
+      "method": "atom_occlusion",
+      "risk": 0.09232749192789082,
+      "atom_fraction": 0.600068940095426,
+      "precision": 0.5415813657483376,
+      "iou": 0.5047509813874541
+    },
+    {
+      "family": "google",
+      "family_label": "Graph Attribution",
+      "tasks": 4,
+      "cells": 24,
+      "method": "gnnexplainer",
+      "risk": 0.08474685331168039,
+      "atom_fraction": 0.8765195609514278,
+      "precision": 0.3609851954699863,
+      "iou": 0.34806246362599425
+    },
+    {
+      "family": "google",
+      "family_label": "Graph Attribution",
+      "tasks": 4,
+      "cells": 24,
+      "method": "gradinput",
+      "risk": 0.07582234154242126,
+      "atom_fraction": 0.8514840419414595,
+      "precision": 0.38692419808365486,
+      "iou": 0.3711240721358162
+    },
+    {
+      "family": "google",
+      "family_label": "Graph Attribution",
+      "tasks": 4,
+      "cells": 24,
+      "method": "ig",
+      "risk": 0.08259966180145696,
+      "atom_fraction": 0.7626093537799693,
+      "precision": 0.421256318384884,
+      "iou": 0.4010372067380783
+    },
+    {
+      "family": "google",
+      "family_label": "Graph Attribution",
+      "tasks": 4,
+      "cells": 24,
+      "method": "saliency",
+      "risk": 0.08525840042296154,
+      "atom_fraction": 0.7793895606590545,
+      "precision": 0.4337705410072755,
+      "iou": 0.4086879144892823
+    }
+  ],
+  "paired_vs_ig": [
+    {
+      "method": "atom_occlusion",
+      "reference": "ig",
+      "differences": {
+        "risk": {
+          "mean": 0.0014036700606147002,
+          "task_cluster_bootstrap_95ci": [
+            -0.0053526226507457164,
+            0.008612424400161404
+          ],
+          "positive_cells": 24,
+          "negative_cells": 24,
+          "ties": 18
+        },
+        "atom_fraction": {
+          "mean": -0.10010718621911198,
+          "task_cluster_bootstrap_95ci": [
+            -0.14703039999852013,
+            -0.05104314596421234
+          ],
+          "positive_cells": 4,
+          "negative_cells": 39,
+          "ties": 23
+        },
+        "precision": {
+          "mean": 0.06973534943074756,
+          "task_cluster_bootstrap_95ci": [
+            0.03135359007212412,
+            0.11284071613874914
+          ],
+          "positive_cells": 42,
+          "negative_cells": 6,
+          "ties": 18
+        },
+        "iou": {
+          "mean": 0.06224382171070306,
+          "task_cluster_bootstrap_95ci": [
+            0.03007412219381098,
+            0.09964856083148267
+          ],
+          "positive_cells": 41,
+          "negative_cells": 7,
+          "ties": 18
+        }
+      }
+    },
+    {
+      "method": "gnnexplainer",
+      "reference": "ig",
+      "differences": {
+        "risk": {
+          "mean": 0.010986131446183418,
+          "task_cluster_bootstrap_95ci": [
+            0.0018544423448653225,
+            0.021354728444339548
+          ],
+          "positive_cells": 42,
+          "negative_cells": 24,
+          "ties": 0
+        },
+        "atom_fraction": {
+          "mean": 0.25130156519968705,
+          "task_cluster_bootstrap_95ci": [
+            0.07750373423108471,
+            0.4346929415996353
+          ],
+          "positive_cells": 48,
+          "negative_cells": 17,
+          "ties": 1
+        },
+        "precision": {
+          "mean": -0.23656736009794088,
+          "task_cluster_bootstrap_95ci": [
+            -0.4518137654887408,
+            -0.04437846863347912
+          ],
+          "positive_cells": 15,
+          "negative_cells": 51,
+          "ties": 0
+        },
+        "iou": {
+          "mean": -0.22123730510474127,
+          "task_cluster_bootstrap_95ci": [
+            -0.4334200447718507,
+            -0.04782696708298478
+          ],
+          "positive_cells": 14,
+          "negative_cells": 52,
+          "ties": 0
+        }
+      }
+    },
+    {
+      "method": "gradinput",
+      "reference": "ig",
+      "differences": {
+        "risk": {
+          "mean": -0.0011320088861988603,
+          "task_cluster_bootstrap_95ci": [
+            -0.007237008409966433,
+            0.0055291518498533174
+          ],
+          "positive_cells": 23,
+          "negative_cells": 27,
+          "ties": 16
+        },
+        "atom_fraction": {
+          "mean": 0.05404015347305087,
+          "task_cluster_bootstrap_95ci": [
+            0.019437866185278634,
+            0.09505918396363071
+          ],
+          "positive_cells": 33,
+          "negative_cells": 13,
+          "ties": 20
+        },
+        "precision": {
+          "mean": -0.021219604846498322,
+          "task_cluster_bootstrap_95ci": [
+            -0.03553985214896035,
+            -0.008874814504711158
+          ],
+          "positive_cells": 15,
+          "negative_cells": 35,
+          "ties": 16
+        },
+        "iou": {
+          "mean": -0.018806718503253578,
+          "task_cluster_bootstrap_95ci": [
+            -0.031544679350156625,
+            -0.007664650398352276
+          ],
+          "positive_cells": 13,
+          "negative_cells": 37,
+          "ties": 16
+        }
+      }
+    },
+    {
+      "method": "saliency",
+      "reference": "ig",
+      "differences": {
+        "risk": {
+          "mean": 0.006485392990951625,
+          "task_cluster_bootstrap_95ci": [
+            -0.005736433778355962,
+            0.018977504271704308
+          ],
+          "positive_cells": 38,
+          "negative_cells": 28,
+          "ties": 0
+        },
+        "atom_fraction": {
+          "mean": 0.007451576800053684,
+          "task_cluster_bootstrap_95ci": [
+            -0.05812045979307238,
+            0.08283315698702604
+          ],
+          "positive_cells": 31,
+          "negative_cells": 29,
+          "ties": 6
+        },
+        "precision": {
+          "mean": -0.0750809444578031,
+          "task_cluster_bootstrap_95ci": [
+            -0.18477540165564063,
+            0.017957395562454844
+          ],
+          "positive_cells": 34,
+          "negative_cells": 32,
+          "ties": 0
+        },
+        "iou": {
+          "mean": -0.07024420451268243,
+          "task_cluster_bootstrap_95ci": [
+            -0.1641370051949261,
+            0.016160246332972188
+          ],
+          "positive_cells": 34,
+          "negative_cells": 32,
+          "ties": 0
+        }
+      }
+    }
+  ],
+  "bootstraps": 2000,
+  "bootstrap_unit": "task cluster",
+  "interpretation": "Matched reviewer-driven subset analysis; cell rows are paired, and uncertainty resamples the observed 11 task clusters from two benchmark families. Family summaries are macro means of task means and are descriptive.",
+  "family_summary_csv": "family_stratified_summary.csv"
+}

@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "source_eligible_targets": 15,
+  "selection_rule": "Retain every frozen source-eligible target with at least 20 auditable molecule-disjoint exact-single-cut cliff pairs in both calibration and test.",
+  "selected_targets": [
+    "CHEMBL204_Ki",
+    "CHEMBL214_Ki",
+    "CHEMBL228_Ki",
+    "CHEMBL233_Ki",
+    "CHEMBL234_Ki",
+    "CHEMBL235_EC50",
+    "CHEMBL236_Ki",
+    "CHEMBL237_Ki",
+    "CHEMBL244_Ki",
+    "CHEMBL264_Ki",
+    "CHEMBL4792_Ki"
+  ],
+  "excluded_targets": {
+    "CHEMBL2147_Ki": {
+      "calibration": 93,
+      "test": 1
+    },
+    "CHEMBL219_Ki": {
+      "calibration": 4,
+      "test": 5
+    },
+    "CHEMBL239_EC50": {
+      "calibration": 3,
+      "test": 8
+    },
+    "CHEMBL287_Ki": {
+      "calibration": 12,
+      "test": 10
+    }
+  },
+  "audit_for_four_recomputed_targets": {
+    "automorphism_match_total": 9581,
+    "automorphism_truncated_molecules": 0,
+    "equal_size_cut_lexically_resolved": 116,
+    "molecules_without_eligible_cut": 1,
+    "molecules_over_rdmmpa_max_cut_bonds": 27,
+    "eligible_cut_bonds": 9688,
+    "duplicate_cut_records_removed": 0,
+    "rdmmpa_reference_core_keys": 8288,
+    "raw_mapped_core_keys": 8773,
+    "rdmmpa_reference_only_core_keys": 5,
+    "rdmmpa_filtered_extra_core_keys": 490,
+    "mapped_core_keys": 8283,
+    "rdmmpa_core_mismatch_molecules": 1,
+    "rdmmpa_core_mismatch_molecules_excluded": 1,
+    "rdmmpa_fragmentation_limit_exclusions": 27
+  },
+  "boundary": "Selection is a pre-model feasibility filter. Exclusion counts are reported and are not relaxed after observing predictor or attribution results."
+}

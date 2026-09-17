@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "reviewer_item": "A1/A7-statistical",
+  "set_policy": "include_all_exact_ties_v2",
+  "cells": 66,
+  "methods": [
+    "gradinput",
+    "ig",
+    "saliency",
+    "atom_occlusion",
+    "gnnexplainer"
+  ],
+  "repeats_per_cell_size": 500,
+  "per_repeat_rows": 990000,
+  "calibration_fractions": [
+    0.125,
+    0.25,
+    0.5
+  ],
+  "corrected_macro": [
+    {
+      "calibration_fraction": 0.125,
+      "mean_test_risk": 0.05667584136445839,
+      "violation_frequency": 0.06192727272727273,
+      "mean_realized_atom_fraction": 0.6783402793191105
+    },
+    {
+      "calibration_fraction": 0.25,
+      "mean_test_risk": 0.0721631277638062,
+      "violation_frequency": 0.11184848484848484,
+      "mean_realized_atom_fraction": 0.6552073996672255
+    },
+    {
+      "calibration_fraction": 0.5,
+      "mean_test_risk": 0.0799177076765454,
+      "violation_frequency": 0.17646666666666666,
+      "mean_realized_atom_fraction": 0.644373176972746
+    }
+  ],
+  "naive_macro": [
+    {
+      "calibration_fraction": 0.125,
+      "mean_test_risk": 0.09131581283102677,
+      "violation_frequency": 0.38227272727272726,
+      "mean_realized_atom_fraction": 0.631404935480952
+    },
+    {
+      "calibration_fraction": 0.25,
+      "mean_test_risk": 0.0895566082172214,
+      "violation_frequency": 0.35335151515151514,
+      "mean_realized_atom_fraction": 0.6323715842866521
+    },
+    {
+      "calibration_fraction": 0.5,
+      "mean_test_risk": 0.08862653576528462,
+      "violation_frequency": 0.3327515151515152,
+      "mean_realized_atom_fraction": 0.6329893401126335
+    }
+  ],
+  "paired_corrected_minus_naive": [
+    {
+      "calibration_fraction": 0.125,
+      "corrected_minus_naive_mean_test_risk": -0.03463997146656837,
+      "corrected_minus_naive_violation_frequency": -0.32034545454545454,
+      "corrected_minus_naive_mean_nominal_fraction": 0.047266727272727266,
+      "corrected_minus_naive_mean_realized_atom_fraction": 0.04693534383815852
+    },
+    {
+      "calibration_fraction": 0.25,
+      "corrected_minus_naive_mean_test_risk": -0.017393480453415204,
+      "corrected_minus_naive_violation_frequency": -0.2415030303030303,
+      "corrected_minus_naive_mean_nominal_fraction": 0.02307896969696969,
+      "corrected_minus_naive_mean_realized_atom_fraction": 0.022835815380573506
+    },
+    {
+      "calibration_fraction": 0.5,
+      "corrected_minus_naive_mean_test_risk": -0.008708828088739214,
+      "corrected_minus_naive_violation_frequency": -0.15628484848484847,
+      "corrected_minus_naive_mean_nominal_fraction": 0.011571939393939386,
+      "corrected_minus_naive_mean_realized_atom_fraction": 0.011383836860112394
+    }
+  ],
+  "fallback_count": 0,
+  "interpretation": "Finite-pool repeated mutually exclusive redraw diagnostic. The controlled estimand is expected nonempty-rationale loss, not per-repeat test-set violation frequency; no new-population guarantee is inferred."
+}

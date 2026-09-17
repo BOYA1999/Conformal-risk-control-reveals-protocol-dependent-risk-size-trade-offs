@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "cells": 66,
+  "maximum_metric_replay_difference": 3.419486915845482e-14,
+  "eligible_calibration_occurrences": 82866,
+  "eligible_test_occurrences": 81672,
+  "comparison_boundary": "New methods use fresh attribution with original checkpoints. Original gradient results are historical P01; same-run subset versus full uses the identical fresh cached rankings. Historical-subset replay drift is retained separately. Bootstrap intervals describe the 11 observed task clusters from two dependent benchmark families.",
+  "score_replay": {
+    "status": "PASS",
+    "cell_count": 66,
+    "molecule_count": 198,
+    "method_molecule_checks": 396,
+    "selection": "first, middle and last eligible test source IDs per frozen cell",
+    "atol": 0.0001,
+    "rtol": 1e-05,
+    "max_abs_difference": 2.288818359375e-05,
+    "boundary": "all original source IDs, labels, masks and atom counts checked; sampled numerical solo-inference score consistency is not byte-identical set replay or independent chemical validation"
+  },
+  "complete_source_surfaces_checked": 132
+}

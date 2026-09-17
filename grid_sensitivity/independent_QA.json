@@ -1,0 +1,279 @@
+{
+  "status": "PASS",
+  "cells": 66,
+  "curve_rows": 106656,
+  "operating_points": 1584,
+  "maximum_curve_difference": 1.1102230246251565e-16,
+  "occurrences_per_method": {
+    "calibration": 82866,
+    "test": 81672
+  },
+  "checks": [
+    {
+      "cell_id": "bxaic__B__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__B__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__B__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__B__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__B__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__B__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__indole__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__indole__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__indole__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__indole__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__indole__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__indole__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__P__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__P__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__P__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__P__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__P__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__P__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__PAINS__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__PAINS__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__PAINS__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__PAINS__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__PAINS__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__PAINS__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-count__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-count__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-count__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-count__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-count__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-count__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-max__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-max__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-max__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-max__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-max__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__rings-max__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__X__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__X__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__X__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__X__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__X__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "bxaic__X__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__benzene__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__benzene__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__benzene__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__benzene__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__benzene__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__benzene__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic10__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic10__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic10__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic10__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic10__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic10__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic7__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic7__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic7__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic7__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic7__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic7__gin__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic8__gcn__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic8__gcn__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic8__gcn__seed42",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic8__gin__seed123",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic8__gin__seed2026",
+      "status": "PASS"
+    },
+    {
+      "cell_id": "google__logic8__gin__seed42",
+      "status": "PASS"
+    }
+  ],
+  "independence": "Separate evaluator uses Python stable sorting and cumulative reference hits, rather than runner lexsort/searchsorted; all saved scores and both grids reconstructed, no new scoring or training.",
+  "validator_sha256": "8E6AA1004873DE0FC2ABFAF68B25C2A01856BC5D7BAAE0EF5E0F0F082B5E21A3"
+}

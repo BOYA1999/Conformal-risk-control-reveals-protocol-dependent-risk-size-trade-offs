@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "expected_score_rows": 11000,
+  "observed_score_rows": 11000,
+  "expected_policy_rows": 33000,
+  "observed_policy_rows": 33000,
+  "exact_expected_cell_ids": true,
+  "all_policy_calibrations_present": true,
+  "per_molecule_repetitions_complete": true,
+  "sampled_molecules_per_cell_complete": true,
+  "finite_core_outputs": true,
+  "cache_true_score_max_abs_difference": 3.814697265625e-06,
+  "cache_consistency_within_1e-5": true
+}

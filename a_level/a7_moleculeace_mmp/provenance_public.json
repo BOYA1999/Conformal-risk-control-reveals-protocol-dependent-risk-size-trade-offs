@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-09-04T15:58:36.129026+00:00",
+  "code_source": {
+    "repository": "<moleculeace-repository>",
+    "remote": "https://github.com/molML/MoleculeACE.git",
+    "commit": "7e6de0bd2968c56589c580f2a397f01c531ede26",
+    "commit_time": "2025-02-15T10:08:47+01:00",
+    "commit_subject": "Update README.md",
+    "license": "MIT",
+    "license_scope": "MoleculeACE code only",
+    "license_file": "<moleculeace-repository>\\LICENCE",
+    "license_sha256": "FA5550E77810F026154185D653867090DB1C49BA79E6A78B35425BA111AD0CC6",
+    "readme": "<moleculeace-repository>\\README.md",
+    "readme_sha256": "5AD847E040340D0C7704284283FE90989E37C7B24883F7CA8B611F7705ECE86C",
+    "paper_doi": "10.1021/acs.jcim.2c01073"
+  },
+  "data_source": {
+    "lineage": "MoleculeACE benchmark data derived from ChEMBL v29",
+    "license": "CC BY-SA 3.0",
+    "license_scope": "benchmark and derived data; not covered by the MoleculeACE MIT code license",
+    "license_url": "https://chembl.gitbook.io/chembl-interface-documentation/frequently-asked-questions/general-questions",
+    "publication_doi": "10.1021/acs.jcim.2c01073",
+    "evidence_basis": "ChEMBL official licensing FAQ, MoleculeACE publication, and frozen source-file hashes",
+    "benchmark_files": [
+      {
+        "dataset": "CHEMBL204_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL204_Ki.csv",
+        "sha256": "5165F6B4C00C2F686279AF81D873F010C93F7C7AAC5BFB76B6A0040145237EFF",
+        "selection_json_sha256": "5165F6B4C00C2F686279AF81D873F010C93F7C7AAC5BFB76B6A0040145237EFF",
+        "rows": 2754
+      },
+      {
+        "dataset": "CHEMBL214_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL214_Ki.csv",
+        "sha256": "D9AB0CC4C85A711883B8C2956A7A5488DC7D5E8472AF3E1EA25F03ED7A560391",
+        "selection_json_sha256": "D9AB0CC4C85A711883B8C2956A7A5488DC7D5E8472AF3E1EA25F03ED7A560391",
+        "rows": 3317
+      },
+      {
+        "dataset": "CHEMBL228_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL228_Ki.csv",
+        "sha256": "94D46B50CB12DDA27E38EF95594A1DC7E3719FEC87C6A0B3530CE35D2E842250",
+        "selection_json_sha256": "94D46B50CB12DDA27E38EF95594A1DC7E3719FEC87C6A0B3530CE35D2E842250",
+        "rows": 1704
+      },
+      {
+        "dataset": "CHEMBL233_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL233_Ki.csv",
+        "sha256": "732AF36C6CBE340822D9261D2F6CF9907CE59BE12463A65BB3772ECC492C0250",
+        "selection_json_sha256": "732AF36C6CBE340822D9261D2F6CF9907CE59BE12463A65BB3772ECC492C0250",
+        "rows": 3142
+      },
+      {
+        "dataset": "CHEMBL234_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL234_Ki.csv",
+        "sha256": "CA8C6BB3C4081C7084439F0E111292D13EF18E117895C65E6AD7F3F2EE4765E8",
+        "selection_json_sha256": "CA8C6BB3C4081C7084439F0E111292D13EF18E117895C65E6AD7F3F2EE4765E8",
+        "rows": 3657
+      },
+      {
+        "dataset": "CHEMBL235_EC50",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL235_EC50.csv",
+        "sha256": "705F5576E36A5243F2AE4421927B73AD0E5F5551EC9E52D492F08AB1143CE37D",
+        "selection_json_sha256": "705F5576E36A5243F2AE4421927B73AD0E5F5551EC9E52D492F08AB1143CE37D",
+        "rows": 2349
+      },
+      {
+        "dataset": "CHEMBL236_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL236_Ki.csv",
+        "sha256": "09DDD8BE1D86F8ECDB4E6F9E016F3AA254F0A53B67F0CDA4A0E390DF575685A2",
+        "selection_json_sha256": "09DDD8BE1D86F8ECDB4E6F9E016F3AA254F0A53B67F0CDA4A0E390DF575685A2",
+        "rows": 2598
+      },
+      {
+        "dataset": "CHEMBL237_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL237_Ki.csv",
+        "sha256": "FA0A5E47DCD6038240D9AE99CA8AC0812A7F600D59325D5401C0EFEE7BEBD769",
+        "selection_json_sha256": "FA0A5E47DCD6038240D9AE99CA8AC0812A7F600D59325D5401C0EFEE7BEBD769",
+        "rows": 2603
+      },
+      {
+        "dataset": "CHEMBL244_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL244_Ki.csv",
+        "sha256": "38F8B8A3975C9641657CAA1DD5B524C71FCA229347437A2025426CCD01FC1AA4",
+        "selection_json_sha256": "38F8B8A3975C9641657CAA1DD5B524C71FCA229347437A2025426CCD01FC1AA4",
+        "rows": 3097
+      },
+      {
+        "dataset": "CHEMBL264_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL264_Ki.csv",
+        "sha256": "82B1AD6089CB8F8BBEB1C26ED12FF6F7A22238E3249D1EE6F8B53682630F02C9",
+        "selection_json_sha256": "82B1AD6089CB8F8BBEB1C26ED12FF6F7A22238E3249D1EE6F8B53682630F02C9",
+        "rows": 2862
+      },
+      {
+        "dataset": "CHEMBL4792_Ki",
+        "path": "<moleculeace-repository>\\MoleculeACE\\Data\\benchmark_data\\CHEMBL4792_Ki.csv",
+        "sha256": "0291CB9EBF1B19C13C2662BD57842C61F145BD0FA8E57153864EC54BDE9D7BF8",
+        "selection_json_sha256": "0291CB9EBF1B19C13C2662BD57842C61F145BD0FA8E57153864EC54BDE9D7BF8",
+        "rows": 1471
+      }
+    ]
+  },
+  "split_source": {
+    "manifest": "<split-semantics-directory>\\split_manifest.csv",
+    "manifest_sha256": "C71E0E2624AFFE872E368131517FA1A565B81520FED25F87CA4C64B53F83174F",
+    "selection": "<split-semantics-directory>\\dataset_selection.json",
+    "selection_sha256": "2F2F2734C838D9D84E29833049E9D8425CF7A916DD9418DBA63D60AC86661CF4",
+    "selection_commit": "7e6de0bd2968c56589c580f2a397f01c531ede26"
+  },
+  "method_sources": [
+    {
+      "path": "<split-method-source>\\prepare_data.py",
+      "sha256": "CE8C9FC0A7452D9181F67533755BF4B433DFCEFC9B76F8A9EAABCD66FE6BCC2F"
+    },
+    {
+      "path": "<split-method-source>\\prepare_splits.py",
+      "sha256": "3312D3EC0DE9203B5DC44988D8CCD0015887E97D8BCB9288B1125A6539041C2E"
+    },
+    {
+      "path": "<moleculeace-repository>\\MoleculeACE\\benchmark\\cliffs.py",
+      "sha256": "7C0A81FC427887BD9B55537B95A361CDE80D79A178B80F71F964154065307A38"
+    }
+  ],
+  "claim_boundary": "Experimental SAR-linked transformation-site proxy; not causal, complete, mechanistic, expert, or ground truth."
+}

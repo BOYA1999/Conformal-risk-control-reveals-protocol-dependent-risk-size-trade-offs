@@ -1,0 +1,260 @@
+{
+  "status": "PASS",
+  "reviewer_item": "A5",
+  "cells": 66,
+  "target_rows": 396,
+  "target_macro": [
+    {
+      "method": "gradinput",
+      "target": "positive",
+      "risk": 0.07307189553557947,
+      "retained": 0.6476892165539027,
+      "precision": 0.5371584772128788,
+      "iou": 0.5115961178305392
+    },
+    {
+      "method": "gradinput",
+      "target": "predicted",
+      "risk": 0.07304612808647522,
+      "retained": 0.6708663992603119,
+      "precision": 0.5239527452546,
+      "iou": 0.5004928789103705
+    },
+    {
+      "method": "gradinput",
+      "target": "true",
+      "risk": 0.07335760347595975,
+      "retained": 0.656355560685715,
+      "precision": 0.5307637347193793,
+      "iou": 0.5061016202078252
+    },
+    {
+      "method": "ig",
+      "target": "positive",
+      "risk": 0.07313805347016422,
+      "retained": 0.5915159841684061,
+      "precision": 0.5612864977893751,
+      "iou": 0.533363809746132
+    },
+    {
+      "method": "ig",
+      "target": "predicted",
+      "risk": 0.07225241563092918,
+      "retained": 0.6229942571389996,
+      "precision": 0.5420057606003741,
+      "iou": 0.5180638822695192
+    },
+    {
+      "method": "ig",
+      "target": "true",
+      "risk": 0.07310522276455045,
+      "retained": 0.6031832165232941,
+      "precision": 0.5523698447598568,
+      "iou": 0.5264407482229401
+    }
+  ],
+  "agreement_macro": [
+    {
+      "method": "gradinput",
+      "comparison": "true_vs_positive",
+      "score_spearman_mean": 0.8775807660401899,
+      "fixed20_set_jaccard_mean": 0.9334599145959308,
+      "own_calibrated_set_jaccard_mean": 0.9743535776691229
+    },
+    {
+      "method": "gradinput",
+      "comparison": "true_vs_predicted",
+      "score_spearman_mean": 0.8431584308529283,
+      "fixed20_set_jaccard_mean": 0.9151730131598935,
+      "own_calibrated_set_jaccard_mean": 0.9626329683215475
+    },
+    {
+      "method": "ig",
+      "comparison": "true_vs_positive",
+      "score_spearman_mean": 0.8766210254833224,
+      "fixed20_set_jaccard_mean": 0.9336587849562232,
+      "own_calibrated_set_jaccard_mean": 0.9754476652627639
+    },
+    {
+      "method": "ig",
+      "comparison": "true_vs_predicted",
+      "score_spearman_mean": 0.8461602401865171,
+      "fixed20_set_jaccard_mean": 0.9154797406696799,
+      "own_calibrated_set_jaccard_mean": 0.9509999404789338
+    }
+  ],
+  "two_stage_macro": {
+    "gate_test_auroc": 0.9482332601482755,
+    "gate_test_auprc": 0.8305493251965224,
+    "gate_test_balanced_accuracy": 0.9050119842545108,
+    "null_false_positive_set_rate": 0.0832871509291526,
+    "nonnull_abstention_rate": 0.10668888056182575,
+    "selective_nonnull_risk": 0.0790934614880878,
+    "overall_nonnull_risk_abstention_as_one": 0.17622189250988624,
+    "overall_retained_fraction": 0.24878439345013112,
+    "overall_abstention_rate": 0.6554713719354336,
+    "test_nonnull_label_agreement": 0.9376238884140465
+  },
+  "two_stage_by_family_task": [
+    {
+      "family": "bxaic",
+      "task": "B",
+      "gate_test_auroc": 1.0,
+      "gate_test_auprc": 0.9999999999999999,
+      "gate_test_balanced_accuracy": 1.0,
+      "null_false_positive_set_rate": 0.0,
+      "nonnull_abstention_rate": 0.0,
+      "selective_nonnull_risk": 0.013761467889908258,
+      "overall_nonnull_risk_abstention_as_one": 0.013761467889908258,
+      "overall_retained_fraction": 0.0008626432144235039,
+      "overall_abstention_rate": 0.9781956391278256,
+      "test_nonnull_label_agreement": 1.0
+    },
+    {
+      "family": "bxaic",
+      "task": "P",
+      "gate_test_auroc": 1.0,
+      "gate_test_auprc": 1.0,
+      "gate_test_balanced_accuracy": 1.0,
+      "null_false_positive_set_rate": 0.0,
+      "nonnull_abstention_rate": 0.0,
+      "selective_nonnull_risk": 0.08143073938989485,
+      "overall_nonnull_risk_abstention_as_one": 0.08143073938989485,
+      "overall_retained_fraction": 0.004855439484215772,
+      "overall_abstention_rate": 0.872374474894979,
+      "test_nonnull_label_agreement": 1.0
+    },
+    {
+      "family": "bxaic",
+      "task": "PAINS",
+      "gate_test_auroc": 0.9199151379778399,
+      "gate_test_auprc": 0.8673620714452168,
+      "gate_test_balanced_accuracy": 0.8443459967631322,
+      "null_false_positive_set_rate": 0.14058618976651763,
+      "nonnull_abstention_rate": 0.17072181670721817,
+      "selective_nonnull_risk": 0.09187605846713832,
+      "overall_nonnull_risk_abstention_as_one": 0.246700221080055,
+      "overall_retained_fraction": 0.3429465997368162,
+      "overall_abstention_rate": 0.6329265853170635,
+      "test_nonnull_label_agreement": 1.0
+    },
+    {
+      "family": "bxaic",
+      "task": "X",
+      "gate_test_auroc": 0.9999451994798617,
+      "gate_test_auprc": 0.9999753612696528,
+      "gate_test_balanced_accuracy": 0.9999409402315144,
+      "null_false_positive_set_rate": 0.0,
+      "nonnull_abstention_rate": 0.00011811953697141507,
+      "selective_nonnull_risk": 0.07062513444826378,
+      "overall_nonnull_risk_abstention_as_one": 0.07073475976736077,
+      "overall_retained_fraction": 0.037085365528821544,
+      "overall_abstention_rate": 0.4355537774221511,
+      "test_nonnull_label_agreement": 1.0
+    },
+    {
+      "family": "bxaic",
+      "task": "indole",
+      "gate_test_auroc": 0.9650150939878727,
+      "gate_test_auprc": 0.9339827754469034,
+      "gate_test_balanced_accuracy": 0.9211459086257773,
+      "null_false_positive_set_rate": 0.08777495769881556,
+      "nonnull_abstention_rate": 0.06993322504963002,
+      "selective_nonnull_risk": 0.0962661116722275,
+      "overall_nonnull_risk_abstention_as_one": 0.1593319432811402,
+      "overall_retained_fraction": 0.35313669671853853,
+      "overall_abstention_rate": 0.6010202040408081,
+      "test_nonnull_label_agreement": 1.0
+    },
+    {
+      "family": "bxaic",
+      "task": "rings-count",
+      "gate_test_auroc": 0.990156480679489,
+      "gate_test_auprc": 0.9998605716252583,
+      "gate_test_balanced_accuracy": 0.9676595674973943,
+      "null_false_positive_set_rate": 0.025252525252525252,
+      "nonnull_abstention_rate": 0.03942833975268599,
+      "selective_nonnull_risk": 0.0937600438201915,
+      "overall_nonnull_risk_abstention_as_one": 0.12948966886250213,
+      "overall_retained_fraction": 0.8577783154043064,
+      "overall_abstention_rate": 0.05177702207108089,
+      "test_nonnull_label_agreement": 0.3138627725545109
+    },
+    {
+      "family": "bxaic",
+      "task": "rings-max",
+      "gate_test_auroc": 0.8305289117024492,
+      "gate_test_auprc": 0.4209658406678712,
+      "gate_test_balanced_accuracy": 0.7554485469097463,
+      "null_false_positive_set_rate": 0.1780319073838769,
+      "nonnull_abstention_rate": 0.3110709987966305,
+      "selective_nonnull_risk": 0.09332323423824852,
+      "overall_nonnull_risk_abstention_as_one": 0.3750110110313802,
+      "overall_retained_fraction": 0.1911176715190307,
+      "overall_abstention_rate": 0.7936587317463494,
+      "test_nonnull_label_agreement": 1.0
+    },
+    {
+      "family": "google",
+      "task": "benzene",
+      "gate_test_auroc": 0.9554921221587889,
+      "gate_test_auprc": 0.947266118523872,
+      "gate_test_balanced_accuracy": 0.8875859709193042,
+      "null_false_positive_set_rate": 0.11505161505161506,
+      "nonnull_abstention_rate": 0.10977644310977645,
+      "selective_nonnull_risk": 0.0960599054318464,
+      "overall_nonnull_risk_abstention_as_one": 0.19509926593259927,
+      "overall_retained_fraction": 0.3560667428181678,
+      "overall_abstention_rate": 0.49774999999999997,
+      "test_nonnull_label_agreement": 1.0
+    },
+    {
+      "family": "google",
+      "task": "logic10",
+      "gate_test_auroc": 0.927682391509696,
+      "gate_test_auprc": 0.6523507141158819,
+      "gate_test_balanced_accuracy": 0.8562138828693672,
+      "null_false_positive_set_rate": 0.12388175807078956,
+      "nonnull_abstention_rate": 0.1636904761904762,
+      "selective_nonnull_risk": 0.08935409706497337,
+      "overall_nonnull_risk_abstention_as_one": 0.23825825092566164,
+      "overall_retained_fraction": 0.18068389659937792,
+      "overall_abstention_rate": 0.7937736498108015,
+      "test_nonnull_label_agreement": 1.0
+    },
+    {
+      "family": "google",
+      "task": "logic7",
+      "gate_test_auroc": 0.9723985847913537,
+      "gate_test_auprc": 0.6760502054675483,
+      "gate_test_balanced_accuracy": 0.9265052747217241,
+      "null_false_positive_set_rate": 0.0618830675778284,
+      "nonnull_abstention_rate": 0.08510638297872342,
+      "selective_nonnull_risk": 0.06244859012910255,
+      "overall_nonnull_risk_abstention_as_one": 0.14235477879094902,
+      "overall_retained_fraction": 0.12920686196238376,
+      "overall_abstention_rate": 0.8556241426611798,
+      "test_nonnull_label_agreement": 1.0
+    },
+    {
+      "family": "google",
+      "task": "logic8",
+      "gate_test_auroc": 0.8694319393436797,
+      "gate_test_auprc": 0.6382289185995411,
+      "gate_test_balanced_accuracy": 0.7962857382616594,
+      "null_false_positive_set_rate": 0.18369663941871028,
+      "nonnull_abstention_rate": 0.22373188405797104,
+      "selective_nonnull_risk": 0.08112269381717073,
+      "overall_nonnull_risk_abstention_as_one": 0.2862687106572976,
+      "overall_retained_fraction": 0.2828880949653601,
+      "overall_abstention_rate": 0.6975308641975309,
+      "test_nonnull_label_agreement": 1.0
+    }
+  ],
+  "fallback_cells": 0,
+  "gate_nonconverged_cells": 0,
+  "undefined_selective_risk_cells": 0,
+  "perfect_test_nonnull_label_alignment_cells": 60,
+  "cache_true_score_max_abs_difference": 7.62939453125e-06,
+  "interpretation": "Predicted-class rankings are deployment-available; true-class rankings remain audit-only. Mask presence is identical to the class label in most studied tasks, so the supervised gate is not an independent detector of universal chemical relevance; the nondegenerate task is reported separately."
+}

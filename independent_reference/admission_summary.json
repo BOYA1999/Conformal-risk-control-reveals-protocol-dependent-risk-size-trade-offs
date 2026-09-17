@@ -1,0 +1,50 @@
+{
+  "source_rows": 587,
+  "admitted_rows": 552,
+  "exclusion_rule": "any full or largest-fragment stereo-insensitive identity overlap with original families; conflicting duplicate groups excluded, otherwise official-test/earliest-row precedence",
+  "counts": {
+    "fit": {
+      "total": 284,
+      "eligible": 91,
+      "labels": {
+        "0": 91,
+        "1": 106,
+        "2": 87
+      }
+    },
+    "dev": {
+      "total": 66,
+      "eligible": 23,
+      "labels": {
+        "0": 21,
+        "1": 25,
+        "2": 20
+      }
+    },
+    "calibration": {
+      "total": 88,
+      "eligible": 33,
+      "labels": {
+        "0": 28,
+        "1": 33,
+        "2": 27
+      }
+    },
+    "test": {
+      "total": 114,
+      "eligible": 31,
+      "labels": {
+        "0": 35,
+        "1": 50,
+        "2": 29
+      }
+    }
+  },
+  "feature_dimension": 33,
+  "source_hashes": {
+    "attributions.npz": "d2abe69c7e5d1f7fb1f2bb77029ed6d01492ef63c744c14ca11141660672383c",
+    "Liver.csv": "255054c8030712c094de5f88484311d006a667ae6565a2879c417d5cd47d533f"
+  },
+  "external_overlap_rows": 30,
+  "excluded_rows_total": 35
+}

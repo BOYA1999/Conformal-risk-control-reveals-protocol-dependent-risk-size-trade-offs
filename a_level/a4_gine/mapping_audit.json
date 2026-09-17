@@ -1,0 +1,153 @@
+{
+  "run_id": "EXP-A4-BOND-AWARE-GINE-20260904",
+  "started_utc": "2026-09-04T14:38:57.291458+00:00",
+  "feature_dimensions": {
+    "atom": 45,
+    "edge": 17
+  },
+  "google": {
+    "status": "PASS",
+    "tasks": {
+      "benzene": {
+        "status": "PASS",
+        "n_molecules": 12000,
+        "partition_counts": {
+          "fit": 7000,
+          "dev": 1000,
+          "calibration": 2000,
+          "test": 2000
+        },
+        "authoritative_label_source": "y_true.npz",
+        "csv_label_agreement_with_y_true": 1.0,
+        "gate_checks": {
+          "row_alignment": true,
+          "official_split_complete": true,
+          "official_split_disjoint": true,
+          "derived_split_complete": true,
+          "derived_split_test_disjoint": true,
+          "atom_edge_mapping": true
+        },
+        "mapping_counts": {
+          "molecules": 12000,
+          "invalid_smiles": 0
+        },
+        "first_errors": [],
+        "seconds": 5.239707599997928
+      },
+      "logic7": {
+        "status": "PASS",
+        "n_molecules": 4326,
+        "partition_counts": {
+          "fit": 2688,
+          "dev": 384,
+          "calibration": 768,
+          "test": 486
+        },
+        "authoritative_label_source": "y_true.npz",
+        "csv_label_agreement_with_y_true": 0.7348589921405455,
+        "gate_checks": {
+          "row_alignment": true,
+          "official_split_complete": true,
+          "official_split_disjoint": true,
+          "derived_split_complete": true,
+          "derived_split_test_disjoint": true,
+          "atom_edge_mapping": true
+        },
+        "mapping_counts": {
+          "molecules": 4326,
+          "invalid_smiles": 0
+        },
+        "first_errors": [],
+        "seconds": 1.956842499999766
+      },
+      "logic8": {
+        "status": "PASS",
+        "n_molecules": 8671,
+        "partition_counts": {
+          "fit": 5427,
+          "dev": 775,
+          "calibration": 1551,
+          "test": 918
+        },
+        "authoritative_label_source": "y_true.npz",
+        "csv_label_agreement_with_y_true": 0.7327874524276323,
+        "gate_checks": {
+          "row_alignment": true,
+          "official_split_complete": true,
+          "official_split_disjoint": true,
+          "derived_split_complete": true,
+          "derived_split_test_disjoint": true,
+          "atom_edge_mapping": true
+        },
+        "mapping_counts": {
+          "molecules": 8671,
+          "invalid_smiles": 0
+        },
+        "first_errors": [],
+        "seconds": 3.861072499999864
+      },
+      "logic10": {
+        "status": "PASS",
+        "n_molecules": 8687,
+        "partition_counts": {
+          "fit": 5403,
+          "dev": 772,
+          "calibration": 1543,
+          "test": 969
+        },
+        "authoritative_label_source": "y_true.npz",
+        "csv_label_agreement_with_y_true": 0.500863359042247,
+        "gate_checks": {
+          "row_alignment": true,
+          "official_split_complete": true,
+          "official_split_disjoint": true,
+          "derived_split_complete": true,
+          "derived_split_test_disjoint": true,
+          "atom_edge_mapping": true
+        },
+        "mapping_counts": {
+          "molecules": 8687,
+          "invalid_smiles": 0
+        },
+        "first_errors": [],
+        "seconds": 3.723224500001379
+      }
+    }
+  },
+  "bxaic": {
+    "status": "PASS",
+    "n_csv_rows": 50000,
+    "n_sdf_records": 50000,
+    "excluded_source_index": 997,
+    "counts": {
+      "retained_rows": 49999,
+      "B_nonempty": 1116,
+      "B_positive_without_rationale": 0,
+      "B_negative_with_rationale": 0,
+      "P_nonempty": 6611,
+      "P_positive_without_rationale": 0,
+      "P_negative_with_rationale": 0,
+      "X_nonempty": 27933,
+      "X_positive_without_rationale": 0,
+      "X_negative_with_rationale": 0,
+      "indole_nonempty": 18403,
+      "indole_positive_without_rationale": 0,
+      "indole_negative_with_rationale": 0,
+      "PAINS_nonempty": 16446,
+      "PAINS_positive_without_rationale": 0,
+      "PAINS_negative_with_rationale": 0,
+      "rings-count_nonempty": 49330,
+      "rings-count_positive_without_rationale": 0,
+      "rings-count_negative_with_rationale": 34268,
+      "rings-max_nonempty": 2841,
+      "rings-max_positive_without_rationale": 0,
+      "rings-max_negative_with_rationale": 0,
+      "expected_excluded_rows": 1
+    },
+    "first_errors": [],
+    "seconds": 27.450679100002162
+  },
+  "status": "PASS",
+  "preferred_features_approved": true,
+  "finished_utc": "2026-09-04T14:39:39.559990+00:00"
+}

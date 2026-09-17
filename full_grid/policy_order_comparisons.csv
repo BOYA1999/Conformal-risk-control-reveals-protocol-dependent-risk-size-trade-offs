@@ -1,0 +1,6 @@
+comparison,left,right,metric,cells,non_tied_cells,strict_reversals
+index_vs_exact_ties,atom_occlusion,saliency,risk,66,66,13
+index_vs_exact_ties,atom_occlusion,saliency,mean_atom_fraction,66,59,0
+index_vs_exact_ties,atom_occlusion,saliency,iou,66,66,2
+calibrated_size_vs_fixed_0.20_iou,atom_occlusion,saliency,smaller_size_vs_larger_iou,66,56,6
+calibrated_size_vs_fixed_0.50_iou,atom_occlusion,saliency,smaller_size_vs_larger_iou,66,51,2

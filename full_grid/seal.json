@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "exact_expected_cells": 66,
+  "exact_expected_caches": 66,
+  "inputs_rechecked": 90,
+  "import_and_selector_hashes_unchanged": true,
+  "all_metric_replays_pass": true,
+  "all_sampled_score_replays_pass": true
+}
