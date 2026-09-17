@@ -1,0 +1,25 @@
+{
+  "P20": {
+    "analysis": "complete_original_partition_established_explainer_extension",
+    "contract": "contracts/full_grid/run_contract.json",
+    "code": "scripts/full_grid/run_full_grid.py",
+    "independent_metric_validation": "scripts/full_grid/validate_and_compare.py",
+    "score_replay": "scripts/full_grid/replay_scores.py",
+    "result_root": "results/full_grid",
+    "checkpoint_scope": "original 66 fitted predictors; no retraining for the published extension",
+    "method_scope": "saliency and atom-feature occlusion freshly recomputed; GradInput/IG comparison entries retain P01 provenance",
+    "comparison_scope": "full eligible partitions, same-run matched subsets, original matched subsets, exact ties and fixed budgets",
+    "inference": "descriptive paired bootstrap of 11 observed task clusters from two dependent benchmark families"
+  },
+  "P21": {
+    "analysis": "independent_liver_chemical_reference",
+    "contract": "contracts/independent_reference/run_contract.json",
+    "code": "scripts/independent_reference/run_liver.py",
+    "independent_validation": "scripts/independent_reference/independent_validation.py",
+    "result_root": "results/independent_reference",
+    "source_scope": "MolRep Liver released labels and atom-alert masks; overlap and duplicate exclusions applied before fitting",
+    "model_scope": "GIN and GCN; seeds 42, 123, 2026; six freshly trained three-class predictors",
+    "inference": "shared bootstrap of 31 unique nonempty-reference test molecules after averaging across six fixed models; conditional on calibration/checkpoints",
+    "boundary": "literature-alert operational references; not experimental causal atom labels or separate chemist annotations"
+  }
+}

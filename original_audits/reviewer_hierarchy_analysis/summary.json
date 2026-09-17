@@ -1,0 +1,170 @@
+{
+  "status": "complete",
+  "cells": 22,
+  "task_clusters": 11,
+  "task_cluster_bootstrap_repetitions": 2000,
+  "unit_of_inference": "task-backbone cell; molecule rows used only for cell descriptors",
+  "interpretation": "Associational and exploratory; intervals reflect resampling of observed tasks.",
+  "associations": [
+    {
+      "term": "spearman_actual_oracle",
+      "analysis": "correlation",
+      "point_estimate": 0.6058594399,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.6269741026,
+      "ci95_low": -0.1215506846,
+      "ci95_high": 0.9371335188,
+      "same_sign_frequency": 0.957
+    },
+    {
+      "term": "spearman_actual_mean_rationale",
+      "analysis": "correlation",
+      "point_estimate": 0.5999444762,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.6203525944,
+      "ci95_low": -0.1285818229,
+      "ci95_high": 0.9369105961,
+      "same_sign_frequency": 0.9555
+    },
+    {
+      "term": "spearman_actual_median_rationale",
+      "analysis": "correlation",
+      "point_estimate": 0.6229098932,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.6407158262,
+      "ci95_low": -0.0632582552,
+      "ci95_high": 0.9277929413,
+      "same_sign_frequency": 0.9655
+    },
+    {
+      "term": "spearman_actual_mean_atoms",
+      "analysis": "correlation",
+      "point_estimate": -0.0079387738,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": -0.0162714694,
+      "ci95_low": -0.6229582295,
+      "ci95_high": 0.5985957361,
+      "same_sign_frequency": 0.515
+    },
+    {
+      "term": "spearman_excess_fixed20_iou",
+      "analysis": "correlation",
+      "point_estimate": 0.0371126945,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": -0.005521235,
+      "ci95_low": -0.4950657812,
+      "ci95_high": 0.4371099235,
+      "same_sign_frequency": 0.489
+    },
+    {
+      "term": "spearman_excess_mean_atoms",
+      "analysis": "correlation",
+      "point_estimate": -0.1213192697,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": -0.1146374324,
+      "ci95_low": -0.7096212749,
+      "ci95_high": 0.5306648331,
+      "same_sign_frequency": 0.6365
+    },
+    {
+      "term": "spearman_random_saving_fixed20_iou",
+      "analysis": "correlation",
+      "point_estimate": 0.2058823529,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.2322194316,
+      "ci95_low": -0.3150938294,
+      "ci95_high": 0.6686727391,
+      "same_sign_frequency": 0.807
+    },
+    {
+      "term": "partial_actual_oracle_given_atoms",
+      "analysis": "correlation",
+      "point_estimate": 0.6191273154,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.6562717373,
+      "ci95_low": -0.0846851865,
+      "ci95_high": 0.9453227725,
+      "same_sign_frequency": 0.961
+    },
+    {
+      "term": "partial_actual_rationale_given_atoms",
+      "analysis": "correlation",
+      "point_estimate": 0.618309142,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.6577702527,
+      "ci95_low": -0.079870286,
+      "ci95_high": 0.9451070589,
+      "same_sign_frequency": 0.9615
+    },
+    {
+      "term": "partial_excess_iou_given_atoms_rationale",
+      "analysis": "correlation",
+      "point_estimate": 0.0755038079,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": -0.0382303474,
+      "ci95_low": -0.6858849298,
+      "ci95_high": 0.4304471975,
+      "same_sign_frequency": 0.444
+    },
+    {
+      "term": "actual_fraction_model:oracle_fraction",
+      "analysis": "standardized_ols",
+      "point_estimate": 0.8370393535,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.8536538712,
+      "ci95_low": -0.0172650633,
+      "ci95_high": 1.0289882598,
+      "same_sign_frequency": 0.973
+    },
+    {
+      "term": "actual_fraction_model:fixed20_iou",
+      "analysis": "standardized_ols",
+      "point_estimate": 0.0882882186,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.0261437584,
+      "ci95_low": -0.5662848977,
+      "ci95_high": 0.3093325568,
+      "same_sign_frequency": 0.56
+    },
+    {
+      "term": "actual_fraction_model:mean_test_atoms",
+      "analysis": "standardized_ols",
+      "point_estimate": 0.1409973629,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.122715201,
+      "ci95_low": -0.4765518741,
+      "ci95_high": 0.4586684665,
+      "same_sign_frequency": 0.644
+    },
+    {
+      "term": "excess_fraction_model:fixed20_iou",
+      "analysis": "standardized_ols",
+      "point_estimate": 0.1566650809,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.0633820443,
+      "ci95_low": -0.5869061381,
+      "ci95_high": 0.507184272,
+      "same_sign_frequency": 0.591
+    },
+    {
+      "term": "excess_fraction_model:mean_test_atoms",
+      "analysis": "standardized_ols",
+      "point_estimate": 0.2448262171,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.1899893731,
+      "ci95_low": -0.7409716675,
+      "ci95_high": 0.7143690899,
+      "same_sign_frequency": 0.6515
+    },
+    {
+      "term": "excess_fraction_model:mean_test_rationale_fraction",
+      "analysis": "standardized_ols",
+      "point_estimate": 0.5177328832,
+      "bootstrap_valid": 2000,
+      "bootstrap_median": 0.5462024541,
+      "ci95_low": -0.7703988148,
+      "ci95_high": 0.9329694649,
+      "same_sign_frequency": 0.943
+    }
+  ]
+}

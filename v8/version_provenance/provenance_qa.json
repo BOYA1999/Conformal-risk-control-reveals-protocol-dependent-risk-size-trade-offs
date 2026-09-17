@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Public P01-P24 analysis identity and location map",
+  "checks": {
+    "csv_rows": 24,
+    "unique_provenance_ids": 24,
+    "required_columns": 15,
+    "public_locations_exist": 24,
+    "packaged_detailed_surfaces": 13,
+    "external_detailed_surfaces_explicitly_marked": 11
+  },
+  "boundary": "Location/schema checks alone are not scientific replay. Separate recorded reconstruction and adapter-lineage reports state the numerical checks actually performed."
+}

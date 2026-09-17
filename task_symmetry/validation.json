@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "input_rows": 264,
+  "methods": 4,
+  "primary_cells_per_method": 66,
+  "excluded_panel_cells_per_method": 48,
+  "summary_rows": 24,
+  "task_mean_rows": 44,
+  "task_difference_rows": 33,
+  "paired_summary_rows": 18,
+  "original_summary_max_errors": {
+    "risk": 5.551115123125783e-17,
+    "mean_atom_fraction": 0.0,
+    "precision": 2.220446049250313e-16,
+    "iou": 1.1102230246251565e-16,
+    "random_atom_fraction": 1.1102230246251565e-16,
+    "saving_vs_random": 5.551115123125783e-17
+  },
+  "direct_cell_mean_max_error": 1.1102230246251565e-16,
+  "source_sha256": "fed782ed4d003fb919265772ed7ffc4ec675c2506cdca93daa2539e4e60a55a3",
+  "original_summary_sha256": "02634f681ea234911446c1897f1e59e14453c031c8f47a2105ee7ec13cc74510",
+  "script_sha256": "404d8621dcc6ca1d5f6c778109ce3e67f7911a3d3a9dadbf2d2707d7b0160f01",
+  "python": "3.12.0",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "bootstrap": "5000 paired task-cluster draws, seed20260913; six models/seeds averaged first; descriptive fixed-panel sensitivity, not benchmark-family population inference"
+}

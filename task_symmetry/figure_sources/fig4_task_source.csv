@@ -1,0 +1,67 @@
+family,task,method,mean_atom_fraction,provenance
+bxaic,B,atom_occlusion,0.0386003571497199,P20 complete partition
+bxaic,B,gradinput,0.0386003571497199,P01 historical primary
+bxaic,B,ig,0.0386003571497199,P01 historical primary
+bxaic,B,saliency,0.0785425822662749,P20 complete partition
+bxaic,P,atom_occlusion,0.0365457382575857,P20 complete partition
+bxaic,P,gradinput,0.0365457382575857,P01 historical primary
+bxaic,P,ig,0.0365457382575857,P01 historical primary
+bxaic,P,saliency,0.0562879581914299,P20 complete partition
+bxaic,PAINS,atom_occlusion,0.7252562288291204,P20 complete partition
+bxaic,PAINS,gradinput,0.9299237908557667,P01 historical primary
+bxaic,PAINS,ig,0.8444382194936964,P01 historical primary
+bxaic,PAINS,saliency,0.7816460026209405,P20 complete partition
+bxaic,X,atom_occlusion,0.0681479369393897,P20 complete partition
+bxaic,X,gradinput,0.06974262754188719,P01 historical primary
+bxaic,X,ig,0.0681479369393897,P01 historical primary
+bxaic,X,saliency,0.2270856516396423,P20 complete partition
+bxaic,indole,atom_occlusion,0.46607216725381306,P20 complete partition
+bxaic,indole,gradinput,0.8846100844452383,P01 historical primary
+bxaic,indole,ig,0.6882862041782438,P01 historical primary
+bxaic,indole,saliency,0.7081556359172505,P20 complete partition
+bxaic,rings-count,atom_occlusion,0.9076153829854192,P20 complete partition
+bxaic,rings-count,gradinput,0.9109092918436019,P01 historical primary
+bxaic,rings-count,ig,0.9055041791155914,P01 historical primary
+bxaic,rings-count,saliency,0.8308238542735705,P20 complete partition
+bxaic,rings-max,atom_occlusion,0.8007656343310717,P20 complete partition
+bxaic,rings-max,gradinput,0.9232150528833377,P01 historical primary
+bxaic,rings-max,ig,0.9244126466079475,P01 historical primary
+bxaic,rings-max,saliency,0.8282313257868839,P20 complete partition
+google,benzene,atom_occlusion,0.4534007418581634,P20 complete partition
+google,benzene,gradinput,0.6883534131066574,P01 historical primary
+google,benzene,ig,0.6160903116491825,P01 historical primary
+google,benzene,saliency,0.4921263099031405,P20 complete partition
+google,logic10,atom_occlusion,0.6343258669777992,P20 complete partition
+google,logic10,gradinput,0.8747707360027578,P01 historical primary
+google,logic10,ig,0.8018045505480561,P01 historical primary
+google,logic10,saliency,0.8608104980455855,P20 complete partition
+google,logic7,atom_occlusion,0.591672253940829,P20 complete partition
+google,logic7,gradinput,0.8969627883434902,P01 historical primary
+google,logic7,ig,0.7256785571055123,P01 historical primary
+google,logic7,saliency,0.9808316658742747,P20 complete partition
+google,logic8,atom_occlusion,0.7248424256951037,P20 complete partition
+google,logic8,gradinput,0.933763454543748,P01 historical primary
+google,logic8,ig,0.8859081404128776,P01 historical primary
+google,logic8,saliency,0.7948085340164367,P20 complete partition
+bxaic,B,random,0.9037279719751973,P02 original index policy
+bxaic,P,random,0.9171632160487384,P02 original index policy
+bxaic,PAINS,random,0.9052511321724808,P02 original index policy
+bxaic,X,random,0.9087783882831856,P02 original index policy
+bxaic,indole,random,0.90726752777742,P02 original index policy
+bxaic,rings-count,random,0.9084471118578895,P02 original index policy
+bxaic,rings-max,random,0.907650027704569,P02 original index policy
+google,benzene,random,0.9031661198214196,P02 original index policy
+google,logic10,random,0.9075577596515901,P02 original index policy
+google,logic7,random,0.9118845308602955,P02 original index policy
+google,logic8,random,0.9067681987951755,P02 original index policy
+bxaic,B,oracle,0.0386003571497199,P02 original index policy
+bxaic,P,oracle,0.0365457382575857,P02 original index policy
+bxaic,X,oracle,0.0681479369393897,P02 original index policy
+bxaic,indole,oracle,0.3145430447201606,P02 original index policy
+bxaic,PAINS,oracle,0.3455370467368918,P02 original index policy
+bxaic,rings-count,oracle,0.6277794572679153,P02 original index policy
+bxaic,rings-max,oracle,0.2818605783877526,P02 original index policy
+google,benzene,oracle,0.3760250504552863,P02 original index policy
+google,logic7,oracle,0.2134990913272832,P02 original index policy
+google,logic8,oracle,0.2909041702993742,P02 original index policy
+google,logic10,oracle,0.434170783989253,P02 original index policy

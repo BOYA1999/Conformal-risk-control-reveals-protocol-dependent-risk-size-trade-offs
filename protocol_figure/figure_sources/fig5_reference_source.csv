@@ -1,0 +1,5 @@
+family,method,set_family,calibration_loss,test_union_risk,test_alternative_risk,mean_atom_fraction,provenance
+google,gradinput,global_index,alternative,0.1054508896836024,0.0718623369833476,0.8976753398506052,P14 legal-witness comparison; four Graph Attribution tasks
+google,gradinput,global_index,union,0.0852713367454058,0.0571409590704803,0.9192996304579985,P14 legal-witness comparison; four Graph Attribution tasks
+google,ig,global_index,alternative,0.1194622221749881,0.0835140740612815,0.7770398874441794,P14 legal-witness comparison; four Graph Attribution tasks
+google,ig,global_index,union,0.0934037959676257,0.0671792842943108,0.8239975270235127,P14 legal-witness comparison; four Graph Attribution tasks

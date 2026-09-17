@@ -1,0 +1,13 @@
+surface,cell_id,model,method,target,stratum,n_test,nominal_fraction,risk,retained_fraction,oracle_excess,random_draws_per_molecule,selected_minus_random
+full_test_historical_index_tiebreak,bxaic__rings-count__gcn__seed42,gcn,ig20,observed_class,all_nonempty_reference,4933,0.89,0.09968211792662798,0.9084471118578897,0.2806676545899744,1,2.0596677205298217
+full_test_historical_index_tiebreak,bxaic__rings-count__gcn__seed42,gcn,ig20,observed_class,positive_label,1503,0.89,0.08874211052071179,0.9037053233521073,0.2810463675167253,1,5.1945562873454545
+full_test_historical_index_tiebreak,bxaic__rings-count__gcn__seed42,gcn,ig20,observed_class,negative_label,3430,0.89,0.1044759462447306,0.9105249276375372,0.2805017054561824,1,0.685983313554925
+full_test_historical_index_tiebreak,bxaic__rings-count__gin__seed42,gin,ig20,observed_class,all_nonempty_reference,4933,0.9,0.09417992244073636,0.915205996412866,0.2874265391449507,1,-0.12896784792655916
+full_test_historical_index_tiebreak,bxaic__rings-count__gin__seed42,gin,ig20,observed_class,positive_label,1503,0.9,0.004564584693668734,0.91121042870076,0.28855147286537797,1,0.04071126647258868
+full_test_historical_index_tiebreak,bxaic__rings-count__gin__seed42,gin,ig20,observed_class,negative_label,3430,0.9,0.13344868414156513,0.9169568238972087,0.28693360171585386,1,-0.2033199496588971
+V8_fresh_attribution_matched_A5_exact_tie,bxaic__rings-count__gin__seed42,gin,ig20,observed_class,all_nonempty_reference,100,0.9,0.09682609839109702,0.9163723915599773,0.2969712134426105,20,-0.11333020687103287
+V8_fresh_attribution_matched_A5_exact_tie,bxaic__rings-count__gin__seed42,gin,ig20,observed_class,positive_label,29,0.9,0.00748845662638766,0.9151871847453277,0.2962599919213479,20,0.008105093857337639
+V8_fresh_attribution_matched_A5_exact_tie,bxaic__rings-count__gin__seed42,gin,ig20,observed_class,negative_label,71,0.9,0.13331612108372476,0.9168564901180732,0.2972617123738305,20,-0.16293054097135323
+V8_fresh_attribution_matched_A5_exact_tie,bxaic__rings-count__gin__seed42,gin,ig20,positive_class,all_nonempty_reference,100,0.67,0.09418474616559262,0.6974932361443957,0.0641977994492266,20,-0.6131846961975097
+V8_fresh_attribution_matched_A5_exact_tie,bxaic__rings-count__gin__seed42,gin,ig20,positive_class,positive_label,29,0.67,0.15979416931932158,0.6871724067748025,0.062265809325152514,20,-1.0794571185934134
+V8_fresh_attribution_matched_A5_exact_tie,bxaic__rings-count__gin__seed42,gin,ig20,positive_class,negative_label,71,0.67,0.0673865310746329,0.701708786168596,0.06498692217596108,20,-0.42273539690904205

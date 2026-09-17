@@ -1,0 +1,265 @@
+{
+  "validation": {
+    "status": "PASS",
+    "cells": 22,
+    "molecule_rows": 78732,
+    "hashes_match": true,
+    "finite": true
+  },
+  "runtime_seconds": 234.21280598640442,
+  "fidelity_gate": {
+    "minimum_cell_wins": 15,
+    "observed_cell_wins": 21,
+    "mean_fidelity_advantage": 3.2768762858978815,
+    "pass": true
+  },
+  "task_summary": [
+    {
+      "family": "bxaic",
+      "task": "B",
+      "models": 2,
+      "mean_miss_loss": 0.0290519878,
+      "mean_iou": 0.9617737003,
+      "mean_selected_fraction": 0.0354197237,
+      "mean_fidelity_advantage": 1.5045247148,
+      "fidelity_wins": 2
+    },
+    {
+      "family": "bxaic",
+      "task": "P",
+      "models": 2,
+      "mean_miss_loss": 0.1097649062,
+      "mean_iou": 0.8514419903,
+      "mean_selected_fraction": 0.0364354863,
+      "mean_fidelity_advantage": 3.2513728051,
+      "fidelity_wins": 2
+    },
+    {
+      "family": "bxaic",
+      "task": "PAINS",
+      "models": 2,
+      "mean_miss_loss": 0.0987611066,
+      "mean_iou": 0.3349012924,
+      "mean_selected_fraction": 0.8827047785,
+      "mean_fidelity_advantage": 1.5046284459,
+      "fidelity_wins": 2
+    },
+    {
+      "family": "bxaic",
+      "task": "X",
+      "models": 2,
+      "mean_miss_loss": 0.0921681122,
+      "mean_iou": 0.63534275,
+      "mean_selected_fraction": 0.0680150386,
+      "mean_fidelity_advantage": 10.3888828834,
+      "fidelity_wins": 2
+    },
+    {
+      "family": "bxaic",
+      "task": "indole",
+      "models": 2,
+      "mean_miss_loss": 0.0965671212,
+      "mean_iou": 0.3871301077,
+      "mean_selected_fraction": 0.6935975531,
+      "mean_fidelity_advantage": 1.2998061049,
+      "fidelity_wins": 2
+    },
+    {
+      "family": "bxaic",
+      "task": "rings-count",
+      "models": 2,
+      "mean_miss_loss": 0.0969310202,
+      "mean_iou": 0.6010955113,
+      "mean_selected_fraction": 0.9119844653,
+      "mean_fidelity_advantage": 0.9557544555,
+      "fidelity_wins": 1
+    },
+    {
+      "family": "bxaic",
+      "task": "rings-max",
+      "models": 2,
+      "mean_miss_loss": 0.0937239195,
+      "mean_iou": 0.2536861631,
+      "mean_selected_fraction": 0.9423121619,
+      "mean_fidelity_advantage": 2.6962590618,
+      "fidelity_wins": 2
+    },
+    {
+      "family": "google",
+      "task": "benzene",
+      "models": 2,
+      "mean_miss_loss": 0.1025278254,
+      "mean_iou": 0.5099297304,
+      "mean_selected_fraction": 0.6248258843,
+      "mean_fidelity_advantage": 0.812847221,
+      "fidelity_wins": 2
+    },
+    {
+      "family": "google",
+      "task": "logic10",
+      "models": 2,
+      "mean_miss_loss": 0.0979550769,
+      "mean_iou": 0.5523074754,
+      "mean_selected_fraction": 0.7744202936,
+      "mean_fidelity_advantage": 10.8869269744,
+      "fidelity_wins": 2
+    },
+    {
+      "family": "google",
+      "task": "logic7",
+      "models": 2,
+      "mean_miss_loss": 0.0798125633,
+      "mean_iou": 0.2661644866,
+      "mean_selected_fraction": 0.6756954098,
+      "mean_fidelity_advantage": 2.1205455697,
+      "fidelity_wins": 2
+    },
+    {
+      "family": "google",
+      "task": "logic8",
+      "models": 2,
+      "mean_miss_loss": 0.0589096516,
+      "mean_iou": 0.3024837781,
+      "mean_selected_fraction": 0.9374299751,
+      "mean_fidelity_advantage": 0.6240909082,
+      "fidelity_wins": 2
+    }
+  ],
+  "rationale_strata": [
+    {
+      "rationale_group": "diffuse",
+      "molecules": 11584,
+      "mean_rationale_fraction": 0.6392012894,
+      "mean_miss_loss": 0.0993224071,
+      "mean_iou": 0.618233005,
+      "mean_selected_fraction": 0.8768970687,
+      "mean_fidelity_advantage": 1.0784692768
+    },
+    {
+      "rationale_group": "focal",
+      "molecules": 6730,
+      "mean_rationale_fraction": 0.0482437817,
+      "mean_miss_loss": 0.0457400087,
+      "mean_iou": 0.6686874761,
+      "mean_selected_fraction": 0.1044606406,
+      "mean_fidelity_advantage": 17.6072963122
+    },
+    {
+      "rationale_group": "medium",
+      "molecules": 8910,
+      "mean_rationale_fraction": 0.2729386413,
+      "mean_miss_loss": 0.1295031181,
+      "mean_iou": 0.3480536215,
+      "mean_selected_fraction": 0.7160393433,
+      "mean_fidelity_advantage": 3.501068417
+    }
+  ],
+  "atom_size_strata": [
+    {
+      "atom_size_group": "large",
+      "molecules": 11324,
+      "mean_atoms": 47.6400565171,
+      "mean_miss_loss": 0.0932621437,
+      "mean_iou": 0.5143026786,
+      "mean_selected_fraction": 0.6229796558,
+      "mean_fidelity_advantage": 7.5357539922
+    },
+    {
+      "atom_size_group": "medium",
+      "molecules": 10384,
+      "mean_atoms": 26.1854776579,
+      "mean_miss_loss": 0.0948288408,
+      "mean_iou": 0.5472344966,
+      "mean_selected_fraction": 0.6399724719,
+      "mean_fidelity_advantage": 5.1764947015
+    },
+    {
+      "atom_size_group": "small",
+      "molecules": 5516,
+      "mean_atoms": 19.3165337201,
+      "mean_miss_loss": 0.1035987324,
+      "mean_iou": 0.590389606,
+      "mean_selected_fraction": 0.6419163405,
+      "mean_fidelity_advantage": 4.1872756872
+    }
+  ],
+  "null_summary": [
+    {
+      "family": "bxaic",
+      "task": "B",
+      "molecules": 9780,
+      "mean_false_highlight_fraction": 0.0353488261,
+      "mean_fidelity_advantage": 1.0867516589
+    },
+    {
+      "family": "bxaic",
+      "task": "P",
+      "molecules": 8722,
+      "mean_false_highlight_fraction": 0.0364193568,
+      "mean_fidelity_advantage": 0.6404968468
+    },
+    {
+      "family": "bxaic",
+      "task": "PAINS",
+      "molecules": 6710,
+      "mean_false_highlight_fraction": 0.8824392682,
+      "mean_fidelity_advantage": 0.8570719899
+    },
+    {
+      "family": "bxaic",
+      "task": "X",
+      "molecules": 4354,
+      "mean_false_highlight_fraction": 0.0678427651,
+      "mean_fidelity_advantage": 0.7173010038
+    },
+    {
+      "family": "bxaic",
+      "task": "indole",
+      "molecules": 6304,
+      "mean_false_highlight_fraction": 0.6944901952,
+      "mean_fidelity_advantage": 1.112818763
+    },
+    {
+      "family": "bxaic",
+      "task": "rings-count",
+      "molecules": 132,
+      "mean_false_highlight_fraction": 0.9237871313,
+      "mean_fidelity_advantage": 0.2385649609
+    },
+    {
+      "family": "bxaic",
+      "task": "rings-max",
+      "molecules": 9444,
+      "mean_false_highlight_fraction": 0.9426022624,
+      "mean_fidelity_advantage": 2.6230297568
+    },
+    {
+      "family": "google",
+      "task": "benzene",
+      "molecules": 2002,
+      "mean_false_highlight_fraction": 0.62720671,
+      "mean_fidelity_advantage": 0.9364223657
+    },
+    {
+      "family": "google",
+      "task": "logic10",
+      "molecules": 1714,
+      "mean_false_highlight_fraction": 0.7744300392,
+      "mean_fidelity_advantage": 11.5212007712
+    },
+    {
+      "family": "google",
+      "task": "logic7",
+      "molecules": 878,
+      "mean_false_highlight_fraction": 0.6757162698,
+      "mean_fidelity_advantage": 2.1136402162
+    },
+    {
+      "family": "google",
+      "task": "logic8",
+      "molecules": 1468,
+      "mean_false_highlight_fraction": 0.9376665993,
+      "mean_fidelity_advantage": 0.6514807279
+    }
+  ]
+}
