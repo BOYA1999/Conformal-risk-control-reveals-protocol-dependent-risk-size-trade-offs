@@ -1,3 +1,4 @@
+import os
 import argparse
 import hashlib
 import json
@@ -5,15 +6,16 @@ import sys
 import time
 from pathlib import Path
 
+import torch
 import numpy as np
 import pandas as pd
-import torch
 from torch_geometric.data import Batch
 from torch_geometric.loader import DataLoader
 
 
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+PACKAGE = Path(__file__).resolve().parents[2]
+ROOT = Path(os.environ.get('MOLXAI_WORK_ROOT', '../molxai-work')).resolve()
+sys.path.insert(0, str(PACKAGE / 'src'))
 
 from run_bxaic_probe import gradient_scores, hash_order, set_seed
 from run_gnnexplainer_dev_gate import gnn_scores
@@ -158,7 +160,7 @@ def run_cell(family, task, model_kind, seed, partitions, limit, gnn_epochs, batc
 
     write_json(result_path, {
         "status": "complete",
-        "surface": "post_rejection_official_split_matched_subset",
+        "surface": "official_split_matched_subset",
         "cell_id": cell_id,
         "family": family,
         "task": task,
@@ -219,7 +221,7 @@ def aggregate(out_dir, runtime_seconds):
         })
     write_json(out_dir / "summary.json", {
         "status": "PASS" if len(frame) else "FAIL",
-        "surface": "post_rejection_official_split_matched_subset",
+        "surface": "official_split_matched_subset",
         "runtime_seconds": runtime_seconds,
         "cell_method_rows": int(len(frame)),
         "unique_cells": int(frame["cell_id"].nunique()),
@@ -230,7 +232,7 @@ def aggregate(out_dir, runtime_seconds):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--out-dir", default=str(Path(__file__).resolve().parent / "established_explainers_20260901"))
+    parser.add_argument("--out-dir", default=str(ROOT / "experiments/established_subset"))
     parser.add_argument("--limit-per-split", type=int, default=100)
     parser.add_argument("--gnn-epochs", type=int, default=100)
     parser.add_argument("--batch-size", type=int, default=64)
@@ -244,8 +246,7 @@ def main():
         jobs = jobs[:1]
     started = time.time()
     write_json(out_dir / "run_contract.json", {
-        "reviewer_item": "DEC-C2",
-        "surface": "post_rejection_official_split_matched_subset",
+        "surface": "official_split_matched_subset",
         "methods": ["gradinput", "ig", "saliency", "atom_occlusion", "gnnexplainer"],
         "limit_per_split": limit,
         "gnnexplainer_epochs": gnn_epochs,

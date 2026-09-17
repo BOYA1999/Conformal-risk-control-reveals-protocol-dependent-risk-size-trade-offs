@@ -50,9 +50,11 @@ require({row["stratum"] for row in rings} == {"all_nonempty_reference", "positiv
 
 provenance = rows("results/v8/version_provenance/analysis_version_result_provenance.csv")
 provenance_qa = payload("results/v8/version_provenance/provenance_qa.json")
-require(len(provenance) == 19, "provenance row count")
+require(len(provenance) == 24 and {row['provenance_id'] for row in provenance} == {f'P{i:02d}' for i in range(1, 25)}, "provenance identifiers and row count")
 require(provenance_qa.get("status") == "PASS", "provenance QA")
 require(all(not re.search(r"(?:^[A-Za-z]:[\\/]|^/)", row["canonical_output_file"]) for row in provenance), "repository-relative output paths")
+require(all((ROOT / row['public_aggregate_location']).exists() for row in provenance), 'public aggregate locations exist')
+require(sum(row['artifact_scope'] == 'packaged_aggregate' for row in provenance) == 13, 'packaged versus external detailed artifact scope')
 
 for relative, marker in [
     ("results/v8/pharmacophore_oracle/DATA_LICENSE.md", "CC BY 4.0"),

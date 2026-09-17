@@ -16,7 +16,7 @@ def digest(path):
 
 paths = sorted(
     path for path in ROOT.rglob("*")
-    if path.is_file() and path != MANIFEST and "__pycache__" not in path.parts
+    if path.is_file() and path != MANIFEST and not {"__pycache__", ".git"}.intersection(path.parts)
 )
 MANIFEST.write_text(
     "".join(f"{digest(path)}  {path.relative_to(ROOT).as_posix()}\n" for path in paths),
